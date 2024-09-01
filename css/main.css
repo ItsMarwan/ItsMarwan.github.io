@@ -1,3 +1,12 @@
+::-website-scrollbar{
+    background: #AD91FF;
+    display: none;
+}
+
+::-website-scrollbar-thumb{
+    background: #000;
+}
+
 body {
     font-family: 'Poppins', sans-serif !important;
     background-color: #1D1E28;
@@ -29,7 +38,7 @@ body {
      background: #AD91FF !important;
  }
 .navbar {
-    box-shadow: none !important
+    x-shadow: none !important
 }
 
 .navbar-brand {
