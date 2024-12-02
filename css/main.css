@@ -38,15 +38,15 @@ body {
      background: #AD91FF !important;
  }
 .navbar {
-    x-shadow: none !important
+    x-shadow: none !important;
 }
 
 .navbar-brand {
-    font-size: 25px !important
+    font-size: 25px !important;
 }
 
 .navbar-toggler-icon {
-    color: #fff !important
+    color: #fff !important;
 }
 
 .btn {
@@ -57,13 +57,13 @@ body {
 }
 
 .btn-primary {
-    background-color: #AD91FF!important
+    background-color: #AD91FF!important;
 }
 .btn-secondary {
-    background-color: #2C2F33 !important
+    background-color: #2C2F33 !important;
 }
 .btn-secondary2 {
-    background-color: #2C2F33 !important
+    background-color: #2C2F33 !important;
 }
 .heading {
     padding: 160px 50px !important;
@@ -77,7 +77,7 @@ body {
 .title {
     line-height: 90px !important;
     margin-bottom: -2px !important;
-    font-size: 36px !important
+    font-size: 36px !important;
 }
 
 .subtitle {
