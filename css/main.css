@@ -7,6 +7,10 @@
     background: #000;
 }
 
+.card:hover {
+  box-shadow: 0 0 20px 0px rgba(173, 145, 255, 1);
+}
+
 body {
     font-family: 'Poppins', sans-serif !important;
     background-color: #1D1E28;
