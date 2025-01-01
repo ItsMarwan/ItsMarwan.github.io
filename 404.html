@@ -151,15 +151,16 @@
 </body>
 <script>
  function checkPassword(event) {
-     event.preventDefault(); // Prevent the default link behavior
-     const correctPassword = "1906"; // Replace with your desired password
-     const userInput = prompt("???"); // Prompt the user for the password
+    event.preventDefault(); // Prevent the default link behavior
+    const correctPassword = "the password"; // Replace with your desired password
+    const userInput = prompt("Enter the password:"); // Prompt the user for the password
 
-     if (userInput === correctPassword) {
-         window.location.href = event.target.href; // Redirect to the link if password is correct
-     } else {
-         alert("☹️"); // Show an error message if incorrect
-     }
+    if (userInput === correctPassword) {
+        const link = event.currentTarget.getAttribute("href"); // Get the href attribute
+        window.location.href = link; // Redirect to the link if the password is correct
+    } else {
+        alert("Incorrect password. Please try again."); // Show an error message if the password is incorrect
+    }
  }
 </script>
 </html>
