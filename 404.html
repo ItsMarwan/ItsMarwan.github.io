@@ -129,6 +129,7 @@
         </div>
     </div>
     <div class="footer">
+<button onclick="checkPassword()">?</button>
         <div class="bot-footer">
             <br />
             youtube.com/@itsmarwan.
@@ -146,4 +147,16 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/now-ui-kit.min.js"></script>
 </body>
+   <script>
+        function checkPassword() {
+            const correctPassword = "yourPassword"; // Replace with your desired password
+            const userInput = prompt("Enter the password:");
+
+            if (userInput === correctPassword) {
+                window.location.href = "https://example.com"; // Replace with your redirect link
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
 </html>
