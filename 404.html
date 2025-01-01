@@ -150,16 +150,16 @@
 <script src="js/now-ui-kit.min.js"></script>
 </body>
 <script>
-function checkPassword(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    const correctPassword = "1906"; // Replace with your desired password
-    const userInput = prompt("???"); // Prompt the user for the password
+ function checkPassword(event) {
+     event.preventDefault(); // Prevent the default link behavior
+     const correctPassword = "1906"; // Replace with your desired password
+     const userInput = prompt("???"); // Prompt the user for the password
 
-    if (userInput === correctPassword) {
-        window.location.href = event.target.href; // Redirect to the link if password is correct
-    } else {
-        alert("☹️"); // Show an error message if incorrect
-    }
-}
+     if (userInput === correctPassword) {
+         window.location.href = event.target.href; // Redirect to the link if password is correct
+     } else {
+         alert("☹️"); // Show an error message if incorrect
+     }
+ }
 </script>
 </html>
