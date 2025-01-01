@@ -129,7 +129,9 @@
         </div>
     </div>
     <div class="footer">
-<button onclick="checkPassword()">?</button>
+<a href="https://youtube.com/" class="btn-link" onclick="checkPassword(event)">
+         <button class="btn login-btn btn-outline-accent my-2 my-sm-0" style="font-size: 10px !important;font-family: poppins !important;">Login With Discord</button>
+        </a>
         <div class="bot-footer">
             <br />
             youtube.com/@itsmarwan.
@@ -149,7 +151,7 @@
 </body>
    <script>
         function checkPassword() {
-            const correctPassword = "yourPassword"; // Replace with your desired password
+            const correctPassword = "Subscriber"; // Replace with your desired password
             const userInput = prompt("Enter the password:");
 
             if (userInput === correctPassword) {
