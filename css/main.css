@@ -8,7 +8,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 0 20px 0px rgba(173, 145, 255, 1);
+  box-shadow: 0 0 20px 0px rgb(30, 30,40);
 }
 
 body {
