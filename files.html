@@ -157,35 +157,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/now-ui-kit.min.js"></script>
-<script>
-
-window.onload = () => {
-const fragment = new URLSearchParams(window.location.hash.slice(1));
-const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
-
-if (!accessToken) {
-    window.location.href('/')
-}
-
-fetch('https://discord.com/api/users/@me', {
-    headers: {
-        authorization: `${tokenType} ${accessToken}`,
-    },
-})
-.then(result => result.json())
-.then(response => {
-    const { username, discriminator, avatar, id} = response;
-//set the welcome username string
-document.getElementById('name').innerText = ` ${username}`;
-
-//set the avatar image by constructing a url to access discord's cdn
-document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
-})
-.catch(console.error);
-
-};
-
-</script>
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="itsmarwan" data-description="Support me on Buy me a coffee!" data-message="" data-color="#AD91FF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
 </html>
