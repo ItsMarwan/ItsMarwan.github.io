@@ -5,7 +5,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  color: inset 0 0 5px #AD91FF;
+  background-color: #AD91FF;
   border-radius: 10px;
 }
  
