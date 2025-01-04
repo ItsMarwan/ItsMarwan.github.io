@@ -184,6 +184,11 @@ body {
     border-radius: 22px !important;
     border: 4px solid #AD91FF;
 }
+
+.features .card-title:hover {
+    box-shadow: 0 0 20px 0px rgb(173, 145, 255);
+}
+
 .features .card-text {
 color: rgba(255, 255, 255, 0.46) !important
 }
