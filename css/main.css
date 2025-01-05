@@ -1,16 +1,13 @@
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background-color: #AD91FF;
 }
- 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background: #1D1E28; 
+  background: #292933; 
   border-radius: 10px;
 }
 
