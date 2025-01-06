@@ -15,10 +15,15 @@ require('dotenv').config();  // Load environment variables
 
 const app = express();
 
-// Session management
+// Middleware to handle sessions
 app.use(session({ secret: 'your_secret_key', resave: false, saveUninitialized: true }));
 
-// Simple test route
+// Root route - welcome message
+app.get('/', (req, res) => {
+    res.send('Welcome to the Discord OAuth2 login site!');
+});
+
+// Login route - placeholder route
 app.get('/login', (req, res) => {
     res.send('Login page works!');
 });
@@ -50,5 +55,5 @@ app.get('/auth/callback', async (req, res) => {
     }
 });
 
-// Export the Express app for serverless deployment
-module.exports = app;  // This export is required for Vercel
+// Export the app for serverless deployment
+module.exports = app; // Ensure this export is in place
