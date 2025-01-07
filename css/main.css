@@ -1,6 +1,6 @@
 
 .collapsible {
-  background-color: #777;
+  background-color: #AD91FF;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -24,11 +24,12 @@
 }
 
 .content {
+  font-family: 'Poppins', sans-serif !important;
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  background-color: #1E1E28;
 }
 
 ::-webkit-scrollbar {
