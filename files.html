@@ -192,11 +192,17 @@
                 if (content.style.maxHeight && content.style.maxHeight !== "0px") {
                     // Collapse the content
                     content.style.maxHeight = "0px";
-                    content.style.outline = "none"; 
+
+                    // Remove outline **after** the collapse animation finishes
+                    setTimeout(() => {
+                        if (content.style.maxHeight === "0px") { 
+                            content.style.outline = "none";
+                        }
+                    }, 500); // Matches CSS transition duration
                 } else {
                     // Expand the content
                     content.style.maxHeight = content.scrollHeight + "px";
-                    content.style.outline = "3px solid #AD91FF"; 
+                    content.style.outline = "3px solid #AD91FF"; // Show outline immediately
                 }
             });
         }
