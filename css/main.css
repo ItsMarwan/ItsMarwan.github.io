@@ -2,7 +2,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out, outline 0.3s ease-out;
-    outline: none; /* Hide outline initially */
+    outline: 3px solid transparent; /* Completely invisible initially */
     border-radius: 10px;
 }
 
