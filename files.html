@@ -182,29 +182,24 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var coll = document.getElementsByClassName("collapsible2");
+        var content = document.getElementById("reviews"); // Select the reviews div
 
         for (var i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function (event) {
                 event.preventDefault(); // Prevent default anchor behavior
-                
-                var content = document.getElementById("reviews"); // Select the reviews div
 
                 if (content.style.maxHeight && content.style.maxHeight !== "0px") {
                     // Collapse the content
                     content.style.maxHeight = "0px";
-                    content.style.opacity = "0"; // Fade out content
 
-                    // Remove outline **after** fade-out completes
+                    // Fade out the outline smoothly
                     setTimeout(() => {
-                        if (content.style.maxHeight === "0px") { 
-                            content.style.outline = "none";
-                        }
-                    }, 300); // Matches CSS opacity transition duration
+                        content.classList.add("outline-fade");
+                    }, 200); // Delay to match collapse animation
                 } else {
                     // Expand the content
                     content.style.maxHeight = content.scrollHeight + "px";
-                    content.style.opacity = "1"; // Fade in content
-                    content.style.outline = "3px solid #AD91FF"; // Show outline immediately
+                    content.classList.remove("outline-fade"); // Restore the outline
                 }
             });
         }
