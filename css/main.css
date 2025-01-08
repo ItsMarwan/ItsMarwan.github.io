@@ -1,3 +1,11 @@
+#reviews {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, outline 0.3s ease-out;
+    outline: none; /* Hide outline initially */
+    border-radius: 10px;
+}
+
 .collapsible {
   font-family: 'Poppins', sans-serif !important;
   background-color: #777;
