@@ -1,15 +1,3 @@
-#reviews {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease, outline 0.3s ease;
-    outline: 3px solid #AD91FF;
-}
-
-.outline-fade {
-    transition: outline 0.3s ease;
-    outline: 3px solid transparent; /* Fades the outline out */
-}
-
 .collapsible {
   font-family: 'Poppins', sans-serif !important;
   background-color: #777;
