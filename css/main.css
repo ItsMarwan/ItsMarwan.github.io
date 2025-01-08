@@ -1,5 +1,6 @@
 
 .collapsible {
+  font-family: 'Poppins', sans-serif !important;
   background-color: #777;
   color: white;
   cursor: pointer;
@@ -24,6 +25,7 @@
 }
 
 .content {
+  font-family: 'Poppins', sans-serif !important;
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
