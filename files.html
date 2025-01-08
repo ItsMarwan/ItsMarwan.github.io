@@ -64,14 +64,12 @@
      <div class="reviews-section">
     <a href="javascript:void(0);" class="btn btn-primary btn-lg collapsible2" 
        style="border-radius: 10px; background-color: #AD91FF; font-family: 'Poppins', sans-serif !important; font-weight: bold;" 
-       id="reviewsBtn">SEE REVIEWS</a>
+       id="reviewsBtn"><i class="fa-solid fa-user-group"></i> SEE REVIEWS</a>
 </div>
 
 <div class="content" id="reviews" 
      style="background-color: #1E1E28; font-family: 'Poppins' !important; border-radius: 10px; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
-    <h1 style="font-size: 20px; margin: 0px; padding: 5px; font-weight: bold; display: inline-block;">
-        JOE MICHEAL: Very Amazing File, Would Recommend
-    </h1>
+    <h1 style="font-size: 20px; margin: 0px; padding: 5px; font-weight: bold; display: inline-block;">USER: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus condimentum elit.</h1>
     <span style="float: right;">
         <i class="fa-solid fa-star" style="color: #AD91FF;"></i>    
         <i class="fa-solid fa-star" style="color: #AD91FF;"></i>    
@@ -182,24 +180,27 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var coll = document.getElementsByClassName("collapsible2");
-        var content = document.getElementById("reviews"); // Select the reviews div
 
         for (var i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function (event) {
                 event.preventDefault(); // Prevent default anchor behavior
+                
+                var content = document.getElementById("reviews"); // Select the reviews div
 
                 if (content.style.maxHeight && content.style.maxHeight !== "0px") {
                     // Collapse the content
                     content.style.maxHeight = "0px";
 
-                    // Fade out the outline smoothly
+                    // Remove outline **after** the collapse animation finishes
                     setTimeout(() => {
-                        content.classList.add("outline-fade");
-                    }, 200); // Delay to match collapse animation
+                        if (content.style.maxHeight === "0px") { 
+                            content.style.outline = "none";
+                        }
+                    }, 500); // Matches CSS transition duration
                 } else {
                     // Expand the content
                     content.style.maxHeight = content.scrollHeight + "px";
-                    content.classList.remove("outline-fade"); // Restore the outline
+                    content.style.outline = "3px solid #AD91FF"; // Show outline immediately
                 }
             });
         }
