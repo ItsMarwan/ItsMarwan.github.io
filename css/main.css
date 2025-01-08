@@ -29,10 +29,12 @@
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
+  transition: outline 0.5s ease-in-out;
 }
-
+.content.hidden {
+  outline: 3px solid transparent;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
