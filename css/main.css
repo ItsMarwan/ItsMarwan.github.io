@@ -119,6 +119,7 @@ body {
 
 .title {
     line-height: 90px !important;
+    margin-bottom: -2px !important;
     font-size: 36px !important;
 }
 
