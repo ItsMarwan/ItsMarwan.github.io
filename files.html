@@ -61,8 +61,10 @@
     <h1 class="display-5 title">Pickaxe 3D Models</h1><div><i class="fa-solid fa-star" style="color: #AD91FF;"></i>    <i class="fa-solid fa-star" style="color: #AD91FF;"></i>    <i class="fa-solid fa-star" style="color: #AD91FF;"></i>    <i class="fa-solid fa-star" style="color: #AD91FF;"></i>    <i class="fa-solid fa-star" style="color: #AD91FF;"></i></div>
     <p class="subtitle">Pickaxe Models I Used In The "How To Add Pickaxes" Video Which all Have .uasset Extention!</p>
     <a class="btn btn-primary btn-lg" href="https://sub2unlock.io/mF23c" target="_blank" role="button"><i class="fa-solid fa-lock"></i> Unlock Download</a>
-     <button class="collapsible" style="border-radius: 10px;background-color: #AD91FF;font-family: 'Poppins', sans-serif !important;font-weight: bold;    border-radius: 10px !important;font-size: 16px !important;font-weight: 600 !important;text-transform: uppercase !important;text-align: center !important; width: 50%;"><i class="fa-solid fa-user-group"></i> See Reviews</button>
-     <div class="content" style="background-color: #1E1E28;font: 'Poppins' !important;border-radius: 10px;">
+     <div class="reviews-section">
+    <a href="javascript:void(0);" class="btn btn-primary btn-lg" style="border-radius: 10px; background-color: #AD91FF; font-family: 'Poppins', sans-serif !important; font-weight: bold;" id="reviewsBtn">SEE REVIEWS</a>
+</div>
+     <div class="content" id="reviews" style="background-color: #1E1E28;font: 'Poppins' !important;border-radius: 10px;">
       <h1 style="font-size: 20px; margin: 0px 0px 0px; padding: 5px; font-weight: bold;display: inline-block;">JOE MICHEAL: Very Amazing File, Would Reccomend</h1><span style="float: right;"><i class="fa-solid fa-star" style="color: #AD91FF;"></i>    <i class="fa-solid fa-star" style="color: #AD91FF;"></i>    <i class="fa-solid fa-star" style="color: #AD91FF;"></i>    <i class="fa-solid fa-star-half-stroke" style="color: #AD91FF;"></i>    <i class="fa-regular fa-star" style="color: #AD91FF;"></i></span>
      </div>
 
@@ -165,22 +167,40 @@
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="itsmarwan" data-description="Support me on Buy me a coffee!" data-message="" data-color="#AD91FF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 
 <script>
-var coll = document.getElementsByClassName("collapsible");
+    // Get all elements with the class "collapsible"
+    var coll = document.getElementsByClassName("collapsible");
 
-for (var i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
+    // Loop through each element with the "collapsible" class
+    for (var i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default anchor link behavior
 
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null; // Collapse section
-      content.style.outline = "none"; // Hide outline
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px"; // Expand section
-      content.style.outline = "3px solid #AD91FF"; // Show outline
-    } 
-  });
-}
+            // Toggle the "active" class for the clicked link
+            this.classList.toggle("active");
+
+            // Get the next sibling (the content section to be toggled)
+            var content = this.nextElementSibling;
+
+            // Check if the content is already expanded
+            if (content.style.maxHeight) {
+                // Collapse the content
+                content.style.maxHeight = null;
+                content.style.outline = "none"; // Hide outline when collapsed
+            } else {
+                // Expand the content
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.outline = "3px solid #AD91FF"; // Show outline when expanded
+            }
+        });
+    }
+
+    // Initially collapse all collapsible sections
+    var collapsibles = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < collapsibles.length; i++) {
+        var content = collapsibles[i].nextElementSibling;
+        content.style.maxHeight = null;
+        content.style.outline = "none"; // Hide outline initially
+    }
 </script>
 
 </body>
