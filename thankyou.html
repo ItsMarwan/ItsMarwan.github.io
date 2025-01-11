@@ -137,6 +137,37 @@
             </div><br/>
             <div class="nouridio"><i class="fa-solid fa-user-astronaut"></i> THE BOTTOM</div>
         </div>
+
+YouTube Subscribers
+    <div id="subscriberCount"></div>
+    YouTube Video Views
+    <div id="viewCount"></div>
+    YouTube Video Count
+    <div id="videoCount"></div>
+    <script>
+    
+    const APIKey = 'AIzaSyA1L67d4JnxRWqRTlH2m6RCP2KTJ2IKroY';
+    const Userid = 'UCsDUR3maxEMihNFGBKOmHLA';
+    const subscriberCount= document.getElementById('subscriberCount');
+    const viewCount = document.getElementById('viewCount');
+    const videoCount = document.getElementById('videoCount');
+   
+    let getdata = () => {
+        fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${Userid}&key=${APIKey}`)
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+            console.log(data);
+            subscriberCount.innerHTML = data["items"][0].statistics.subscriberCount;
+            viewCount.innerHTML = data["items"][0].statistics.viewCount;
+            videoCount.innerHTML = data["items"][0].statistics.videoCount;
+            
+        })
+    }
+   getdata();
+    </script>
+
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
