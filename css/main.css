@@ -1,3 +1,22 @@
+.overlay {
+ position: fixed;
+ width: 100%;
+ length: 100%;
+ display: flex;
+ top: 0;
+ left: 0;
+ background-color: #1D1E28;
+ z-index: 20;
+ algin-items: center;
+ justify-content: center;
+}
+.spinner-icon {
+ font-size: 60px
+}
+.fa-spin {
+ animation-iteration-count: infinite;
+}
+
 #reviews {
     max-height: 0;
     overflow: hidden;
