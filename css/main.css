@@ -1,5 +1,11 @@
-.files .btn btn-primary btn-lg {
- opacity: 0.3s ease;
+.files .btn btn-primary btn-lg .fa-lock {
+ opacity: 1;
+ transition: opacity 0.3s ease;
+}
+
+.files .btn btn-primary btn-lg .fa-lock-open {
+ opacity: 0;
+ transition: opacity 0.3s ease;
 }
 
 .files .btn btn-primary btn-lg:hover .fa-lock {
