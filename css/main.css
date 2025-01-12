@@ -1,3 +1,15 @@
+.files .btn btn-primary btn-lg {
+ opacity: 0.3s ease;
+}
+
+.files .btn btn-primary btn-lg:hover .fa-lock {
+ opacity: 0;
+}
+
+.files .btn btn-primary btn-lg:hover .fa-lock-open {
+ opacity: 1;
+}
+
 .overlay {
  position: fixed;
  width: 100%;
