@@ -1,36 +1,3 @@
-/* Icon wrapper to position icons on top of each other */
-.icon-wrapper {
-    position: relative;
-    margin-right: 10px; /* Space between icon and text */
-}
-
-/* Stack the icons on top of each other */
-.icon-wrapper i {
-    position: absolute; /* Stack the icons in the same space */
-    left: 0;
-    top: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Default state: Lock icon visible */
-.icon-wrapper .fa-lock {
-    opacity: 1;
-}
-
-/* Default state: Unlock icon hidden */
-.icon-wrapper .fa-lock-open {
-    opacity: 0;
-}
-
-/* Hover effect - swap icons */
-.unlock-btn:hover .fa-lock {
-    opacity: 0;
-}
-
-.unlock-btn:hover .fa-lock-open {
-    opacity: 1;
-}
-
 .overlay {
  position: fixed;
  width: 100%;
