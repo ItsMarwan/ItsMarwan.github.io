@@ -1,12 +1,16 @@
 /* Stack Icons on Top of Each Other */
 .icon-wrapper {
-    
-    
-    
+    position: relative;
+    width: 20px; /* Icon width */
+    height: 20px; /* Icon height */
+    margin-right: 8px; /* Space between icon and text */
 }
+
 /* Stack the icons on top of each other */
 .icon-wrapper i {
-    
+    position: absolute;
+    left: 0;
+    top: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
