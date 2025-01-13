@@ -1,15 +1,15 @@
-/* Icon wrapper to stack the icons vertically */
+/* Icon wrapper to position icons on top of each other */
 .icon-wrapper {
-    display: flex;
-    flex-direction: column; /* Stack icons vertically */
-    align-items: center; /* Center icons horizontally */
+    position: relative;
     margin-right: 10px; /* Space between icon and text */
 }
 
-/* Stack the icons */
+/* Stack the icons on top of each other */
 .icon-wrapper i {
+    position: absolute; /* Stack the icons in the same space */
+    left: 0;
+    top: 0;
     transition: opacity 0.3s ease-in-out;
-    font-size: 20px; /* Adjust icon size */
 }
 
 /* Default state: Lock icon visible */
