@@ -1,13 +1,11 @@
 /* Stack Icons on Top of Each Other */
 .icon-wrapper {
-    position: relative;
+    position: left;
     
 }
 
 /* Stack the icons on top of each other */
 .icon-wrapper i {
-    position: relative;
-    left: 10;
     transition: opacity 0.3s ease-in-out;
 }
 
