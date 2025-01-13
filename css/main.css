@@ -1,25 +1,27 @@
 /* Stack Icons on Top of Each Other */
 .icon-wrapper {
     position: left;
-    
+    width: 20px; /* Icon width */
+    height: 20px; /* Icon height */
 }
 
-/* Stack the icons on top of each other */
+/* Stack the icons */
 .icon-wrapper i {
+    position: left;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Lock Icon (Default Visible) */
+/* Default state: Lock icon visible */
 .icon-wrapper .fa-lock {
     opacity: 1;
 }
 
-/* Unlock Icon (Hidden by Default) */
+/* Default state: Unlock icon hidden */
 .icon-wrapper .fa-lock-open {
     opacity: 0;
 }
 
-/* Hover Effect - Swap Icons */
+/* Hover: Swap icons */
 .unlock-btn:hover .fa-lock {
     opacity: 0;
 }
