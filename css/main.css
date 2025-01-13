@@ -1,19 +1,30 @@
-.files .btn btn-primary btn-lg .fa-lock {
- opacity: 1;
- transition: opacity 0.3s ease;
+/* Ensure correct targeting of the button */
+.files .unlock-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
 }
 
-.files .btn btn-primary btn-lg .fa-lock-open {
- opacity: 0;
- transition: opacity 0.3s ease;
+/* Default locked icon */
+.files .unlock-btn .fa-lock {
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
-.files .btn btn-primary btn-lg:hover .fa-lock {
- opacity: 0;
+/* Hidden unlocked icon */
+.files .unlock-btn .fa-lock-open {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
 }
 
-.files .btn btn-primary btn-lg:hover .fa-lock-open {
- opacity: 1;
+/* On hover, hide the lock and show the open-lock */
+.files .unlock-btn:hover .fa-lock {
+    opacity: 0;
+}
+
+.files .unlock-btn:hover .fa-lock-open {
+    opacity: 1;
 }
 
 .overlay {
