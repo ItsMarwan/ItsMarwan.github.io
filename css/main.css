@@ -9,8 +9,7 @@
 /* Stack the icons on top of each other */
 .icon-wrapper i {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10;
     transition: opacity 0.3s ease-in-out;
 }
 
