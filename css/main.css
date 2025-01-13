@@ -3,7 +3,7 @@
 .files .unlock-btn {
     position: relative;
     display: inline-flex;
-    
+    align-items: center;
 }
 
 /* Default locked icon */
