@@ -16,7 +16,7 @@
 
 /* Stack the icons on top of each other */
 .icon-wrapper i {
-    position: absolute;
+    position: left;
     
     transition: opacity 0.3s ease-in-out;
 }
