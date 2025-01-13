@@ -11,7 +11,7 @@
 .icon-wrapper {
     position: left;
     
-    margin-right: 8px; /* Space between icon and text */
+    margin-right: 5px; /* Space between icon and text */
 }
 
 /* Stack the icons on top of each other */
