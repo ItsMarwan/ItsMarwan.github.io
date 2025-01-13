@@ -1,4 +1,6 @@
-
+.icon-wrapper {
+   margin-right: 5px;
+}
 /* Ensure correct targeting of the button */
 .files .unlock-btn {
     position: relative;
