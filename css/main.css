@@ -1,6 +1,6 @@
 /* Stack Icons on Top of Each Other */
 .icon-wrapper {
-    position: left;
+    position: absolute;
     
 }
 
