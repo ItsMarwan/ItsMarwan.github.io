@@ -1,12 +1,3 @@
-/* Button styling without changes */
-.unlock-btn {
-    
-    align-items: left;
-    font-size: 18px;
-    
-    text-decoration: none;
-}
-
 /* Stack Icons on Top of Each Other */
 .icon-wrapper {
     position: left;
