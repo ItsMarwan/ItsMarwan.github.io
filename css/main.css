@@ -1,18 +1,22 @@
 
+/* Ensure correct targeting of the button */
+.files .unlock-btn {
+    position: relative;
+    display: inline-flex;
+    
+}
+
 /* Default locked icon */
 .files .unlock-btn .fa-lock {
     opacity: 1;
-    align-items: absolute;
     transition: opacity 0.3s ease;
-    padding-left: 5px;
 }
 
 /* Hidden unlocked icon */
 .files .unlock-btn .fa-lock-open {
     opacity: 0;
     transition: opacity 0.3s ease;
-    align-items: absolute;
-    padding-left: 5px;
+    position: absolute;
 }
 
 /* On hover, hide the lock and show the open-lock */
