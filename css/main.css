@@ -146,7 +146,6 @@ body {
 }
 
 .title {
-    display: inline-block;
     margin-top: 0px !important;
     line-height: 90px !important;
     margin-bottom: -2px !important;
