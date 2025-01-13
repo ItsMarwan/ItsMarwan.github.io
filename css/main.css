@@ -1,13 +1,15 @@
-/* Stack Icons on Top of Each Other */
+/* Icon wrapper to stack the icons vertically */
 .icon-wrapper {
-    position: relative;
-    
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center icons horizontally */
+    margin-right: 10px; /* Space between icon and text */
 }
 
 /* Stack the icons */
 .icon-wrapper i {
-    position: left;
     transition: opacity 0.3s ease-in-out;
+    font-size: 20px; /* Adjust icon size */
 }
 
 /* Default state: Lock icon visible */
@@ -20,7 +22,7 @@
     opacity: 0;
 }
 
-/* Hover: Swap icons */
+/* Hover effect - swap icons */
 .unlock-btn:hover .fa-lock {
     opacity: 0;
 }
