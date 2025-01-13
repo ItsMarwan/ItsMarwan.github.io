@@ -1,8 +1,8 @@
 /* Stack Icons on Top of Each Other */
 .icon-wrapper {
+    position: left;
     
     
-    margin-right: 5px; /* Space between icon and text
 }
 /* Stack the icons on top of each other */
 .icon-wrapper i {
