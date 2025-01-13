@@ -1,9 +1,3 @@
-/* Ensure correct targeting of the button */
-.files .unlock-btn {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-}
 
 /* Default locked icon */
 .files .unlock-btn .fa-lock {
