@@ -9,7 +9,6 @@
 .files .unlock-btn .fa-lock-open {
     opacity: 0;
     transition: opacity 0.3s ease;
-    position: absolute;
 }
 
 /* On hover, hide the lock and show the open-lock */
