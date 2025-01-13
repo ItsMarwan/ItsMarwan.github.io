@@ -10,8 +10,7 @@
 /* Stack Icons on Top of Each Other */
 .icon-wrapper {
     position: relative;
-    width: 20px; /* Icon width */
-    height: 20px; /* Icon height */
+    
     margin-right: 8px; /* Space between icon and text */
 }
 
