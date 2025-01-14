@@ -2,6 +2,6 @@ RewriteEngine On
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
 RewriteRule ^ /%1 [L,R=301]
 
-
+RewriteEngine On
 RewriteCond %{REQUEST_URI} ^/Zip/Assets/.*$
-RewriteRule ^.*$ /404 [R=301,L]
+RewriteRule ^.*$ /thankyou.html [R=301,L]
