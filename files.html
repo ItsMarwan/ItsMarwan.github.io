@@ -59,7 +59,7 @@
   </body>
 <div class="heading">
 <div class="files">
-    <h1 class="display-5 title">Pickaxe 3D Models</h1>
+    <h1 id="pickaxes" class="display-5 title">Pickaxe 3D Models</h1>
     <span style="float: right;">
         <i class="fa-solid fa-star" style=" color: #AD91FF;"></i>
         <i class="fa-solid fa-star" style=" color: #AD91FF;"></i>
@@ -215,6 +215,16 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/now-ui-kit.min.js"></script>
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="itsmarwan" data-description="Support me on Buy me a coffee!" data-message="" data-color="#AD91FF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+<script type="text/javascript">
+      if (window.location.pathname.toLowerCase() === '/files/pickaxes' || window.location.pathname.toLowerCase() === '/files/pickaxes/') {
+          document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(() => {
+            document.getElementById("pickaxe").scrollIntoView({ behavior: "smooth" });
+        }, 100);
+    });
+      }
+    </script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
