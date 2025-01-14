@@ -1,7 +1,9 @@
 RewriteEngine On
+
+# Redirect anything under /zip/assets/ to /thankyou
+RewriteCond %{REQUEST_URI} ^/zip/assets/ [NC]
+RewriteRule ^.*$ /thankyou [L,R=301]
+
+# Remove .html from URLs (if needed)
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
 RewriteRule ^ /%1 [L,R=301]
-
-RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/zip/assets/ [NC]
-RewriteRule ^.*$ /index.html [L,R=302]
