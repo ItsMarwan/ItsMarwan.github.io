@@ -141,8 +141,9 @@ body {
     padding: 160px 50px !important;
     color: #fff !important;
     background-image: url("../assets/wavy-purple-by-nouridio.svg") !important;
-    background-position: 50% 580px !important;
-    background-size: 300% !important;
+    background-position: bottom !important;
+    background-size: 500% !important;
+    background-repeat: no-repeat !important;
 }
 
 .title {
