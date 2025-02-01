@@ -184,7 +184,7 @@
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label {
   padding: 1px 5px;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 0;
 }
 
 .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-on,
@@ -192,7 +192,7 @@
 .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-label {
   padding: 5px 10px;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 0;
 }
 
 .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-on,
@@ -4459,7 +4459,7 @@ Created using IcoMoon - icomoon.io
   border-radius: 30px;
   font-size: 14px;
   padding: 11px 23px;
-  line-height: 1.5;
+  line-height: 0;
 }
 
 .nav-tabs>.nav-item>.nav-link:hover {
