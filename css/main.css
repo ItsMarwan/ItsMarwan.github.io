@@ -87,7 +87,7 @@ body {
     text-rendering: optimizeLegibility;
     border-top: 6px #ad91ff solid !important;
     font-size: 16px;
-    line-height: 0;
+    line-height: 1.5;
 }
 
 .nav-link {
