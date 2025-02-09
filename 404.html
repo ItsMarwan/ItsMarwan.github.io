@@ -27,8 +27,12 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>ItsMarwan 404 Page</title>
+<style> .progress { position: relative; height: 2px; display: block;z-index: 9999; width: 100%; background-color: white; border-radius: 2px; background-clip: padding-box; /*margin: 0.5rem 0 1rem 0;*/ overflow: hidden; } .progress .indeterminate { background-color:black; } .progress .indeterminate:before { content: ''; position: absolute; background-color: #2C67B1; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; } .progress .indeterminate:after { content: ''; position: absolute; background-color: #2C67B1; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; -webkit-animation-delay: 1.15s; animation-delay: 1.15s; } @-webkit-keyframes indeterminate { 0% { left: -35%; right: 100%; } 60% { left: 100%; right: -90%; } 100% { left: 100%; right: -90%; } } @keyframes indeterminate { 0% { left: -35%; right: 100%; } 60% { left: 100%; right: -90%; } 100% { left: 100%; right: -90%; } } @-webkit-keyframes indeterminate-short { 0% { left: -200%; right: 100%; } 60% { left: 107%; right: -8%; } 100% { left: 107%; right: -8%; } } @keyframes indeterminate-short { 0% { left: -200%; right: 100%; } 60% { left: 107%; right: -8%; } 100% { left: 107%; right: -8%; } } </style>
 </head>
 <body>
+<div class='progress' id='PreLoaderBar'>
+        <div class='indeterminate'/>
+    </div>
 <nav class="navbar navbar-expand-lg bg-transparent">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <img src="/assets\menuIcon.svg" width="20px" height="20px" style="max-width: none !important;">
@@ -169,4 +173,13 @@
  }
 </script>
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="itsmarwan" data-description="Support me on Buy me a coffee!" data-message="" data-color="#2D7EEA" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+<script>
+//<![CDATA[
+document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                console.log(document.readyState);
+                document.getElementById("PreLoaderBar").style.display = "none";
+            }
+        }
+//]]></script>
 </html>
