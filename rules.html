@@ -191,7 +191,7 @@
     document.querySelector(".navbar-toggler").addEventListener("click", function () {
         const img = document.getElementById("menu-icon");
 
-        if (Math.random() < 0.25) { // 50% chance
+        if (Math.random() > 100) { // 50% chance
             img.src = "/assets/burger-solid.svg";
 
             // Reset image back to normal after 5 seconds
