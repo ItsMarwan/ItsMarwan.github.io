@@ -31,8 +31,8 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-transparent">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="assets\menuIcon.svg" width="20px" height="20px" style="max-width: none !important;">
-    </button>
+    <img id="menu-icon" src="assets/menuIcon.svg" width="20px" height="20px" style="max-width: none !important;">
+</button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 20px !important">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -186,5 +186,17 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/now-ui-kit.min.js"></script>
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="itsmarwan" data-description="Support me on Buy me a coffee!" data-message="" data-color="#2D7EEA" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+<script>
+    document.querySelector(".navbar-toggler").addEventListener("click", function () {
+        const img = document.getElementById("menu-icon");
+        if (Math.random() < 0.5) { // 50% chance
+            img.src = "assets/burger-solid.svg";
+        } else {
+            img.src = "assets/menuIcon.svg";
+        }
+    });
+</script>
+
 </body>
 </html>
