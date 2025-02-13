@@ -120,5 +120,28 @@
         }, 100);
     });
 </script>
+
+    <script>
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "F12" && !event.ctrlKey) {
+                event.preventDefault();  // Prevent F12
+            }
+
+            if (event.ctrlKey && event.shiftKey && event.key === "I") {
+                event.preventDefault();
+            }
+        });
+
+        document.addEventListener("keyup", function(event) {
+            if (event.key === "F12" && !event.ctrlKey) {
+                event.preventDefault();
+            }
+        });
+    </script>
+    
 </body>
 </html>
