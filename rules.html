@@ -203,32 +203,23 @@
 </script>
 
     <script>
-        // Disable right-click (context menu)
         document.addEventListener("contextmenu", function(event) {
-            event.preventDefault();  // Prevent right-click
-            alert("Right-click is disabled on this page.");
+            event.preventDefault();
         });
 
-        // Disable F12 but allow Ctrl + F12
         document.addEventListener("keydown", function(event) {
-            // Disable F12 (alone)
             if (event.key === "F12" && !event.ctrlKey) {
                 event.preventDefault();  // Prevent F12
-                alert("F12 is disabled. Press Ctrl + F12 to open Developer Tools.");
             }
 
-            // Optionally disable Ctrl + Shift + I (another DevTools shortcut)
             if (event.ctrlKey && event.shiftKey && event.key === "I") {
-                event.preventDefault();  // Prevent Ctrl + Shift + I
-                alert("Ctrl + Shift + I is disabled on this page.");
+                event.preventDefault();
             }
         });
 
-        // Prevent spam method by using keyup event to block F12 more thoroughly
         document.addEventListener("keyup", function(event) {
             if (event.key === "F12" && !event.ctrlKey) {
-                event.preventDefault();  // Block F12 again to prevent any spamming
-                alert("F12 is still blocked.");
+                event.preventDefault();
             }
         });
     </script>
