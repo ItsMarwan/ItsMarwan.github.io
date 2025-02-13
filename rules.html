@@ -203,10 +203,16 @@
 </script>
 
     <script>
-        // Disable right-click (context menu)
         document.addEventListener("contextmenu", function(event) {
             event.preventDefault();
             alert("Right-click is disabled on this page.");
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "F12") {
+                event.preventDefault();
+                alert("F12 (Developer Tools) is disabled on this page.");
+            }
         });
     </script>
     
