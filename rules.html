@@ -202,5 +202,13 @@
     });
 </script>
 
+    <script>
+        // Disable right-click (context menu)
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+            alert("Right-click is disabled on this page.");
+        });
+    </script>
+    
 </body>
 </html>
