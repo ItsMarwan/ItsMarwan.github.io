@@ -205,29 +205,29 @@
     <script>
         // Disable right-click (context menu)
         document.addEventListener("contextmenu", function(event) {
-            event.preventDefault();
+            event.preventDefault();  // Prevent right-click
             alert("Right-click is disabled on this page.");
         });
 
-        // Disable F12 key but allow Ctrl+F12
+        // Disable F12 but allow Ctrl + F12
         document.addEventListener("keydown", function(event) {
-            // Disable F12 key (alone)
+            // Disable F12 (alone)
             if (event.key === "F12" && !event.ctrlKey) {
-                event.preventDefault();  // Disable F12
-                alert("F12 (Developer Tools) is disabled on this page.");
+                event.preventDefault();  // Prevent F12
+                alert("F12 is disabled. Press Ctrl + F12 to open Developer Tools.");
             }
 
-            // Optionally, also disable Ctrl + Shift + I (DevTools shortcut)
+            // Optionally disable Ctrl + Shift + I (another DevTools shortcut)
             if (event.ctrlKey && event.shiftKey && event.key === "I") {
-                event.preventDefault();  // Disable Ctrl + Shift + I
-                alert("Ctrl + Shift + I (Developer Tools) is disabled on this page.");
+                event.preventDefault();  // Prevent Ctrl + Shift + I
+                alert("Ctrl + Shift + I is disabled on this page.");
             }
         });
 
-        // Optional: Block opening DevTools with F12 after key up (in case of spamming F12)
+        // Prevent spam method by using keyup event to block F12 more thoroughly
         document.addEventListener("keyup", function(event) {
             if (event.key === "F12" && !event.ctrlKey) {
-                event.preventDefault();
+                event.preventDefault();  // Block F12 again to prevent any spamming
                 alert("F12 is still blocked.");
             }
         });
