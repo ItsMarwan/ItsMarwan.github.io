@@ -8,11 +8,6 @@ RewriteRule ^ /%1 [L,R=301]
 RewriteCond %{REQUEST_URI} ^/files/(.*) [NC]
 RewriteRule ^files/(.*)$ /files/$1 [L]
 
-RewriteCond %{REQUEST_URI} ^/support/(.*) [NC]
-RewriteRule ^support(.*)$ https://buymeacoffee.com/itsmarwan/ [L]
+RewriteCond %{REQUEST_URI} ^/shop/external($|/)
+RewriteRule ^shop/external($|/) https://buymeacoffee.com/itsmarwan/extras [L,R=301]
 
-RewriteCond %{REQUEST_URI} ^/shop/external$
-RewriteRule ^shop/external$ https://buymeacoffee.com/itsmarwan/extras [L,R=301]
-
-RewriteCond %{REQUEST_URI} ^/youtube$
-RewriteRule ^support$ https://youtube.com/@itsmarwan. [L,R=301]
