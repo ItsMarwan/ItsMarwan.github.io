@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# If the request starts with /shop/external or /shop/external/anything, redirect to BuyMeACoffee
+RewriteRule ^shop/external(/.*)?$ https://buymeacoffee.com/itsmarwan/extras [L,R=301]
+
 # Remove .html from URLs (if needed)
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
 RewriteRule ^ /%1 [L,R=301]
@@ -7,7 +10,4 @@ RewriteRule ^ /%1 [L,R=301]
 # If the request starts with /files/ and has anything after it, serve that file
 RewriteCond %{REQUEST_URI} ^/files/(.*) [NC]
 RewriteRule ^files/(.*)$ /files/$1 [L]
-
-RewriteCond %{REQUEST_URI} ^/shop/external($|/)
-RewriteRule ^shop/external($|/) https://buymeacoffee.com/itsmarwan/extras [L,R=301]
 
