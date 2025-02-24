@@ -165,28 +165,5 @@
     }
  }
 </script>
-
-    <script>
-        document.addEventListener("contextmenu", function(event) {
-            event.preventDefault();
-        });
-
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "F12" && !event.ctrlKey) {
-                event.preventDefault();  // Prevent F12
-            }
-
-            if (event.ctrlKey && event.shiftKey && event.key === "I") {
-                event.preventDefault();
-            }
-        });
-
-        document.addEventListener("keyup", function(event) {
-            if (event.key === "F12" && !event.ctrlKey) {
-                event.preventDefault();
-            }
-        });
-    </script>
-    
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="itsmarwan" data-description="Support me on Buy me a coffee!" data-message="" data-color="#2D7EEA" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </html>
