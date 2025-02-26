@@ -30,9 +30,10 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-transparent">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="assets\menuIcon.svg" width="20px" height="20px" style="max-width: none !important;">
-    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenuIcon(this)">
+    <img id="menuIcon" src="assets/menuIcon.svg" width="20px" height="20px" style="max-width: none !important;">
+</button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 20px !important">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -119,6 +120,17 @@
             document.getElementById("shop").scrollIntoView({ behavior: "smooth" });
         }, 100);
     });
+</script>
+
+<script>
+function toggleMenuIcon(button) {
+    const img = button.querySelector("img");
+    if (img.src.includes("menuIcon.svg")) {
+        img.src = "assets/close.svg";
+    } else {
+        img.src = "assets/menuIcon.svg";
+    }
+}
 </script>
 </body>
 </html>
