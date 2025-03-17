@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="/assets/js/index.js"></script>
+    <script src="./js/index.js"></script>
     <title>Home - ItsMarwan.</title>
 </head>
 <body>
@@ -142,17 +142,5 @@
  $(window).on("load",function(){
   $(".overlay").fadeOut
  });
-</script>
-
-<script>
-function toggleMenuIcon(button) {
-    const img = button.querySelector("img");
-    if (img.src.includes("menuIcon.svg")) {
-        img.src = "/assets/close.svg";
-    } else {
-        img.src = "/assets/menuIcon.svg";
-    }
-}
-</script>
 </body>
 </html>
