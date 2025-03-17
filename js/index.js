@@ -8,7 +8,7 @@ function toggleMenuIcon(button) {
 }
 
 function youtube() {
-    const APIKey = 'AIzaSyDJwSN96hw_-N3P6FZ32cC1CeGQnMd2im4';
+    const APIKey = 'AIzaSyD3pyuVTBUJJ20nRHhCxa4AhD1VL4gcFuE';
     const Userid = 'UCsDUR3maxEMihNFGBKOmHLA';
     const subscriberCount= document.getElementById('subscriberCount');
     const viewCount = document.getElementById('viewCount');
