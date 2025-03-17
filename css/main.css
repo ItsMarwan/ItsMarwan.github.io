@@ -16,7 +16,7 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
+	background-color: ##1D1E28;
     padding: 70px 0;
 }
 .footer-col{
@@ -36,7 +36,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #e91e63;
+	background-color: #2D7EEA;
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
