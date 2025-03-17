@@ -26,6 +26,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/index.js"></script>
     <title>Server Rules - ItsMarwan.</title>
 </head>
 <body>
@@ -139,20 +140,20 @@
         <div class="cards">
             <div class="card statistic" style="width: 18rem;">
                 <div class="card-body">
-                    <p class="card-title" style="font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;">500+</h1>
-                    <p style="font-weight: bold !important;font-size: 20px !important;"><i class="fa-brands fa-youtube" style="color: #2D7EEA;"></i> SUBSCRIBERS</p>
+                    <p id="subscriberCount" class="card-title" style="font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;">
+                    </p><p style="font-weight: bold !important;font-size: 20px !important;"><i class="fa-brands fa-youtube" style="color: #2D7EEA;"></i> SUBSCRIBERS</p>
                 </div>
             </div>
             <div class="card statistic" style="width: 18rem;">
                 <div class="card-body">
-                    <p class="card-title" style="font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;">800+</h1>
-                    <p style="font-weight: bold !important;font-size: 20px !important;"><i class="fa-brands fa-discord" style="color: #2D7EEA;"></i> MEMBERS</p>
+                    <p id="memberCount" class="card-title" style="font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;">930
+                    </p><p style="font-weight: bold !important;font-size: 20px !important;"><i class="fa-brands fa-discord" style="color: #2D7EEA;"></i> MEMBERS</p>
                 </div>
             </div>
             <div class="card statistic" style="width: 18rem;">
                 <div class="card-body">
-                    <p class="card-title" style="font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;">45k+</h1>
-                    <p style="font-weight: bold !important;font-size: 20px !important;"><i class="fa-brands fa-youtube" style="color: #2D7EEA;"></i> VIEWS</p>
+                    <p id="viewCount" class="card-title" style="font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;">
+                    </p><p style="font-weight: bold !important;font-size: 20px !important;"><i class="fa-brands fa-youtube" style="color: #2D7EEA;"></i> VIEWS</p>
                 </div>
             </div>
         </div>
@@ -181,31 +182,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/now-ui-kit.min.js"></script>
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="itsmarwan" data-description="Support me on Buy me a coffee!" data-message="" data-color="#2D7EEA" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-
-<script>
-    document.querySelector(".navbar-toggler").addEventListener("click", function () {
-        const img = document.getElementById("menu-icon");
-
-        if (Math.random() > 100) { // 50% chance
-            img.src = "/assets/burger-solid.svg";
-
-            // Reset image back to normal after 5 seconds
-            setTimeout(() => {
-                img.src = "/assets/menuIcon.svg";
-            }, 5000);
-        }
-    });
-</script>
-
-<script>
-function toggleMenuIcon(button) {
-    const img = button.querySelector("img");
-    if (img.src.includes("menuIcon.svg")) {
-        img.src = "assets/close.svg";
-    } else {
-        img.src = "assets/menuIcon.svg";
-    }
-}
-</script>
 </body>
 </html>
