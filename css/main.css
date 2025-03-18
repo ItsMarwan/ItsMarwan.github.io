@@ -77,13 +77,13 @@ ul{
 
 /*responsive*/
 @media(max-width: 767px){
-  .footer-col{
+  .Lfooter-col{
     width: 50%;
     margin-bottom: 30px;
 }
 }
 @media(max-width: 574px){
-  .footer-col{
+  .Lfooter-col{
     width: 100%;
 }
 }
