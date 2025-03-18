@@ -11,3 +11,7 @@ RewriteRule ^ /%1 [L,R=301]
 RewriteCond %{REQUEST_URI} ^/files/(.*) [NC]
 RewriteRule ^files/(.*)$ /files/$1 [L]
 
+Redirect /home /index.html
+Redirect /support https://buymeacoffee.com/itsmarwan
+Redirect /discord https://discord.gg/Fwd9MgB8Ww
+
