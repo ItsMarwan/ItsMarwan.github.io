@@ -306,7 +306,6 @@ body {
 
 .statistics .card-body{
     padding: 0 !important;
-    width: 332 !important;
     max-height: 280 !important;
     max-width: 332 !important;
 }
