@@ -1,0 +1,388 @@
+.footer.Lfooter{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.Lfooter{
+	background-color: #2a2a2a;
+	padding: 70px 0;
+}
+.Lfooter-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.Lfooter-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.Lfooter-col h4::before{
+	content: '';
+	position: absolute;
+
+	bottom: -10px;
+	background-color: #2D7EEA;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.Lfooter-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.Lfooter-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.Lfooter-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.Lfooter-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.Lfooter-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .Lfooter-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .Lfooter-col{
+    width: 100%;
+}
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #292933;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D7EEA; 
+  border-radius: 10px;
+}
+
+.fa {
+    text-shadow: 0px 0px 10px #1D1E28; /* No offset, just blur */
+}
+
+.overlay {
+ position: fixed;
+ width: 100%;
+ length: 100%;
+ display: flex;
+ top: 0;
+ left: 0;
+ background-color: #1D1E28;
+ z-index: 20;
+ algin-items: center;
+ justify-content: center;
+}
+
+.spinner-icon {
+ font-size: 60px
+}
+
+.fa-spin {
+ animation-iteration-count: infinite;
+}
+
+#reviews {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, outline 0.3s ease-out;
+    outline: 3px solid transparent; /* Completely invisible initially */
+    border-radius: 10px;
+}
+
+.collapsible {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  font-family: 'Poppins', sans-serif !important;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: max-height 0.2s ease-out;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #1f1f1f;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.nav-link {
+     font-size: 14px !important;
+     background: transparent !important;
+     font-family: Lato, sans-serif !important;
+     text-transform: capitalize !important;
+ }
+ .nav-link:hover {
+     background: transparent !important;
+     color: #2D7EEA !important;
+ }
+
+ .login-btn {
+     border: 2px solid #2D7EEA !important;
+     font-size: 10px !important;
+ }
+ .login-btn:hover {
+     background: #2D7EEA !important;
+ }
+.navbar {
+    border-top: 6px #2D7EEA solid !important;
+    position: fixed; /* Fixes the nav to the top of the screen */
+    top: 0; /* Makes sure it's at the top */
+    left: 0; /* Aligns the nav to the left of the screen */
+    width: 100%; /* Makes the nav full-width */
+    z-index: 1000; /* Ensures the nav stays on top of other content */
+    border-radius: 0 0 20px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-size: 25px !important;
+}
+
+.navbar-toggler-icon {
+    color: #fff !important;
+}
+
+.btn {
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+}
+
+.btn-primary {
+    background-color: #2D7EEA!important;
+}
+.btn-secondary {
+    background-color: #2C2F33 !important;
+}
+.btn-secondary2 {
+    background-color: #2C2F33 !important;
+}
+.heading {
+    padding: 160px 50px !important;
+    color: #fff !important;
+    background-image: url("../assets/wavy-purple-by-nouridio.svg") !important;
+    background-position: bottom !important;
+    background-size: 300% !important;
+    background-repeat: no-repeat !important;
+}
+
+.title {
+    margin-top: 0px !important;
+    line-height: 90px !important;
+    margin-bottom: -2px !important;
+    font-size: 36px !important;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.685) !important;
+    font-size: 16px !important;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.features {
+    text-align: center !important;
+    background: #2D7EEA !important;
+    padding: 60px 50px !important;
+    background-image: url("../assets/wavy-dark-by-nouridio.svg") !important;
+    background-position: bottom !important;
+    background-size: 200% !important;
+    background-repeat: no-repeat !important;
+}
+.features .title {
+    font-size: 40px !important;
+    color: #ffffff !important;
+    line-height: 70px !important;
+}
+
+.features .subtitle {
+    font-size: 20px !important;
+    color: #a2a8bd;
+}
+
+.features .card-body {
+    text-align: left !important;
+}
+
+.features .card-title {
+    margin: 0 0 -3px !important;
+}
+.cards {
+    margin-top: 30px !important;
+}
+
+.card {
+    border-radius: 5px !important;
+    box-shadow: none !important;
+}
+
+.card-title {
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    color: #2D7EEA !important;
+}
+
+.statistics {
+    text-align: center !important;
+    padding-top: 150px !important;
+}
+
+.statistics .card-body{
+    padding: 0 !important;
+    max-height: 280 !important;
+    max-width: 332 !important;
+}
+
+.statistics .title {
+    font-size: 40px !important;
+    color: #ffffff !important;
+    line-height: 70px !important;
+}
+
+.statistics .subtitle {
+    font-size: 20px !important;
+    color: #a2a8bd;
+}
+
+.card.statistic {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #f7f7f7 !important;
+}
+
+
+.page_end {
+    background-image: url("../assets/wavy-light-by-nouridio.svg") !important;
+    background-position: bottom !important;
+    background-size: 200% !important;
+    background-repeat: no-repeat !important;
+}
+.start {
+    padding: 60px 50px !important
+}
+
+.start .card {
+    background: transparent !important;
+    color: #f6f9ff !important;
+}
+
+.features .card {
+    background: #1D1E28;
+    border-radius: 22px !important;
+    border: 4px solid #2D7EEA;
+}
+
+.features .card-text {
+color: rgba(255, 255, 255, 0.46) !important
+}
+
+.features .card-body {
+    padding: 40px 40px 40px 30px !important;
+}
+
+.navbar-toggler-icon {
+    color: #fff !important
+}
+.footer {
+    text-align: center !important;
+    padding: 5px 6px !important;
+    color: #ecf2ff;
+    padding: 30px 30px !important
+}
+
+.footer .nouridio {
+    font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 5px !important;
+    letter-spacing: 0.15em !important;
+    font-variant: small-caps !important;
+}
+
+.footer .nouridio a {
+    color:  #2D7EEA!important;
+    text-decoration: none !important;
+}
+
+.footer .bot-footer {
+    text-align: center !important;
+    color: #a2a8bd !important
+}
