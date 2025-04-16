@@ -56,7 +56,7 @@
 </nav>
   
 <div class="heading" style="margin: auto; text-align: center;">
-    <h1 class="display-5 title" style="font-size: 100px !important;">404</h1>
+    <h1 id="pageinfo" class="display-5 title" style="font-size: 100px !important;">404</h1>
     <p class="subtitle">Page Not Found/Invalid! Please Check That The Page URL That You Provided Is Valid.</p>
     <a class="btn btn-primary btn-lg" href="/" target="_blank" role="button"><i class="fa-solid fa-house"></i> Return Home</a>
     <a class="btn btn-secondary btn-lg" href="https://discord.com/invite/Fwd9MgB8Ww" target="_blank" role="button"><i class="fa-brands fa-discord"></i> Discord Server</a>
@@ -124,13 +124,29 @@
     </div>
 
     <script>
+  const heading = document.getElementById("pageinfo");
   if (window.location.pathname === "/home") {
+    document.body.style.overflow = "hidden";
+    pageinfo.innerText = "Redirecting";
+    pageinfo.style.fontSize = "50px";
     window.location.replace("/");
+      
   } else if (window.location.pathname === "/support") {
+    document.body.style.overflow = "hidden";
+    pageinfo.innerText = "Redirecting";
+    pageinfo.style.fontSize = "50px";
     window.location.replace("https://buymeacoffee.com/itsmarwan");
+      
   } else if (window.location.pathname === "/discord") {
+    document.body.style.overflow = "hidden";
+    pageinfo.innerText = "Redirecting";
+    pageinfo.style.fontSize = "50px";
     window.location.replace("https://discord.gg/Fwd9MgB8Ww");
+      
   } else if (window.location.pathname === "/external-shop") {
+    document.body.style.overflow = "hidden";
+    pageinfo.innerText = "Redirecting";
+    pageinfo.style.fontSize = "50px";
     window.location.replace("https://buymeacoffee.com/itsmarwan/extras");
   }
 </script>
