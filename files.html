@@ -211,11 +211,27 @@
     
 </div>
 
-     <div class="reviews-section">
-    <a href="javascript:void(0);" class="btn btn-primary btn-lg collapsible2" 
-       style="border-radius: 10px; background-color: #2D7EEA; font-family: 'Poppins', sans-serif !important; font-weight: bold;" 
-       id="reviewsBtn"><i class="fa-solid fa-user-group"></i> SEE REVIEWS</a>
-</div>
+    <div class="reviews-section">
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://itsmarwan.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
 <div class="content" id="reviews" 
      style="background-color: #1E1E28; font-family: 'Poppins' !important; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; border-radius: 10px;">
