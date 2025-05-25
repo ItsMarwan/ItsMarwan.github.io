@@ -57,7 +57,7 @@
   
 <div class="heading" style="margin: auto; text-align: center;">
     <h1 id="pageinfo" class="display-5 title" style="font-size: 100px !important;">404</h1>
-    <p class="subtitle">Page Not Found/Invalid! Please Check That The Page URL That You Provided Is Valid.</p>
+    <p id="pagesub" class="subtitle">Page Not Found/Invalid! Please Check That The Page URL That You Provided Is Valid.</p>
     <a class="btn btn-primary btn-lg" href="/" target="_blank" role="button"><i class="fa-solid fa-house"></i> Return Home</a>
     <a class="btn btn-secondary btn-lg" href="https://discord.com/invite/Fwd9MgB8Ww" target="_blank" role="button"><i class="fa-brands fa-discord"></i> Discord Server</a>
     <a class="btn btn-secondary2 btn-lg" href="https://buymeacoffee.com/itsmarwan" target="_blank" role="button"><i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 3s;"></i> Support My Work</a>
@@ -160,7 +160,8 @@
   const index = url.indexOf("password?=");
   if (index !== -1) {
     const value = url.substring(index + "password?=".length);
-
+    document.title = "Password Page!";
+    pageinfo.innerText = "You Found a Password! Congrats!";
     document.getElementById("pageinfo").textContent = value;
   }
 </script>
