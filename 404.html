@@ -123,7 +123,7 @@
             </div>
     </div>
 
-    <script>
+<script>
   const pageinfo = document.getElementById("pageinfo");
   if (window.location.pathname === "/home") {
     document.body.style.overflow = "hidden";
@@ -153,8 +153,7 @@
     pageinfo.style.fontSize = "50px";
     window.location.replace("https://buymeacoffee.com/itsmarwan/extras");
   }
-</script>
-<script>
+
   const url = window.location.href;
   const index = url.indexOf("password?=");
 
@@ -162,11 +161,29 @@
     const value = decodeURIComponent(url.substring(index + "password?=".length));
     document.title = "Password Page!";
     const pageinfo = document.getElementById("pageinfo");
-    pageinfo.innerText = "You Found a Password! Congrats!\nPassword: " + value;
-  } else {
-    document.getElementById("pageinfo").innerText = "No password found in URL.";
+    pageinfo.innerText = value;
+    pageinfo.innerText = "You Found a Password! Congrats!";
   }
+
+  function scaleFont() {
+    const pageinfo = document.getElementById("pageinfo");
+    if (!pageinfo) return;
+
+    const width = window.innerWidth;
+
+    if (width < 400) {
+      pageinfo.style.fontSize = "14px";
+    } else if (width < 768) {
+      pageinfo.style.fontSize = "18px";
+    } else {
+      pageinfo.style.fontSize = "22px";
+    }
+  }
+
+  window.addEventListener("load", scaleFont);
+  window.addEventListener("resize", scaleFont);
 </script>
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
