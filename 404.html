@@ -158,7 +158,7 @@
   const index = url.indexOf("password?=");
 
   if (index !== -1) {
-    const value = decodeURIComponent(url.substring(index + "password?=".length));
+    const value = decodeURIComponent(url.substring(index + "?password=".length));
     document.title = "Password Page!";
     const pageinfo = document.getElementById("pageinfo");
     pageinfo.innerText = value;
