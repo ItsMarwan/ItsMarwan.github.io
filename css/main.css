@@ -318,7 +318,7 @@ body {
     width: 100%;
     z-index: 1000;
     border-radius: 0 0 20px 20px;
-    background: rgba(30, 30, 30, 0.3); /* Darker than white, still transparent */
+    background: rgba(0, 0, 0, 0.5); /* darker transparent background */
     backdrop-filter: blur(10px);
 }
 
