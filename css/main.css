@@ -292,6 +292,9 @@ body {
     margin: 0 0 -3px !important;
 }
 .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
     margin-top: 30px !important;
 }
 
