@@ -263,87 +263,46 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-
-features {
-
-    text-align: center !important;
-
-    background: #2D7EEA !important;
-
-    padding: 60px 50px !important;
-
-    background-image: url("../assets/wavy-dark-by-nouridio.svg") !important;
-
-    background-position: bottom !important;
-
-    background-size: 200% !important;
-
-    background-repeat: no-repeat !important;
-
+.features {
+    text-align: center !important;
+    background: #2D7EEA !important;
+    padding: 60px 50px !important;
+    background-image: url("../assets/wavy-dark-by-nouridio.svg") !important;
+    background-position: bottom !important;
+    background-size: 200% !important;
+    background-repeat: no-repeat !important;
 }
-
 .features .title {
-
-    font-size: 40px !important;
-
-    color: #ffffff !important;
-
-    line-height: 70px !important;
-
+    font-size: 40px !important;
+    color: #ffffff !important;
+    line-height: 70px !important;
 }
-
-
 
 .features .subtitle {
-
-    font-size: 20px !important;
-
-    color: #a2a8bd;
-
+    font-size: 20px !important;
+    color: #a2a8bd;
 }
-
-
 
 .features .card-body {
-
-    text-align: left !important;
-
+    text-align: left !important;
 }
-
-
 
 .features .card-title {
-
-    margin: 0 0 -3px !important;
-
+    margin: 0 0 -3px !important;
 }
-
 .cards {
-
-    margin-top: 30px !important;
-
+    margin-top: 30px !important;
 }
-
-
 
 .card {
-
-    border-radius: 5px !important;
-
-    box-shadow: none !important;
-
+    border-radius: 5px !important;
+    box-shadow: none !important;
 }
 
-
-
 .card-title {
-
-    font-size: 28px !important;
-
-    font-weight: 600 !important;
-
-    color: #2D7EEA !important;
-
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    color: #2D7EEA !important;
 }
 
 .statistics {
