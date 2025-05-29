@@ -119,44 +119,14 @@
         }, 100);
     });
 </script>
-<footer class="Lfooter">
-  	 <div class="container">
-  	 	<div class="row">
-  	 		<div class="Lfooter-col">
-  	 			<h4>GET IN CONTACT</h4>
-  	 			<ul style="padding: 0px 0px 0px;">
-  	 				<li><a href="https://discord.com/users/999407143646142514">Discord Profile</a></li>
-  	 				<li><a href="https://discord.com/invite/Fwd9MgB8Ww">Discord Server</a></li>
-  	 				<li><a href="mailto:itsmarwanuefn@gmail.com">Email Me</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="Lfooter-col">
-  	 			<h4>SITE PAGES</h4>
-  	 			<ul style="padding: 0px 0px 0px;">
-  	 				<li><a href="/">Home</a></li>
-  	 				<li><a href="/files">Project Files</a></li>
-  	 				<li><a href="/rules">Lobby Rules</a></li>
-  	 				<li><a href="/shop">Integrated Shop</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="Lfooter-col">
-  	 			<h4>IMPORTANT LINKS</h4>
-  	 			<ul style="padding: 0px 0px 0px;">
-  	 				<li><a href="https://youtube.com/@itsmarwan.">Youtube</a></li>
-  	 				<li><a href="https://discord.com/invite/Fwd9MgB8Ww">Discord</a></li>
-  	 				<li><a href="https://buymeacoffee.com/itsmarwan/extras">External Shop</a></li>
-  	 				<li><a href="https://buymeacoffee.com/itsmarwan/">Support Page</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="Lfooter-col">
-  	 			<h4>SOCIAL MEDIA</h4>
-  	 			<div class="social-links">
-  	 				<a href="https://discord.com/invite/Fwd9MgB8Ww"><i class="fab fa-discord" style="line-height: 40px;"></i></a>
-  	 				<a href="https://youtube.com/@itsmarwan."><i class="fab fa-youtube" style="line-height: 40px;"></i></a>
-  	 				<a href="https://www.tiktok.com/@itsmarwan.yt"><i class="fab fa-tiktok" style="line-height: 40px;"></i></a>
-  	 				<a href="https://x.com/ItsMarwanYT"><i class="fab fa-x-twitter" style="line-height: 40px;"></i></a>
-  	 			</div>
-  	 		</div>
-  	 	</div>
-  </footer></body></html>
+<div id="footer"></div>
+
+<script>
+  fetch("/Repeated/Footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</body></html>
 
