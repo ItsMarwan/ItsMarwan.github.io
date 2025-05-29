@@ -70,28 +70,7 @@
  <iframe src="https://buymeacoffee.com/itsmarwan/extras" height="800px" allowpaymentrequest="true" width="100%" z-index="9999" allowfullscreen="true" style="border: 2px solid rgb(30, 30,40); background-color: rgb(30, 30,40); box-shadow: 0 0 20px 0px rgb(30, 30,40); font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;    border-radius: 10px !important;">Your Browser Doesnt Support IFrames :'(</iframe>
  <a class="btn btn-secondary btn-lg" href="https://buymeacoffee.com/itsmarwan/extras" target="_blank" role="button"><i class="fa-solid fa-arrow-up-right-from-square"></i> External Shop</a>
 </div>
-<div class="statistics">
-        <div class="cards">
-            <div class="card statistic" style="width: 18rem;">
-                <div class="card-body">
-                    <p id="subscriberCount" class="card-title" style="font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;">
-                    </p><p style="font-weight: bold !important;font-size: 20px !important;"><i class="fa-brands fa-youtube" style="color: #2D7EEA;"></i> SUBSCRIBERS</p>
-                </div>
-            </div>
-            <div class="card statistic" style="width: 18rem;">
-                <div class="card-body">
-                    <p id="memberCount" class="card-title" style="font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;">930
-                    </p><p style="font-weight: bold !important;font-size: 20px !important;"><i class="fa-brands fa-discord" style="color: #2D7EEA;"></i> MEMBERS</p>
-                </div>
-            </div>
-            <div class="card statistic" style="width: 18rem;">
-                <div class="card-body">
-                    <p id="viewCount" class="card-title" style="font-size: 50px !important;line-height: 15px !important;letter-spacing: -0.06em !important;font-weight: bold !important;">
-                    </p><p style="font-weight: bold !important;font-size: 20px !important;"><i class="fa-brands fa-youtube" style="color: #2D7EEA;"></i> VIEWS</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<div id="counter"></div>
     <div class="page_end">
         <div class="start">
             <div class="card">
@@ -126,6 +105,11 @@
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
+    });
+  fetch("/Repeated/Counter.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("counter").innerHTML = data;
     });
 </script>
 </body></html>
