@@ -10,26 +10,26 @@ function toggleMenuIcon(button) {
 function youtube() {
     const APIKey = 'AIzaSyD3pyuVTBUJJ20nRHhCxa4AhD1VL4gcFuE';
     const Userid = 'UCsDUR3maxEMihNFGBKOmHLA';
-    const subscriberCount= document.getElementById('subscriberCount');
+    
+    const subscriberCount = document.getElementById('subscriberCount');
     const viewCount = document.getElementById('viewCount');
     const videoCount = document.getElementById('videoCount');
 
-    let getdata = () => {
-        fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${Userid}&key=${APIKey}`)
-        .then(response => {
-            return response.json()
-        })
+    fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${Userid}&key=${APIKey}`)
+        .then(response => response.json())
         .then(data => {
-            console.log(data);
-            subscriberCount.innerHTML = data["items"][0].statistics.subscriberCount;
-            viewCount.innerHTML = data["items"][0].statistics.viewCount;
-            videoCount.innerHTML = data["items"][0].statistics.videoCount;
-            
-        })
-    }
-    getdata();
+            const stats = data.items[0].statistics;
+
+            if (subscriberCount) {
+                subscriberCount.innerHTML = stats.subscriberCount;
+            }
+            if (viewCount) {
+                viewCount.innerHTML = stats.viewCount;
+            }
+            if (videoCount) {
+                videoCount.innerHTML = stats.videoCount;
+            }
+        });
 }
 
-window.onload = function() {
-    youtube();
-};
+window.onload = youtube;
