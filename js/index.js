@@ -31,5 +31,3 @@ function youtube() {
             }
         });
 }
-
-window.onload = youtube;
