@@ -1,0 +1,376 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #04081b;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Subtle animated background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, #081030 0%, #04081b 100%);
+    animation: pulse-bg 10s infinite alternate;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#carousel-dots {
+    /* This creates a fixed-size viewing window for the dots */
+    overflow: hidden; 
+    /* This prevents a long row of dots from pushing other elements around */
+    white-space: nowrap; 
+}
+
+@keyframes pulse-bg {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Hero section animations */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0; 
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+/* Card hover and skill bar animations */
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 229, 255, 0.1), 0 4px 6px rgba(0, 229, 255, 0.05);
+}
+
+.skill-bar-inner {
+    background: linear-gradient(90deg, #00b4ff, #0072ff);
+    animation: fill-bar 1.5s ease-out forwards;
+}
+
+@keyframes fill-bar {
+    from {
+        width: 0;
+    }
+}
+
+/* Explore Button animation */
+.explore-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+.explore-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+}
+.explore-btn:hover::before {
+    transform: translateX(100%);
+}
+
+/* Button color transition for pop effect */
+.button-pop {
+    background: linear-gradient(90deg, #00e5ff, #00b4ff);
+}
+.button-pop:hover {
+    background: linear-gradient(90deg, #00b4ff, #0072ff);
+}
+
+/* General styles */
+.text-neon {
+    color: #00e5ff;
+}
+.card {
+    background-color: #0f172a;
+    transition: all 0.3s ease-in-out;
+}
+.glass-bg {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Navbar link hover effect */
+.nav-link {
+    position: relative;
+    transition: color 0.3s;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #00e5ff;
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Carousel styles */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.carousel-slide {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+    width: 0;
+    background: linear-gradient(90deg, #00b4ff, #0072ff);
+    transition: width 0.1s linear;
+}
+
+/* Footer social link hover effects */
+.footer-link {
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+
+.footer-link:hover {
+    transform: scale(1.05);
+}
+
+.footer-link.discord:hover {
+    color: #5865F2;
+    text-shadow: 0 0 8px #5865F2;
+}
+.footer-link.twitter:hover {
+    color: #1DA1F2;
+    text-shadow: 0 0 8px #1DA1F2;
+}
+.footer-link.youtube:hover {
+    color: #FF0000;
+    text-shadow: 0 0 8px #FF0000;
+}
+.footer-link.github:hover {
+    color: #E8E8E8;
+    text-shadow: 0 0 8px #E8E8E8;
+}
+.footer-link.email:hover {
+    color: #00e5ff;
+    text-shadow: 0 0 8px #00e5ff;
+}
+.footer-link.linkedin:hover {
+    color: #0A66C2;
+    text-shadow: 0 0 8px #0A66C2;
+}
+
+/* Quick link hover effect with a glow */
+.footer-link.quick-link:hover span {
+    color: #00e5ff;
+    text-shadow: 0 0 8px #00e5ff;
+}
+
+/* Custom styles for the name pop effect */
+.name-pop {
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
+    animation: pulse-name 2s infinite ease-in-out;
+}
+
+@keyframes pulse-name {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(0, 229, 255, 1), 0 0 30px rgba(0, 229, 255, 0.6);
+    }
+}
+
+/* Go to top button animations */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.back-to-top-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Discord image parallax effect */
+.parallax-bg {
+    transition: transform 0.2s ease-out;
+}
+
+/* Discord section layout for mobile and desktop */
+@media (max-width: 767px) {
+    .discord-flex {
+        flex-direction: column;
+    }
+    .discord-image-order {
+        order: -1;
+    }
+}
+
+/* --- Mobile Specific Styles --- */
+@media (max-width: 768px) {
+    /* Mobile Navbar Improvements */
+    .mobile-menu {
+        transition: transform 0.3s ease-out;
+        transform: translateY(-100%);
+    }
+
+    .mobile-menu.active {
+        transform: translateY(0);
+    }
+
+    .mobile-nav-link {
+        transition: background-color 0.3s ease-in-out;
+    }
+    .mobile-nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Refresh button styling for mobile */
+    .refresh-btn {
+        transition: all 0.3s ease-in-out;
+        transform-origin: center;
+    }
+    .refresh-btn:hover {
+        transform: rotate(360deg) scale(1.1);
+        color: #00e5ff;
+    }
+
+    /* Adjust font sizes and spacing for a better mobile experience */
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .explore-btn,
+    .support-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-item {
+        margin-bottom: 2rem;
+    }
+}
+
+#shop-container #shop-modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+#shop-container #shop-modal.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#shop-container #shop-modal-content {
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+}
+
+#shop-container #shop-modal.visible #shop-modal-content {
+    transform: scale(1);
+}
+
+#shop-container .shop-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+#shop-container .shop-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#shop-container .shop-btn.bmc {
+    background-color: #ffffff;
+    color: #0d0d0d;
+}
+#shop-container .shop-btn.bmc:hover {
+    background-color: #dfdfdf;
+    border-color: #dadada;
+}
+
+#shop-container .shop-btn.patreon {
+    background-color: #000000;
+    color: #fff;
+}
+#shop-container .shop-btn.patreon:hover {
+    background-color: #0c0c0c;
+    border-color: #111111;
+}
+.shop-btn .shop-icon {
+    width: 20px;       /* Matches Patreon’s icon size */
+    height: 20px;      /* Keep it square */
+    object-fit: contain; /* Ensures no stretching */
+    margin-right: 8px;  /* Spacing between icon and text */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.filter-btn{
+    transform: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+    background: linear-gradient(90deg, #1c2535, #0f172a);
+    border: 2px solid #1c293d;
+}
+
+/* Active filter button style */
+.filter-btn.active-filter {
+    transform: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+    background: linear-gradient(90deg, #00b4ff, #0072ff);
+    color: #fff;
+    transform: scale(1.05);
+}
