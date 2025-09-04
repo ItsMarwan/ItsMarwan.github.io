@@ -259,7 +259,7 @@ const projectsData = [{
     title: 'FULL Health Bar Customizable',
     description: 'Complete health bar system with managers and bars included. Fully customizable and ready to use.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-07-31/1/163104_Logopit_1753979075823.jpg@1200w_0e.jpg',
-    price: '€15.00',
+    price: '847.95£ (€15.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/441215',
         patreon: 'https://www.patreon.com/posts/138063553'
@@ -269,7 +269,7 @@ const projectsData = [{
     title: 'Health Bar Customizable',
     description: 'Customizable health bars from the demo video. Does not include the health managers for control.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-07-31/1/163104_Logopit_1753979075823.jpg@1200w_0e.jpg',
-    price: '€10.00',
+    price: '565.30£ (€10.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/441225',
         patreon: 'https://www.patreon.com/posts/138063305'
@@ -279,7 +279,7 @@ const projectsData = [{
     title: '[Skeleton] UEFN Wallhacks VFX',
     description: 'Custom VFX designed for UEFN. Fully safe and visual only. No cheats or real wallhacks are included.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-07-06/1/201118_Logopit_1751832454519.jpg@1200w_0e.jpg',
-    price: '€10.00',
+    price: '565.30£ (€10.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/429192',
         patreon: 'https://www.patreon.com/posts/135722355'
@@ -289,7 +289,7 @@ const projectsData = [{
     title: 'XP Custom Collectables V3',
     description: 'Revamped XP collectables with better meshes, animations, and emissive effects. Easy setup, no edits.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-06-15/1/195356_Screenshot_20250615_224307.png@1200w_0e.png',
-    price: '€10.00',
+    price: '565.30£ (€10.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/364541',
         patreon: 'https://www.patreon.com/posts/135722486'
@@ -299,7 +299,7 @@ const projectsData = [{
     title: '[Rectangle] UEFN Wallhacks VFX',
     description: 'High-quality visual wallhack VFX for UEFN. Safe, customizable, and 100% cheat-free implementation.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-04-13/1/200049_1000030524.jpg@1200w_0e.jpg',
-    price: '€9.00',
+    price: '508.77£ (€9.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/396983',
         patreon: 'https://www.patreon.com/posts/rectangle-uefn-135727168?'
@@ -309,7 +309,7 @@ const projectsData = [{
     title: 'XP Overlay For Tiktok Videos',
     description: 'Custom XP overlay effect for TikTok videos. Features emissive visuals, smooth animations, and setup.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-06-07/1/205633_Screenshot_20250607_232837.png@1200w_0e.png',
-    price: '€10.00',
+    price: '565.30£ (€10.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/418811',
         patreon: 'https://www.patreon.com/posts/135722571'
@@ -319,7 +319,7 @@ const projectsData = [{
     title: 'Custom Emoji Heads',
     description: 'Emoji head assets in .UASSET format. Import easily into your UEFN project directly via explorer.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-03-26/1/222556_Screenshot_20250327_002227.png@1200w_0e.png',
-    price: '€10.00',
+    price: '565.30£ (€10.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/390543',
         patreon: 'https://www.patreon.com/posts/135726641'
@@ -329,7 +329,7 @@ const projectsData = [{
     title: 'Pre-Made KICKS',
     description: 'Custom kick assets for 1v1 or FFA maps. Unique sizes included, with options for personal requests.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-01-31/1/195623_Screenshot_20250131_215433.png@1200w_0e.png',
-    price: '€9.00',
+    price: '508.77£ (€9.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/366747',
         patreon: 'https://www.patreon.com/posts/135725777'
@@ -339,7 +339,7 @@ const projectsData = [{
     title: 'Ultimate Brainrot Pack',
     description: 'Bundle of 11 cursed 3D memes, sounds, and UEFN assets. Perfect for fun, chaos, and wild creativity.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-05-01/1/131346_Screenshot_20250501_161019.png@1200w_0e.png',
-    price: '€8.00',
+    price: '452.24£ (€8.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/403585',
         patreon: 'https://www.patreon.com/posts/135726860'
@@ -349,7 +349,7 @@ const projectsData = [{
     title: 'Pre-Made Backblings',
     description: 'Pre-made custom backblings for your maps. Includes tutorial to create your own personalized designs.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-03-06/1/143913_1000029409.png@1200w_0e.png',
-    price: '€8.00',
+    price: '452.24£ (€8.00)',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/382560',
         patreon: 'https://www.patreon.com/c/itsmarwan'
@@ -359,7 +359,7 @@ const projectsData = [{
     title: 'Crown 3D Model',
     description: 'Crown 3D Model I Used In The "How To Make a Leaderboard" Video Which includes The Niagara System and the 3D Model!',
     image: 'https://i.ytimg.com/vi/FNPTE6Jewew/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCWpzNtaeIfFMEBIkCccFtng7Higw',
-    price: '€0.00',
+    price: '0.00£ (€0.00)',
     downloadLink: 'https://sub2unlock.io/osQSb',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/382560',
@@ -370,7 +370,7 @@ const projectsData = [{
     title: 'Pickaxe Manager',
     description: 'Verse Code I Used To Fix The Clipping Of Pickaxes In The Weapons!',
     image: 'https://i.ytimg.com/vi/RRwGqAWyAqY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAngzYgGNIp9OIiJXNuh4F7Mb07DQ',
-    price: '€0.00',
+    price: '0.00£ (€0.00)',
     downloadLink: 'https://sub2unlock.io/3M8NB',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/382560',
@@ -381,7 +381,7 @@ const projectsData = [{
     title: 'Custom Car',
     description: 'The Custom Car Verse i Used In My Video (credit @frozenpawn for the verse)!',
     image: 'https://i.ytimg.com/vi/zwIcbON_UsU/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBmjPaMvsGE4Je6bbY-jM1AKE-_1A',
-    price: '€0.00',
+    price: '0.00£ (€0.00)',
     downloadLink: 'https://sub2unlock.io/5OHhe',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/382560',
@@ -390,20 +390,34 @@ const projectsData = [{
     tags: ['Verse', 'Assets' , 'Free']
 }];
 
+// New global state variables for pagination
+const PRODUCTS_PER_PAGE = 6;
+let currentPage = 0;
+let filteredProjects = [];
 
 // --- Projects Page Functions ---
-function renderProjects() {
+function renderProjects(projectsToRender, append = false) {
     const projectsGrid = document.getElementById('projects-grid');
     if (!projectsGrid) return;
     
-    projectsGrid.innerHTML = '';
+    // Clear the grid only if not appending
+    if (!append) {
+        projectsGrid.innerHTML = '';
+    }
 
-    projectsData.forEach(project => {
-        const isFree = !project.price || project.price === '€0.00';
+    const startIndex = currentPage * PRODUCTS_PER_PAGE;
+    const endIndex = startIndex + PRODUCTS_PER_PAGE;
+    const projectsToDisplay = projectsToRender.slice(startIndex, endIndex);
+
+    projectsToDisplay.forEach(project => {
+        const isFree = !project.price || project.price === '0.00£ (€0.00)';
 
         const projectCard = document.createElement('div');
         projectCard.classList.add('card', 'card-hover', 'rounded-xl', 'shadow-lg', 'border', 'border-gray-700', 'overflow-hidden', 'flex', 'flex-col');
         projectCard.setAttribute('data-tags', project.tags.join(','));
+        // Add a data attribute for search filtering
+        projectCard.setAttribute('data-search-terms', `${project.title.toLowerCase()} ${project.description.toLowerCase()} ${project.tags.join(' ').toLowerCase()}`);
+
 
         const buttonHtml = isFree ? 
             `<a href="${project.downloadLink || '#'}" class="inline-block px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300" target="_blank" rel="noopener noreferrer">Download</a>` :
@@ -428,27 +442,70 @@ function renderProjects() {
     });
 }
 
+function updateLoadMoreButtonState() {
+    const loadMoreBtnContainer = document.getElementById('load-more-container');
+    if (!loadMoreBtnContainer) return;
+    
+    // Check if there are more products to load
+    const hasMoreProducts = (currentPage + 1) * PRODUCTS_PER_PAGE < filteredProjects.length;
+    
+    if (hasMoreProducts) {
+        loadMoreBtnContainer.style.display = 'block';
+    } else {
+        loadMoreBtnContainer.style.display = 'none';
+    }
+}
+
 function initializeProjectFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectsGrid = document.getElementById('projects-grid');
+    const searchInput = document.getElementById('search-input');
+    const loadMoreBtn = document.getElementById('load-more-btn');
 
-    if (!filterButtons.length || !projectsGrid) return;
+    if (!filterButtons.length || !searchInput) return;
+
+    // Filter and search logic combined in a single function
+    const applyFiltersAndSearch = () => {
+        const activeFilter = document.querySelector('.filter-btn.active-filter')?.dataset.filter || 'all';
+        const searchTerm = searchInput.value.toLowerCase().trim();
+
+        // 1. Filter the projectsData array based on active filter and search term
+        filteredProjects = projectsData.filter(project => {
+            const tags = project.tags;
+            const searchTerms = `${project.title.toLowerCase()} ${project.description.toLowerCase()} ${tags.join(' ').toLowerCase()}`;
+            
+            const isFilterMatch = activeFilter === 'all' || tags.includes(activeFilter);
+            const isSearchMatch = searchTerms.includes(searchTerm);
+            
+            return isFilterMatch && isSearchMatch;
+        });
+
+        // 2. Reset the page and render the filtered results
+        currentPage = 0;
+        renderProjects(filteredProjects);
+        updateLoadMoreButtonState();
+    };
+    
+    // Handle "Load More" button click
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            currentPage++;
+            renderProjects(filteredProjects, true); // Pass `true` to append
+            updateLoadMoreButtonState();
+        });
+    }
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             filterButtons.forEach(btn => btn.classList.remove('active-filter'));
             button.classList.add('active-filter');
-            
-            const filter = button.dataset.filter;
-            const projectCards = projectsGrid.querySelectorAll('.card');
-
-            projectCards.forEach(card => {
-                const tags = card.dataset.tags.split(',');
-                card.style.display = (filter === 'all' || tags.includes(filter)) ? 'flex' : 'none';
-            });
+            applyFiltersAndSearch();
         });
     });
-    
+
+    // Event listener for the search input
+    searchInput.addEventListener('input', applyFiltersAndSearch);
+
+    // Initial call to set up the display
     document.querySelector('.filter-btn[data-filter="all"]')?.click();
 }
 
@@ -594,7 +651,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchRatingsAndInitialize();
     
     if (document.getElementById('projects-grid')) {
-        renderProjects();
         initializeProjectFilters();
         initializeShopModal();
     }
