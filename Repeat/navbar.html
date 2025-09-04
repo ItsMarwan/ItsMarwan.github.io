@@ -1,0 +1,67 @@
+<!-- FOR LIVE SERVER NOT LOADING CORRECTLY -->
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<nav class="fixed top-0 left-0 w-full z-50 glass-bg border-b-0 shadow-none">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-neon tracking-wider transition-colors duration-300 hover:text-white transform hover:scale-105">
+            <i class="fa-solid fa-code"></i> ITSMARWAN
+        </a>
+        <div class="space-x-2 md:space-x-4 hidden md:flex items-center flex-nowrap">
+            <a style="color: aqua;" href="/" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
+                <i class="fas fa-home mr-1"></i> Home
+            </a>
+            <a href="/index#reviews" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
+                <i class="fas fa-star mr-1"></i> Reviews
+            </a>
+            <a href="/products" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
+                <i class="fa-solid fa-cart-shopping"></i> Products
+            </a>
+            <div class="relative group">
+                <button class="nav-link flex items-center">
+                    <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>&#8194More
+                </button>
+                <div id="planet-dropdown" class="absolute left-0 mt-2 w-48 bg-[#111527] rounded-md  py-1 z-50 opacity-0 group-hover:opacity-85 group-hover:visible transition-all duration-300 invisible origin-top transform scale-y-0 group-hover:scale-y-100">
+                    <a href="/rules" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1c2447]">Planet Rules</a>
+                    <a href="/faq" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1c2447]">FAQ</a>
+                    <a href="/products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1c2447]">Products</a>
+                </div>
+            </div>
+            <button onclick="window.location.reload();" class="refresh-btn nav-link text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2 transform hover:scale-105 flex-shrink-0" title="Refresh Page">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="text-gray-300 hover:text-white md:hidden focus:outline-none w-6 h-6 relative">
+            <svg id="menu-icon" class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path id="line-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+                <path id="line-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+                <path id="line-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+</nav>
+<!-- Mobile Menu -->
+<nav id="mobile-menu" class="md:hidden fixed w-full top-16 z-40 glass-bg transition-all duration-300 ease-in-out border-b-0 shadow-none">
+    <div class="flex flex-col space-y-4 items-center">
+        <a style="color: aqua;" href="/" class="nav-link w-full text-center py-2">
+            <i class="fas fa-home mr-1"></i> Home
+        </a>
+        <a href="index#reviews" class="nav-link w-full text-center py-2">
+            <i class="fas fa-star mr-1"></i> Reviews
+        </a>
+        <a href="/products" class="nav-link w-full text-center py-2">
+            <i class="fas fa-folder-open mr-1"></i> Products
+        </a>
+        <a href="/faq" class="nav-link w-full text-center py-2">
+            <i class="fa-solid fa-comment-question"></i> FAQ
+        </a>
+        <a href="/rules" class="nav-link w-full text-center py-2">
+            <i class="fa-solid fa-book-sparkles"></i> Planet Rules
+        </a>
+        <button onclick="window.location.reload();" class="refresh-btn nav-link text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2 transform hover:scale-105 flex-shrink-0" title="Refresh Page">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+    </div>
+</nav>

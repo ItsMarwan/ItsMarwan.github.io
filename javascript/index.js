@@ -44,6 +44,7 @@ async function fetchRatingsAndInitialize() {
         ]);
 
     try {
+        
         // --- STEP 2: Fetch usernames + avatars ---
         const fetchPromises = userIds.map(id =>
             fetchWithTimeout(`${baseApiUrl}${id}`)
@@ -87,6 +88,20 @@ async function fetchRatingsAndInitialize() {
     }
 }
 
+// --- Function to show a skeleton loading state for the average rating ---
+function showAverageRatingSkeleton() {
+    const container = document.getElementById('average-rating-container');
+    if (container) {
+        container.innerHTML = `
+            <div class="flex items-center space-x-2">
+                <div class="w-24 h-6 bg-gray-700 rounded animate-pulse"></div>
+                <div class="w-12 h-6 bg-gray-700 rounded animate-pulse"></div>
+            </div>
+            <div class="mt-2 w-32 h-4 bg-gray-700 rounded animate-pulse"></div>
+        `;
+    }
+}
+
 // --- Ratings Carousel Functions ---
 function initializeRatingsCarousel(ratingsData) {
     const carouselTrack = document.getElementById('carousel-track');
@@ -117,7 +132,8 @@ function initializeRatingsCarousel(ratingsData) {
         carouselTrack.appendChild(slide);
 
         const dot = document.createElement('button');
-        dot.className = `w-3 h-3 rounded-full bg-gray-600 transition-colors duration-300 ${index === 0 ? 'bg-blue-500' : ''}`;
+        // This line is changed to no longer set the initial active class.
+        dot.className = `w-3 h-3 rounded-full bg-gray-600 transition-colors duration-300`;
         dot.addEventListener('click', () => goToSlide(index));
         carouselDots.appendChild(dot);
     });
@@ -127,6 +143,8 @@ function initializeRatingsCarousel(ratingsData) {
     
     setupCarouselNavigation();
     startCarouselAutoplay();
+    // This new line ensures the correct dot is selected immediately after creation.
+    updateCarousel(); 
 }
 
 function updateCarousel() {
@@ -370,17 +388,6 @@ const projectsData = [{
         patreon: 'https://www.patreon.com/c/itsmarwan'
     },
     tags: ['Verse', 'Assets' , 'Free']
-},{
-    title: '[Skeleton] UEFN Wallhacks VERSE',
-    description: 'Custom VFX designed for UEFN. Fully safe and visual only. No cheats or real wallhacks are included.',
-    image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-07-06/1/201118_Logopit_1751832454519.jpg@1200w_0e.jpg',
-    downloadLink: 'https://sub2unlock.io/sgDj0',
-    price: '€0.00',
-    shops: {
-        buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/429192',
-        patreon: 'https://www.patreon.com/posts/135722355'
-    },
-    tags: ['Free', 'Verse']
 }];
 
 
@@ -445,6 +452,21 @@ function initializeProjectFilters() {
     document.querySelector('.filter-btn[data-filter="all"]')?.click();
 }
 
+// --- Mobile Navigation Select ---
+function initializeMobilePlanetSelect() {
+    const mobileSelect = document.getElementById('mobile-planet-select');
+    if (mobileSelect) {
+        // Change the event listener from 'click' to 'change'
+        mobileSelect.addEventListener('change', (event) => {
+            const selectedUrl = event.target.value;
+            if (selectedUrl) {
+                window.location.href = selectedUrl;
+            }
+        });
+    }
+}
+
+
 // --- Shop Modal Functions ---
 function initializeShopModal() {
     const modal = document.getElementById('shop-modal');
@@ -492,15 +514,23 @@ function initializeShopModal() {
     });
 }
 
-
 // --- Menu & Scroll Effects ---
 function initializeMenuButton() {
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+
     if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        menuBtn.addEventListener('click', () => {
+            // Toggle the `is-open` class on the menu for visibility
+            mobileMenu.classList.toggle('is-open');
+            // Toggle the `active` class on the button for the animation
+            menuBtn.classList.toggle('active');
+        });
     }
 }
+
+// Initialize the menu button immediately after the HTML is loaded.
+initializeMenuButton();
 
 function initializeScrollEffects() {
     const backToTopBtn = document.getElementById('back-to-top');
@@ -528,17 +558,51 @@ function initializeScrollEffects() {
     }
 }
 
+// --- FAQ Section Functionality ---
+function initializeFaqAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.fa-chevron-down');
+
+            // Close all other open items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+                    otherItem.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle the clicked item
+            item.classList.toggle('active');
+            if (item.classList.contains('active')) {
+                // Set the height to scrollHeight for smooth transition
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+}
+
 // --- Main Initializer ---
 document.addEventListener('DOMContentLoaded', () => {
     fetchRatingsAndInitialize();
-
+    
     if (document.getElementById('projects-grid')) {
         renderProjects();
         initializeProjectFilters();
         initializeShopModal();
     }
-
-    initializeMenuButton();
-    initializeScrollEffects();
+    
+    // Add this line to initialize the FAQ functionality
+    if (document.getElementById('faq')) {
+        initializeFaqAccordion();
+    }
+    
+    // This call is now removed. It will be initialized from loaders.js
 });
-

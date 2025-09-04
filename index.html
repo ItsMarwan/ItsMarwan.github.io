@@ -28,75 +28,30 @@
 </head>
 <body class="text-gray-200 min-h-screen">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full z-50 glass-bg shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-neon tracking-wider transition-colors duration-300 hover:text-white transform hover:scale-105">
-                <i class="fa-solid fa-code"></i> ITSMARWAN
-            </a>
-            <div class="space-x-2 md:space-x-4 hidden md:flex items-center flex-nowrap">
-                <a style="color: aqua;" href="/" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
-                    <i class="fas fa-home mr-1"></i> Home
-                </a>
-                <a href="/rules" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
-                    <i class="fa-solid fa-book-sparkles"></i> Planet Rules
-                </a>
-                <a href="index#reviews" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
-                    <i class="fas fa-star mr-1"></i> Reviews
-                </a>
-                <a href="/products" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
-                    <i class="fa-solid fa-cart-shopping"></i> Products
-                </a>
-                <button onclick="window.location.reload();" class="refresh-btn nav-link text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2 transform hover:scale-105 flex-shrink-0" title="Refresh Page">
-                    <i class="fas fa-sync-alt"></i>
-                </button>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="text-gray-300 hover:text-white md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
-    <!-- Mobile Menu -->
-    <nav id="mobile-menu" class="md:hidden fixed left-0 w-full z-40 glass-bg shadow-lg p-4 transition-all duration-300 ease-in-out hidden">
-        <div class="flex flex-col space-y-4 items-center">
-            <a style="color: aqua;" href="/" class="nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fas fa-home mr-1"></i> Home
-            </a>
-            <a href="/rules" class="nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fa-solid fa-book-sparkles"></i> Planet Rules
-            </a>
-            <a href="index#reviews" class="nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fas fa-star mr-1"></i> Reviews
-            </a>
-            <a href="/products" class="nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fas fa-folder-open mr-1"></i> Products
-            </a>
-            <button onclick="window.location.reload();" class="refresh-btn nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fas fa-sync-alt mr-1"></i> Refresh
-            </button>
-        </div>
-    </nav>
+    <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
+        <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
+        <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+    </div>
+
+    <div id="navbar-placeholder"></div>
 
     <main>
         <!-- Home Section -->
         <section id="home" class="container mx-auto px-4 py-16 text-center">
-            <h1 style="margin-top: 100px;" class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 fade-in-up" style="animation-delay: 0.2s;">
+            <h1 style="margin-top: 100px; opacity: 0;" class="text-5xl md:text-7xl font-extrabold text-white leading-tight  mb-4 animated-element" style="animation-delay: 0.2s;">
                 I'm <span class="name-pop">Marwan,</span> a Solo UEFN Developer.
             </h1>
-            <p class="text-lg md:text-2xl mb-4 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.4s;">
-                A dedicated creator specializing in Verse, custom assets, and engaging tutorials.
+            <p class="text-lg md:text-2xl mb-4 max-w-2xl mx-auto animated-element" style="animation-delay: 0.4s; opacity: 0;">
+                A dedicated creator specializing in Logic, Mechanics, custom assets, and engaging tutorials.
             </p>
             <!-- Average Rating Display -->
-            <a href="#reviews" class="inline-block hover:scale-105 transition-transform duration-300 fade-in-up" style="animation-delay: 0.5s;">
+            <a href="#reviews" class="inline-block hover:scale-105 transition-transform duration-300  animated-element" style="animation-delay: 0.5s; opacity: 0;">
                 <div class="bg-gray-800 rounded-full px-4 py-2 inline-flex items-center space-x-2 text-white shadow-lg cursor-pointer">
                     <p id="average-rating" class="text-xl font-bold"></p>
                     <div id="average-stars" class="text-yellow-400 text-sm"></div>
                 </div>
             </a>
-            <div class="mt-8 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 fade-in-up" style="animation-delay: 0.6s;">
+            <div class="mt-8 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4  animated-element" style="animation-delay: 0.6s; opacity: 0; ">
                 <a href="#Tutorials" class="explore-btn inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
                     Explore My Tutorials
                 </a>
@@ -120,19 +75,19 @@
                         <div>
                             <p class="text-sm font-medium">Verse Language</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar-inner h-2.5 rounded-full w-[40%]"></div>
+                                <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="40%"></div>
                             </div>
                         </div>
                         <div>
                             <p class="text-sm font-medium">Game Logic</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar-inner h-2.5 rounded-full w-[95%]"></div>
+                                <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="95%"></div>
                             </div>
                         </div>
                         <div>
                             <p class="text-sm font-medium">Mechanics & Systems</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar-inner h-2.5 rounded-full w-[97%]"></div>
+                                <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="97%"></div>
                             </div>
                         </div>
                     </div>
@@ -147,19 +102,19 @@
                         <div>
                             <p class="text-sm font-medium">UEFN Assets</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar-inner h-2.5 rounded-full w-[85%]"></div>
+                                <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="85%"></div>
                             </div>
                         </div>
                         <div>
                             <p class="text-sm font-medium">Level Design</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar-inner h-2.5 rounded-full w-[78%]"></div>
+                                <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="75%"></div>
                             </div>
                         </div>
                         <div>
                             <p class="text-sm font-medium">Environmental Art</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar-inner h-2.5 rounded-full w-[70%]"></div>
+                                <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="70%"></div>
                             </div>
                         </div>
                     </div>
@@ -174,19 +129,19 @@
                         <div>
                             <p class="text-sm font-medium">Tutorial Creation</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar-inner h-2.5 rounded-full w-[90%]"></div>
+                                <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="90%"></div>
                             </div>
                         </div>
                         <div>
                             <p class="text-sm font-medium">Paid Assets</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar-inner h-2.5 rounded-full w-[98%]"></div>
+                                <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="98%"></div>
                             </div>
                         </div>
                         <div>
                             <p class="text-sm font-medium">Community Engagement</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar-inner h-2.5 rounded-full w-[65%]"></div>
+                                <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="65%"></div>
                             </div>
                         </div>
                     </div>
@@ -258,7 +213,7 @@
                 <!-- Discord Status on the left -->
                 <div class="flex-initial flex flex-col items-center md:items-start text-center md:text-left">
                     <!-- Discord Server Icon -->
-                    <img src="/imgs/server-icon.jpg" alt="Discord Server Icon" class="w-24 h-24 rounded-full shadow-lg border-2 border-blue-500 mb-4 hover:scale-110 transition-transform duration-300">
+                    <img src="/imgs/server-icon.jpg" alt="Discord Server Icon" class="w-24 h-24 rounded-full content-center shadow-lg border-2 border-blue-500 mb-4 hover:scale-110 transition-transform duration-300">
                     
                     <h3 class="text-2xl font-semibold mb-2 text-white">Marwan's Blue Planet</h3>
                     <p class="text-sm text-gray-400 mb-4">ItsMarwan Official Discord Server! If You Have Any Issues In UEFN I'll Be More Than Happy To Help You Solve It! + Commisions Open! Open a Ticket!</p>
@@ -278,7 +233,6 @@
                         Join Now
                     </a>
                 </div>
-                <!-- Discord Server Image on the right -->
                 <div class="flex-grow flex justify-center items-center">
                     <img id="discord-image" src="/imgs/discordOverview.png" alt="Discord Server Screenshot" class="rounded-xl w-full h-auto object-cover shadow-lg border-2 border-neon parallax-bg discord-image-order">
                 </div>
@@ -289,88 +243,13 @@
     </main>
     
     <!-- Footer -->
-    <footer id="animated-footer" class="bg-gray-900 text-gray-400 py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <!-- About Section -->
-            <div class="col-span-1 footer-item ">
-                <h3 class="text-xl font-bold text-neon mb-4">About Me</h3>
-                <p class="text-sm">A dedicated UEFN developer focused on creating innovative game mechanics, stunning visuals, and educational content for the community.</p>
-            </div>
-            <!-- Quick Links -->
-            <div class="col-span-1 footer-item ">
-                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#home" class="footer-link quick-link flex items-center space-x-2 transition duration-300"><i class="fas fa-arrow-right mr-2"></i><span>Home</span></a></li>
-                    <li><a href="#skills" class="footer-link quick-link flex items-center space-x-2 transition duration-300"><i class="fas fa-arrow-right mr-2"></i><span>My Toolkit</span></a></li>
-                    <li><a href="#Tutorials" class="footer-link quick-link flex items-center space-x-2 transition duration-300"><i class="fas fa-arrow-right mr-2"></i><span>Tutorials</span></a></li>
-                    <li><a href="#reviews" class="footer-link quick-link flex items-center space-x-2 transition duration-300"><i class="fas fa-arrow-right mr-2"></i><span>Reviews</span></a></li>
-                </ul>
-            </div>
-            <!-- Social Media -->
-            <div class="col-span-1 footer-item ">
-                <h3 class="text-xl font-bold text-white mb-4">Connect</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="https://discord.com/invite/itsmarwan-s-blue-planet-1150156572857733170" target="_blank" class="footer-link discord flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-discord mr-2"></i><span>Discord</span>
-                    </a></li>
-                    <li><a href="https://twitter.com/ItsMarwanYT" target="_blank" class="footer-link twitter flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-twitter mr-2"></i><span>Twitter</span>
-                    </a></li>
-                    <li><a href="https://www.youtube.com/@itsmarwan." target="_blank" class="footer-link youtube flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-youtube mr-2"></i><span>YouTube</span>
-                    </a></li>
-                    <li><a href="https://github.com/ItsMarwan" target="_blank" class="footer-link github flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-github mr-2"></i><span>GitHub</span>
-                    </a></li>
-                </ul>
-            </div>
-            <!-- Contact Info as Buttons -->
-            <div class="col-span-1 footer-item ">
-                <h3 class="text-xl font-bold text-white mb-4">Contact Me</h3>
-                <div class="flex flex-col space-y-2 text-sm">
-                    <a href="mailto:itsmarwanuefn@gmail.com" class="footer-link email flex items-center space-x-2 transition duration-300">
-                        <i class="fas fa-envelope mr-2"></i><span>Email</span>
-                    </a>
-                    <a href="https://www.linkedin.com/404" target="_blank" class="footer-link linkedin flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-linkedin-in mr-2"></i><span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/ItsMarwan" target="_blank" class="footer-link github flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-github mr-2"></i><span>GitHub</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-            <p class="text-sm">&copy; 2025 Marwan. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <script>
-        // Adjusts the body padding to account for the fixed navbar height.
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbar = document.querySelector('nav');
-            if (navbar) {
-                const navHeight = navbar.offsetHeight;
-            }
-        });
-        
-        // Positions the mobile menu just below the main navbar.
-        document.addEventListener('DOMContentLoaded', positionMobileMenu);
-        window.addEventListener('resize', positionMobileMenu);
-
-        function positionMobileMenu() {
-            const navbar = document.querySelector('nav');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (navbar && mobileMenu) {
-                const navHeight = navbar.offsetHeight;
-                mobileMenu.style.top = navHeight + 'px';
-            }
-        }
-    </script>
     <script src="/javascript/index.js"></script>
+    <script src="/javascript/loaders.js"></script>
+    <script src="/javascript/loading.js"></script>
 </body>
 </html>
-

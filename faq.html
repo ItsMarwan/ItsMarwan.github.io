@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - ItsMarwan Homepage</title>
+    <meta name="description" content="Frequently Asked Questions about ItsMarwan's UEFN development tutorials, custom assets, and community.">
+    <meta name="keywords" content="UEFN, Fortnite, Verse, Game Development, Tutorials, Custom Assets, Game Mechanics, ItsMarwan, FAQ, support">
+    <link rel="icon" type="image/png" href="/imgs/brand.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css">
+</head>
+<body class="text-gray-200 min-h-screen">
+
+    <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
+        <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
+        <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+    </div>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="py-16">
+        <section id="faq" class="container mx-auto px-4 mt-24">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-8 text-center">
+                Frequently Asked <span class="text-neon">Questions</span>
+            </h1>
+            <p class="text-lg md:text-2xl mb-12 max-w-2xl mx-auto text-center text-gray-400">
+                Got questions? We've got answers. If you don't find what you're looking for, feel free to join our <a href="https://discord.com/invite/itsmarwan-s-blue-planet-1150156572857733170" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Discord server</a>.
+            </p>
+            <div id="faq-list" class="max-w-3xl mx-auto space-y-4">
+                <h2 class="text-3xl font-bold text-white mt-10 mb-4"><i class="fa-solid fa-rocket-launch text-neon"></i> Getting Started</h2>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">What is UEFN?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>UEFN stands for Unreal Editor for Fortnite, which is a powerful toolset that allows creators to build and publish a wide variety of games and experiences directly within the Fortnite ecosystem. It uses the power of Unreal Engine to bring advanced features to creators.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">What is Verse?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>Verse is a programming language developed by Epic Games specifically for the metaverse. It's used in UEFN to create custom game logic, mechanics, and interactive elements that go beyond the capabilities of devices and pre-built templates.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">How do I get help with a project?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>The best way to get support is by joining my official Discord server, "Marwan's Blue Planet." There, you can ask questions, open a support ticket for specific issues, or inquire about commission work.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">Do you accept commissions?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>Yes, I do! If you have a specific project or game mechanic in mind that you need help with, please join my Discord server and open a ticket to discuss your needs and get a quote.</p>
+                    </div>
+                </div>
+                
+                <h2 class="text-3xl font-bold text-white mt-10 mb-4"><i class="fa-solid fa-bug text-neon"></i> Common Issues</h2>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">My custom car mesh isn't showing. Is it fixable?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>Yes, but your car mesh is a different size from the model I used in the video. You must set the size of the mesh to 1 on all axes and the rotations on all axes to 0. If you still can't see the car, make the mesh bigger. If not, follow the tutorial again.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">My pickaxe is in the ground. How can I fix it?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>In the VFX Powerup Device, search for "Socket" and change it to **RIGHT HAND**.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">My pickaxe doesn't have its normal color. How can I fix it?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>You have to go to the material (not the material instance). On the left side, search for "Nia" and tick the 3 boxes that pop up.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">My pickaxe isn't visible. How can I fix it?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>Go to the Niagra System and click on Mesh Renderer. In Mesh, click it and locate Index [0] and add your static mesh of the pickaxe.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">My pickaxe looks weird (as of rotation). Fixable?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>Pickaxes will always need testing and adjusting until you get your rotation just how you like it. For most cases, you only need to make the Z-AXIS to "90".</p>
+                    </div>
+                </div>
+                
+                <h2 class="text-3xl font-bold text-white mt-10 mb-4"><i class="fa-solid fa-credit-card text-neon"></i> Payments</h2>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">Is support free or is it paid?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>If you're asking a simple question in ⁠❓┃ask-marwan, then it's free. But if it's a bug you have or a massive issue, you will have to pay.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">What's the price range?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>From FREE up to €20 per issue. Issues are first checked out by Marwan, then rated according to how complex they are.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">Why do I need to pay for support?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>Because support takes time & effort to fix your issue. Also, Marwan doesn't have much time to work with, so paying ensures that you get support for your issue.</p>
+                    </div>
+                </div>
+                <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">Where do I buy stuff from Marwan's shop?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400">
+                        <p>You can buy stuff from the <a href="/products.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Marwan's Shop Page</a>. Members get offers + exclusive perks as listed there.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('nav');
+            if (navbar) {
+                const navHeight = navbar.offsetHeight;
+            }
+        });
+        
+        document.addEventListener('DOMContentLoaded', positionMobileMenu);
+        window.addEventListener('resize', positionMobileMenu);
+
+        function positionMobileMenu() {
+            const navbar = document.querySelector('nav');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (navbar && mobileMenu) {
+                const navHeight = navbar.offsetHeight;
+                mobileMenu.style.top = navHeight + 'px';
+            }
+        }
+    </script>
+    <script src="/javascript/index.js"></script>
+    <script src="/javascript/loaders.js"></script>
+    <script src="/javascript/loading.js"></script>
+</html>

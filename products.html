@@ -27,57 +27,13 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css">
 </head>
 <body class="text-gray-200 min-h-screen">
+    <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
+        <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
+        <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+    </div>
 
-    <nav class="fixed top-0 left-0 w-full z-50 glass-bg shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-neon tracking-wider transition-colors duration-300 hover:text-white transform hover:scale-105">
-                <i class="fa-solid fa-code"></i> ITSMARWAN
-            </a>
-            <div class="space-x-2 md:space-x-4 hidden md:flex items-center flex-nowrap">
-                <a href="/" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
-                    <i class="fas fa-home mr-1"></i> Home
-                </a>
-                <a href="/rules" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
-                    <i class="fa-solid fa-book-sparkles"></i> Planet Rules
-                </a>
-                <a href="index#reviews" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
-                    <i class="fas fa-star mr-1"></i> Reviews
-                </a>
-                <a style="color: aqua;" href="/products" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
-                    <i class="fa-solid fa-cart-shopping"></i> Products
-                </a>
-                <button onclick="window.location.reload();" class="refresh-btn nav-link text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2 transform hover:scale-105 flex-shrink-0" title="Refresh Page">
-                    <i class="fas fa-sync-alt"></i>
-                </button>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="text-gray-300 hover:text-white md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
-    <!-- Mobile Menu -->
-    <nav id="mobile-menu" class="md:hidden fixed left-0 w-full z-40 glass-bg shadow-lg p-4 transition-all duration-300 ease-in-out hidden">
-        <div class="flex flex-col space-y-4 items-center">
-            <a href="/" class="nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fas fa-home mr-1"></i> Home
-            </a>
-            <a href="/rules" class="nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fa-solid fa-book-sparkles"></i> Planet Rules
-            </a>
-            <a href="index#Reviews" class="nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fas fa-star mr-1"></i> Reviews
-            </a>
-            <a style="color: aqua;" href="/products" class="nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fas fa-folder-open mr-1"></i> Products
-            </a>
-            <button onclick="window.location.reload();" class="refresh-btn nav-link w-full text-center py-2 hover:bg-gray-700 rounded transition duration-300">
-                <i class="fas fa-sync-alt mr-1"></i> Refresh
-            </button>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
+    
     <main class="py-24 container mx-auto px-4 md:px-8">
         <section id="projects" class="text-center">
             <div style="margin: 20px;"><h2 style="display: inline;" class="text-5xl font-extrabold text-neon mb-4 animate-fadeInUp">My </h2><h2 style="display: inline;" class="text-5xl font-extrabold mb-4 animate-fadeInUp">Products</h2></div>
@@ -130,57 +86,7 @@
 
     </main>
 
-    <footer id="animated-footer" class="bg-gray-900 text-gray-400 py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="col-span-1 footer-item ">
-                <h3 class="text-xl font-bold text-neon mb-4">About Me</h3>
-                <p class="text-sm">A dedicated UEFN developer focused on creating innovative game mechanics, stunning visuals, and educational content for the community.</p>
-            </div>
-            <div class="col-span-1 footer-item ">
-                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="home#home" class="footer-link quick-link flex items-center space-x-2 transition duration-300"><i class="fas fa-arrow-right mr-2"></i><span>Home</span></a></li>
-                    <li><a href="home#skills" class="footer-link quick-link flex items-center space-x-2 transition duration-300"><i class="fas fa-arrow-right mr-2"></i><span>My Toolkit</span></a></li>
-                    <li><a href="home#Tutorials" class="footer-link quick-link flex items-center space-x-2 transition duration-300"><i class="fas fa-arrow-right mr-2"></i><span>Tutorials</span></a></li>
-                    <li><a href="home#Reviews" class="footer-link quick-link flex items-center space-x-2 transition duration-300"><i class="fas fa-arrow-right mr-2"></i><span>Reviews</span></a></li>
-                </ul>
-            </div>
-            <div class="col-span-1 footer-item ">
-                <h3 class="text-xl font-bold text-white mb-4">Connect</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="https://discord.com/invite/itsmarwan-s-blue-planet-1150156572857733170" target="_blank" class="footer-link discord flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-discord mr-2"></i><span>Discord</span>
-                    </a></li>
-                    <li><a href="https://twitter.com/ItsMarwanYT" target="_blank" class="footer-link twitter flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-twitter mr-2"></i><span>Twitter</span>
-                    </a></li>
-                    <li><a href="https://www.youtube.com/@itsmarwan." target="_blank" class="footer-link youtube flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-youtube mr-2"></i><span>YouTube</span>
-                    </a></li>
-                    <li><a href="https://github.com/ItsMarwan" target="_blank" class="footer-link github flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-github mr-2"></i><span>GitHub</span>
-                    </a></li>
-                </ul>
-            </div>
-            <div class="col-span-1 footer-item ">
-                <h3 class="text-xl font-bold text-white mb-4">Contact Me</h3>
-                <div class="flex flex-col space-y-2 text-sm">
-                    <a href="mailto:itsmarwanuefn@gmail.com" class="footer-link email flex items-center space-x-2 transition duration-300">
-                        <i class="fas fa-envelope mr-2"></i><span>Email</span>
-                    </a>
-                    <a href="https://www.linkedin.com/404" target="_blank" class="footer-link linkedin flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-linkedin-in mr-2"></i><span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/ItsMarwan" target="_blank" class="footer-link github flex items-center space-x-2 transition duration-300">
-                        <i class="fab fa-github mr-2"></i><span>GitHub</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-            <p class="text-sm">© 2025 Marwan. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
     <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -207,5 +113,7 @@
         }
     </script>
     <script src="/javascript/index.js"></script>
+    <script src="/javascript/loaders.js"></script>
+    <script src="/javascript/loading.js"></script>
 </body>
 </html>
