@@ -1,4 +1,4 @@
-// Array of random loading messages
+//   RANDOM LOADING MESSAGES
 const loadingMessages = [
     "Loading awesomeness…",
     "Building your experience…",
@@ -34,84 +34,120 @@ const loadingMessages = [
     "Upgrading your experience…",
     "Inventing something new…",
     "Fueling developer mode…",
-    "Ready. Set. Create."
+    "Ready. Set. Create.",
+    "Weaving code into cosmos...",
+    "Charging creativity circuits...",
+    "Crafting realities beyond pixels...",
+    "Spawning infinite possibilities...",
+    "Aligning imagination with algorithms...",
+    "Breathing soul into scripts...",
+    "Assembling your digital playground...",
+    "Rolling dice behind the scenes...",
+    "Casting spells on polygons...",
+    "Summoning epic assets...",
+    "Respawning fresh ideas...",
+    "Loading your next level of wonder...",
+    "Unlocking sandbox mode...",
+    "Pixel potions brewing...",
+    "Compiling dreams into design...",
+    "Debugging the impossible...",
+    "Rendering reality in real time...",
+    "Merging imagination with logic...",
+    "Optimizing your creative core...",
+    "Deploying digital daydreams...",
+    "Every pixel tells a story...",
+    "Imagination loading, reality pending...",
+    "Creation is just code with a soul...",
+    "From idea to infinity...",
+    "Dreams take time to render...",
+    "Loading the future, one frame at a time...",
+    "Every great journey starts with a progress bar..."
 ];
 
 const loadingTextElement = document.getElementById('loading-text');
-let currentMessageIndex = 0;
 
-// Function to get a random message from the array
+//   RANDOM MESSAGE PICKER
+
 function getRandomMessage() {
     const randomIndex = Math.floor(Math.random() * loadingMessages.length);
     return loadingMessages[randomIndex];
 }
 
-// Function to update the text with a fade-in/fade-out effect
+//   UPDATE LOADING TEXT WITH FADE
+
 function updateLoadingTextWithFade() {
     if (loadingTextElement) {
-        // Fade the current text down and out
+        // Fade the current text OUT & move it DOWN
+        loadingTextElement.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         loadingTextElement.style.opacity = '0';
         loadingTextElement.style.transform = 'translateY(20px)';
 
-        // After the fade-out, change the text and fade it back in
+        // After fade-out, switch message and fade IN moving UP
         setTimeout(() => {
-            // Set the new text
             loadingTextElement.textContent = getRandomMessage();
 
-            // Reset transform for the new text and set it to fade up
+            // Reset position ABOVE, invisible
             loadingTextElement.style.opacity = '0';
             loadingTextElement.style.transform = 'translateY(-20px)';
 
-            // Trigger the fade-in-up animation
+            // Fade IN and slide DOWN to original position
             setTimeout(() => {
                 loadingTextElement.style.opacity = '1';
                 loadingTextElement.style.transform = 'translateY(0)';
-            }, 50); // Small delay to ensure the browser registers the starting position
-        }, 500); // This delay should match the CSS transition duration
+            }, 50);
+        }, 500); // Matches CSS fade-out duration
     }
 }
 
-// Set the initial text immediately without any animation to prevent layout shifts
+//   INITIALIZE LOADING TEXT
 if (loadingTextElement) {
+    // Set first random message
     loadingTextElement.textContent = getRandomMessage();
+
+    // Animate first line with your existing "fade-in-up" class
+    loadingTextElement.classList.add('fade-in-up');
+
+    // Remove the class after animation to avoid conflicts later
+    setTimeout(() => {
+        loadingTextElement.classList.remove('fade-in-up');
+    }, 600); // Should match your CSS fade-in-up duration
 }
 
-// Set the interval to change the text every 2 seconds (5000 milliseconds)
-const textInterval = setInterval(updateLoadingTextWithFade, 5000);
+// Change message every 3 seconds
+const textInterval = setInterval(updateLoadingTextWithFade, 3000);
 
+//   LOADING SCREEN FADE & INIT
 
 window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
+
     if (loadingScreen) {
-        // First, fade the loading screen out.
+        // Fade out loading screen
         loadingScreen.style.opacity = '0';
 
-        // Then, after the fade-out transition, hide it completely.
+        // Fully hide after fade-out
         setTimeout(() => {
             loadingScreen.style.display = 'none';
-        }, 350); // This delay should match the CSS transition duration
+        }, 350);
 
-        // Trigger progress bar animations immediately on load
+        // Animate progress bars
         const progressBars = document.querySelectorAll('.progress-bar-fill');
         progressBars.forEach(bar => {
             const targetWidth = bar.getAttribute('data-width') || '100%';
-            
-            // Set the initial width to 0% to ensure the animation starts correctly.
             bar.style.width = '0%';
-            
-            // Allow a brief moment for the browser to register the initial 0% width.
             setTimeout(() => {
                 bar.style.transition = 'width 1.3s ease-in-out';
                 bar.style.width = targetWidth;
             }, 10);
         });
-        
-        // Trigger other animations and initialization
+
+        // Trigger animations on elements
         const animatedElements = document.querySelectorAll('.animated-element');
         animatedElements.forEach(el => {
             el.classList.add('fade-in-up');
         });
-        
+
+        // Initialize custom scroll effects if available
         if (typeof initializeScrollEffects === 'function') {
             initializeScrollEffects();
         }
