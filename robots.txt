@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itsmarwan.github.io/sitemap.xml
+
+# Prevent indexing of GitHub-specific files
+Disallow: /legal/
+Disallow: /README.md
