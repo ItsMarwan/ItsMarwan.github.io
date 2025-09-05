@@ -1,42 +1,25 @@
-// Get the content container from the HTML
-const contentContainer = document.querySelector('.error-container');
+const code = document.getElementById("Code");
+const codeDescription = document.getElementById("Code_Description");
 
-// A function to update the content dynamically
-function updateContent(title, message) {
-    contentContainer.innerHTML = `
-        <h1 class="error-code text-neon">404</h1>
-        <h2 class="error-message text-white">${title}</h2>
-        <p class="error-description text-gray-400">
-            ${message}
-        </p>
-    `;
+// Common message and title
+const redirectMessage = "It looks like the page you found is guiding you to a new destination.\nLet's take you where you need to be.";
+const redirectTitle = "Redirecting...";
+
+// Map of paths and their corresponding redirect URLs
+const redirects = {
+    "/home": "/",
+    "/products/bmc": "https://buymeacoffee.com/itsmarwan",
+    "/products/patreon": "https://buymeacoffee.com/itsmarwan",
+    "/discord": "https://discord.gg/Fwd9MgB8Ww",
+    "/youtube": "https://youtube.com/@itsmarwan"
+};
+
+// Check if current path is in the redirects list
+const currentPath = window.location.pathname;
+if (redirects[currentPath]) {
+    code.innerText = "200";
+    codeDescription.innerText = redirectMessage;
+    document.title = redirectTitle;
+    console.log(`Redirecting to: ${redirects[currentPath]}`);
+    window.location.replace(redirects[currentPath]);
 }
-
-// Function to handle different URL paths
-function handleUrlPath() {
-    const path = window.location.pathname;
-
-    switch (path) {
-        case '/discord':
-            console.log('Path is /discord. Redirecting to Discord...');
-            // Change the page content to "Redirecting..."
-            updateContent("Redirecting...", "Please wait while we redirect you to Discord.");
-            // A full redirect as requested.
-            window.location.href = 'https://discord.com/invite/itsmarwan-s-blue-planet-1150156572857733170';
-            break; // <-- This is the missing break statement
-        case '/home':
-            console.log('Path is /home. Redirecting to home...');
-            // Change the page content to "Redirecting..."
-            updateContent("Redirecting...", "Please wait while we redirect you to Home.");
-            // A full redirect as requested.
-            window.location.href = '/';
-            break;
-        default:
-            console.log('Path is not a special case. Displaying default content.');
-            // The default content is already in the HTML file, so no action is needed here.
-            break;
-    }
-}
-
-// Attach the function to the window's load event to ensure it runs as soon as the page is ready.
-window.onload = handleUrlPath;
