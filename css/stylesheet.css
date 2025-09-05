@@ -448,3 +448,79 @@ body {
     width: 100%;
     height: 100%;
 }
+
+/* Popup CSS */
+.popup-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+.popup-modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup-modal.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear;
+}
+
+.modal-bg {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.modal-content {
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+}
+
+.popup-modal.visible .modal-content {
+    transform: scale(1);
+}
+
+/* Tooltip CSS */
+.tooltip-container {
+    bottom: calc(100% + 10px); /* Adjusts position relative to the element */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+}
+
+.tooltip-container.show {
+    opacity: 1;
+    display: block;
+}
+
+.tooltip-arrow {
+    width: 10px;
+    height: 10px;
+    background-color: #3B82F6; /* Matches the tooltip background color */
+    position: absolute;
+    bottom: -5px; /* Positions the arrow to overlap */
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1; /* Puts the arrow behind the tooltip text */
+    border-radius: 2px;
+}
+
+/* Confetti Canvas */
+.confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100000; /* This z-index must be higher than the popup's z-index (99999) */
+}
