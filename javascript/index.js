@@ -410,7 +410,7 @@ function renderProjects(projectsToRender, append = false) {
     const projectsToDisplay = projectsToRender.slice(startIndex, endIndex);
 
     projectsToDisplay.forEach(project => {
-        const isFree = !project.price || project.price === '0.00£ (0.00£ (€0.00))';
+        const isFree = !project.price || project.price === '€0.00';
 
         const projectCard = document.createElement('div');
         projectCard.classList.add('card', 'card-hover', 'rounded-xl', 'shadow-lg', 'border', 'border-gray-700', 'overflow-hidden', 'flex', 'flex-col');
