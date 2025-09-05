@@ -259,7 +259,7 @@ const projectsData = [{
     title: 'FULL Health Bar Customizable',
     description: 'Complete health bar system with managers and bars included. Fully customizable and ready to use.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-07-31/1/163104_Logopit_1753979075823.jpg@1200w_0e.jpg',
-    price: '847.95£ (854.51£ (€15.00))',
+    price: '€15.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/441215',
         patreon: 'https://www.patreon.com/posts/138063553'
@@ -269,7 +269,7 @@ const projectsData = [{
     title: 'Health Bar Customizable',
     description: 'Customizable health bars from the demo video. Does not include the health managers for control.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-07-31/1/163104_Logopit_1753979075823.jpg@1200w_0e.jpg',
-    price: '565.30£ (569.67£ (€10.00))',
+    price: '€10.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/441225',
         patreon: 'https://www.patreon.com/posts/138063305'
@@ -279,7 +279,7 @@ const projectsData = [{
     title: '[Skeleton] UEFN Wallhacks VFX',
     description: 'Custom VFX designed for UEFN. Fully safe and visual only. No cheats or real wallhacks are included.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-07-06/1/201118_Logopit_1751832454519.jpg@1200w_0e.jpg',
-    price: '565.30£ (569.67£ (€10.00))',
+    price: '€10.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/429192',
         patreon: 'https://www.patreon.com/posts/135722355'
@@ -289,7 +289,7 @@ const projectsData = [{
     title: 'XP Custom Collectables V3',
     description: 'Revamped XP collectables with better meshes, animations, and emissive effects. Easy setup, no edits.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-06-15/1/195356_Screenshot_20250615_224307.png@1200w_0e.png',
-    price: '565.30£ (569.67£ (€10.00))',
+    price: '€10.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/364541',
         patreon: 'https://www.patreon.com/posts/135722486'
@@ -299,7 +299,7 @@ const projectsData = [{
     title: '[Rectangle] UEFN Wallhacks VFX',
     description: 'High-quality visual wallhack VFX for UEFN. Safe, customizable, and 100% cheat-free implementation.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-04-13/1/200049_1000030524.jpg@1200w_0e.jpg',
-    price: '508.77£ (512.71£ (€9.00))',
+    price: '€9.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/396983',
         patreon: 'https://www.patreon.com/posts/rectangle-uefn-135727168?'
@@ -309,7 +309,7 @@ const projectsData = [{
     title: 'XP Overlay For Tiktok Videos',
     description: 'Custom XP overlay effect for TikTok videos. Features emissive visuals, smooth animations, and setup.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-06-07/1/205633_Screenshot_20250607_232837.png@1200w_0e.png',
-    price: '565.30£ (569.67£ (€10.00))',
+    price: '€10.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/418811',
         patreon: 'https://www.patreon.com/posts/135722571'
@@ -319,7 +319,7 @@ const projectsData = [{
     title: 'Custom Emoji Heads',
     description: 'Emoji head assets in .UASSET format. Import easily into your UEFN project directly via explorer.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-03-26/1/222556_Screenshot_20250327_002227.png@1200w_0e.png',
-    price: '565.30£ (569.67£ (€10.00))',
+    price: '€10.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/390543',
         patreon: 'https://www.patreon.com/posts/135726641'
@@ -329,7 +329,7 @@ const projectsData = [{
     title: 'Pre-Made KICKS',
     description: 'Custom kick assets for 1v1 or FFA maps. Unique sizes included, with options for personal requests.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-01-31/1/195623_Screenshot_20250131_215433.png@1200w_0e.png',
-    price: '508.77£ (512.71£ (€9.00))',
+    price: '€9.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/366747',
         patreon: 'https://www.patreon.com/posts/135725777'
@@ -339,7 +339,7 @@ const projectsData = [{
     title: 'Ultimate Brainrot Pack',
     description: 'Bundle of 11 cursed 3D memes, sounds, and UEFN assets. Perfect for fun, chaos, and wild creativity.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-05-01/1/131346_Screenshot_20250501_161019.png@1200w_0e.png',
-    price: '452.24£ (455.74£ (€8.00))',
+    price: '€8.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/403585',
         patreon: 'https://www.patreon.com/posts/135726860'
@@ -349,7 +349,7 @@ const projectsData = [{
     title: 'Pre-Made Backblings',
     description: 'Pre-made custom backblings for your maps. Includes tutorial to create your own personalized designs.',
     image: 'https://cdn.buymeacoffee.com/uploads/rewards/2025-03-06/1/143913_1000029409.png@1200w_0e.png',
-    price: '452.24£ (455.74£ (€8.00))',
+    price: '€8.00',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/382560',
         patreon: 'https://www.patreon.com/c/itsmarwan'
@@ -359,7 +359,7 @@ const projectsData = [{
     title: 'Crown 3D Model',
     description: 'Crown 3D Model I Used In The "How To Make a Leaderboard" Video Which includes The Niagara System and the 3D Model!',
     image: 'https://i.ytimg.com/vi/FNPTE6Jewew/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCWpzNtaeIfFMEBIkCccFtng7Higw',
-    price: '0.00£ (0.00£ (€0.00))',
+    price: '€0.00',
     downloadLink: 'https://sub2unlock.io/osQSb',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/382560',
@@ -370,7 +370,7 @@ const projectsData = [{
     title: 'Pickaxe Manager',
     description: 'Verse Code I Used To Fix The Clipping Of Pickaxes In The Weapons!',
     image: 'https://i.ytimg.com/vi/RRwGqAWyAqY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAngzYgGNIp9OIiJXNuh4F7Mb07DQ',
-    price: '0.00£ (0.00£ (€0.00))',
+    price: '€0.00',
     downloadLink: 'https://sub2unlock.io/3M8NB',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/382560',
@@ -381,7 +381,7 @@ const projectsData = [{
     title: 'Custom Car',
     description: 'The Custom Car Verse i Used In My Video (credit @frozenpawn for the verse)!',
     image: 'https://i.ytimg.com/vi/zwIcbON_UsU/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBmjPaMvsGE4Je6bbY-jM1AKE-_1A',
-    price: '0.00£ (0.00£ (€0.00))',
+    price: '€0.00',
     downloadLink: 'https://sub2unlock.io/5OHhe',
     shops: {
         buymeacoffee: 'https://buymeacoffee.com/itsmarwan/e/382560',
