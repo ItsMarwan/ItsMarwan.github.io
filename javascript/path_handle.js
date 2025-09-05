@@ -23,9 +23,9 @@ function handleUrlPath() {
             updateContent("Redirecting...", "Please wait while we redirect you to Discord.");
             // A full redirect as requested.
             window.location.href = 'https://discord.com/invite/itsmarwan-s-blue-planet-1150156572857733170';
-            break;
+            break; // <-- This is the missing break statement
         case '/home':
-            console.log('Path is /discord. Redirecting to home...');
+            console.log('Path is /home. Redirecting to home...');
             // Change the page content to "Redirecting..."
             updateContent("Redirecting...", "Please wait while we redirect you to Home.");
             // A full redirect as requested.
