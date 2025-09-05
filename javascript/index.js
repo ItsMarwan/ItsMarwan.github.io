@@ -8,7 +8,8 @@ async function fetchRatingsAndInitialize() {
         '1399165813092520128',
         '495229734138019841',
         '638391726058504243',
-        '1403719811598520351'
+        '1403719811598520351',
+        '335943984151265281'
     ];
 
     const staticRatings = [
@@ -19,7 +20,8 @@ async function fetchRatingsAndInitialize() {
         { rating: 5, comment: '10/10 Service everything worked out quick answers when you need help' },
         { rating: 5, comment: '10/10 Perfect service Very reasonable on the price. I recommend 👌🏽' },
         { rating: 5, comment: 'Very good service, attentive to the customer 👌🏽' },
-        { rating: 5, comment: 'very nice service 👍' }
+        { rating: 5, comment: 'very nice service 👍' },
+        { rating: 5, comment: 'Great service, the Verse code works perfectly and he responds quickly. Highly recommend! 🔥' },
     ];
 
     const baseApiUrl = 'https://discordlookup.mesalytic.moe/v1/user/';
