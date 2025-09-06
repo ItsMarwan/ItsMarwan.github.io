@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Purchase!</title>
+    <meta name="description" content="Thank you for your purchase from ItsMarwan's store. Your order is complete, and we appreciate your support!">
+    <meta name="keywords" content="UEFN, Fortnite, Verse, Game Development, Tutorials, Custom Assets, Game Mechanics, ItsMarwan, Thank You, Purchase">
+    <meta name="thumbnail" content="/imgs/brand.png">
+    <meta name="theme-color" content="#2D7EEA">
+    <link rel="icon" type="image/png" href="/imgs/brand.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="/javascript/index.js"></script>
+    <script src="/javascript/loaders.js"></script>
+</head>
+<div id="navbar-placeholder"></div>
+
+<body class="bg-[#04081b] text-gray-200 min-h-screen flex flex-col items-center justify-center p-4">
+
+    
+
+    <div class="w-full max-w-2xl bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-neon text-center fade-in-up">
+        <div class="flex flex-col items-center justify-center mb-8">
+            <i class="fa-solid fa-gift text-blue-500 text-7xl md:text-8xl mb-4"></i>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2 leading-tight">
+                Thank You!
+            </h1>
+            <p class="text-lg md:text-xl font-medium text-gray-400">
+                Your purchase was a success!
+            </p>
+        </div>
+
+        <div class="text-base md:text-lg mb-8 text-gray-300 space-y-4">
+            <p>
+                If you have any questions or run into any issues, please feel free to reach out to me through my <a href="/contact" class="text-blue-400 hover:underline transition-colors duration-200">contact page</a> or by joining my <a href="/discord" class="text-blue-400 hover:underline transition-colors duration-200">Discord server</a>.
+            </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="/" class="inline-block px-8 py-4 w-full md:w-auto bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                Go to Homepage
+            </a>
+            <a href="/products" class="inline-block px-8 py-4 w-full md:w-auto bg-gray-800 text-white font-bold rounded-lg shadow-lg hover:bg-gray-700 transform hover:scale-105 transition duration-300">
+                Explore More Products
+            </a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Use the existing loaders.js file to load the header and footer
+            const head = document.getElementsByTagName('head')[0];
+            const script = document.createElement('script');
+            script.src = '/javascript/loaders.js';
+            head.appendChild(script);
+
+            // Confetti effect using the new library
+            const count = 200;
+            const defaults = {
+                origin: { y: 0.7 }
+            };
+
+            function fire(particleRatio, opts) {
+                confetti(Object.assign({}, defaults, opts, {
+                    particleCount: Math.floor(count * particleRatio)
+                }));
+            }
+
+            // Create a small burst from the bottom
+            fire(0.25, {
+                spread: 26,
+                startVelocity: 55,
+            });
+            fire(0.2, {
+                spread: 60,
+            });
+            fire(0.35, {
+                spread: 100,
+                decay: 0.91,
+                scalar: 0.8
+            });
+            fire(0.1, {
+                spread: 120,
+                startVelocity: 25,
+                decay: 0.92,
+                scalar: 1.2
+            });
+            fire(0.1, {
+                spread: 120,
+                startVelocity: 45,
+            });
+        });
+    </script>
+    <script src="/javascript/js-detector.js"></script>
+    <script src="/javascript/restrictions.js"></script>
+</body>
+</html>
