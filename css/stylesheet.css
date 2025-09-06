@@ -162,9 +162,23 @@ body {
     color: #FF0000;
     text-shadow: 0 0 8px #FF0000;
 }
+.footer-link.twitter2:hover {
+    color: #1DA1F2;
+    text-shadow: 0 0 5px #1DA1F2;
+}
+.footer-link.youtube2:hover {
+    color: #FF0000;
+    text-shadow: 0 0 5px #FF0000;
+}
 .footer-link.github:hover {
     color: #E8E8E8;
     text-shadow: 0 0 8px #E8E8E8;
+}
+.footer-link.tiktok:hover {
+    color: #000000;
+    text-shadow:
+    1px 1px 5px #ff0050,
+    -1px -1px 5px #00f2ea;
 }
 .footer-link.email:hover {
     color: #00e5ff;
@@ -523,7 +537,6 @@ body {
     pointer-events: none;
     z-index: 100000; /* This z-index must be higher than the popup's z-index (99999) */
 }
-
 .js-content-wrapper {
     display: none;
 }
