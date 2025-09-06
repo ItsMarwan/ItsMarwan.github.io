@@ -23,107 +23,123 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css">
-</head>
-<body class="text-gray-200 min-h-screen">
-    <div id="popup-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
-        <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
-        <div class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up">
-            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 transition-colors duration-200">
-                <i class="fa-solid fa-xmark fa-xl"></i>
-            </button>
-            <div class="flex flex-col items-center">
-                <i class="fa-solid fa-gift text-6xl text-blue-500 mb-4"></i>
-                <h3 class="text-3xl font-extrabold text-white mb-2">Exclusive Offer!</h3>
-                <p class="text-gray-400 mb-4">
-                    Get <span class="text-blue-500 font-semibold">20% off</span> your next purchase with this special discount code! expires by 12/9
-                </p>
-                <div class="bg-gray-800 rounded-lg p-4 w-full relative">
-                    <p id="discount-code" class="text-xl font-mono tracking-widest text-white cursor-pointer select-all">REFRESH</p>
-                    <div id="copied-tooltip" class="tooltip-container absolute hidden opacity-0 transition-opacity duration-300">
-                        <div class="tooltip-arrow absolute"></div>
-                        <span class="tooltip-text bg-blue-500 text-white text-xs rounded py-1 px-3 whitespace-nowrap">Copied!</span>
-                    </div>
-                </div>
-                <p class="text-gray-500 text-xs mt-2">
-                    Copy and paste the code at checkout.
-                </p>
-            </div>
-        </div>
-    </div>
 
-    <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
-        <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
-        <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
-    </div>
-
-    <div id="navbar-placeholder"></div>
-    
-    <main class="py-24 container mx-auto px-4 md:px-8">
-        <section id="projects" class="text-center">
-            <div style="margin: 20px;"><h2 style="display: inline;" class="text-5xl font-extrabold text-neon mb-4 animate-fadeInUp">My </h2><h2 style="display: inline;" class="text-5xl font-extrabold mb-4 animate-fadeInUp">Products</h2></div>
-            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto animate-fadeInUp"> 
-                Explore my high-quality systems, visual effects, and assets designed for reliability, and seamless integration into your projects.
-            </p>
-
-            <div class="mb-8 max-w-lg mx-auto">
-                <div class="relative flex items-center">
-                    <input id="search-input" type="text" placeholder="Search for products..." class="w-full px-6 py-3 rounded-full bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all pl-12" />
-                    <i class="fas fa-search absolute left-4 text-gray-400"></i>
-                </div>
-            </div>
-
-            <div class="flex justify-center items-center flex-wrap gap-4 mb-8">
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base active-filter" data-filter="all">All</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Verse">Verse</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Materials">Materials</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Niagara">Niagara</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Animations">Animations</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Free">Free</button>
-            </div>
-
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                </div>
-            
-            <div id="load-more-container" class="mt-8 text-center" style="display: none;">
-                <button id="load-more-btn" class="px-8 py-3 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base bg-blue-500 hover:bg-blue-600 text-white shadow-lg">Load More</button>
-            </div>
-        </section>
-        <div id="shop-container">
-            <div id="shop-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[100] flex items-center justify-center p-4">
-                <div class="modal-bg fixed inset-0 bg-black opacity-75"></div>
-                <div id="shop-modal-content" class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up" style="border: 1px solid #334155;">
-                    <div class="flex justify-between items-center pb-4 border-b border-gray-600">
-                        <h3 class="text-2xl font-bold text-white">Choose a Shop</h3>
-                        <button id="close-shop-modal-btn" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fa-solid fa-xmark text-3xl"></i>
-                        </button>
-                    </div>
-                    <p class="text-gray-300 my-6 text-center">Where would you like to purchase this item?</p>
-                    <div class="flex flex-col gap-4">
-                        <a id="buymeacoffee-link" href="#" target="_blank" rel="noopener noreferrer" class="shop-btn bmc">
-                            <img src="/imgs/bmc.png" alt="Buy Me a Coffee" class="shop-icon">
-                            <span>Buymeacoffee</span>
-                        </a>
-
-                        <a id="patreon-link" href="#" target="_blank" rel="noopener noreferrer" class="shop-btn patreon">
-                            <i class="fa-brands fa-patreon mr-3"></i>
-                            <span>Patreon</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <div id="footer-placeholder"></div>
-    <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
     <script src="/javascript/index.js"></script>
     <script src="/javascript/loaders.js"></script>
     <script src="/javascript/loading.js"></script>
     <script src="/javascript/discount.js"></script>
+    <script src="/javascript/js-detector.js"></script>
+    <script src="/javascript/restrictions.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="text-gray-200 min-h-screen">
+        <!-- This block is only visible if JavaScript is disabled. -->
+    <noscript>
+        <div class="fixed inset-0 z-[99999] bg-gray-900 flex flex-col items-center justify-center p-8 text-center text-white">
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 max-w-lg mx-auto transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                <i class="fa-solid fa-code-slash text-6xl text-neon mb-4 fa-beat"></i>
+                <h1 class="text-3xl font-bold mb-4">JavaScript Required</h1>
+                <p class="text-lg">This site is built with dynamic features and relies on JavaScript to function. Please enable JavaScript in your browser settings to continue.</p>
+            </div>
+        </div>
+    </noscript>
+
+    <!-- This div wraps all of the original page content and will be shown if JS is enabled. -->
+    <div class="js-content-wrapper">
+        <div id="popup-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
+            <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
+            <div class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up">
+                <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                    <i class="fa-solid fa-xmark fa-xl"></i>
+                </button>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-gift text-6xl text-blue-500 mb-4"></i>
+                    <h3 class="text-3xl font-extrabold text-white mb-2">Exclusive Offer!</h3>
+                    <p class="text-gray-400 mb-4">
+                        Get <span class="text-blue-500 font-semibold">20% off</span> your next purchase with this special discount code! expires by 12/9
+                    </p>
+                    <div class="bg-gray-800 rounded-lg p-4 w-full relative">
+                        <p id="discount-code" class="text-xl font-mono tracking-widest text-white cursor-pointer select-all">REFRESH</p>
+                        <div id="copied-tooltip" class="tooltip-container absolute hidden opacity-0 transition-opacity duration-300">
+                            <div class="tooltip-arrow absolute"></div>
+                            <span class="tooltip-text bg-blue-500 text-white text-xs rounded py-1 px-3 whitespace-nowrap">Copied!</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-xs mt-2">
+                        Copy and paste the code at checkout.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
+            <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
+            <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+        </div>
+
+        <div id="navbar-placeholder"></div>
+        
+        <main class="py-24 container mx-auto px-4 md:px-8">
+            <section id="projects" class="text-center">
+                <div style="margin: 20px;"><h2 style="display: inline;" class="text-5xl font-extrabold text-neon mb-4 animate-fadeInUp">My </h2><h2 style="display: inline;" class="text-5xl font-extrabold mb-4 animate-fadeInUp">Products</h2></div>
+                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto animate-fadeInUp"> 
+                    Explore my high-quality systems, visual effects, and assets designed for reliability, and seamless integration into your projects.
+                </p>
+
+                <div class="mb-8 max-w-lg mx-auto">
+                    <div class="relative flex items-center">
+                        <input id="search-input" type="text" placeholder="Search for products..." class="w-full px-6 py-3 rounded-full bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all pl-12" />
+                        <i class="fas fa-search absolute left-4 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center flex-wrap gap-4 mb-8">
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base active-filter" data-filter="all">All</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Verse">Verse</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Materials">Materials</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Niagara">Niagara</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Animations">Animations</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Free">Free</button>
+                </div>
+
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+                
+                <div id="load-more-container" class="mt-8 text-center" style="display: none;">
+                    <button id="load-more-btn" class="px-8 py-3 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base bg-blue-500 hover:bg-blue-600 text-white shadow-lg">Load More</button>
+                </div>
+            </section>
+            <div id="shop-container">
+                <div id="shop-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[100] flex items-center justify-center p-4">
+                    <div class="modal-bg fixed inset-0 bg-black opacity-75"></div>
+                    <div id="shop-modal-content" class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up" style="border: 1px solid #334155;">
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-600">
+                            <h3 class="text-2xl font-bold text-white">Choose a Shop</h3>
+                            <button id="close-shop-modal-btn" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fa-solid fa-xmark text-3xl"></i>
+                            </button>
+                        </div>
+                        <p class="text-gray-300 my-6 text-center">Where would you like to purchase this item?</p>
+                        <div class="flex flex-col gap-4">
+                            <a id="buymeacoffee-link" href="#" target="_blank" rel="noopener noreferrer" class="shop-btn bmc">
+                                <img src="/imgs/bmc.png" alt="Buy Me a Coffee" class="shop-icon">
+                                <span>Buymeacoffee</span>
+                            </a>
+
+                            <a id="patreon-link" href="#" target="_blank" rel="noopener noreferrer" class="shop-btn patreon">
+                                <i class="fa-brands fa-patreon mr-3"></i>
+                                <span>Patreon</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <div id="footer-placeholder"></div>
+        <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
+            <i class="fas fa-arrow-up"></i>
+        </button>
 </body>
 </html>

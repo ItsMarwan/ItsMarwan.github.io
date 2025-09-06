@@ -22,400 +22,419 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css">
+
+    <script src="/javascript/loaders.js"></script>
+    <script src="/javascript/loading.js"></script>
+    <script src="/javascript/index.js"></script>
+    <script src="/javascript/js-detector.js"></script>
+    <script src="/javascript/restrictions.js"></script>
 </head>
 <body class="text-gray-200 min-h-screen">
-    <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
-        <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
-        <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
-    </div>
+        <!-- This block is only visible if JavaScript is disabled. -->
+    <noscript>
+        <div class="fixed inset-0 z-[99999] bg-gray-900 flex flex-col items-center justify-center p-8 text-center text-white">
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 max-w-lg mx-auto transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                <i class="fa-solid fa-code-slash text-6xl text-neon mb-4 fa-beat"></i>
+                <h1 class="text-3xl font-bold mb-4">JavaScript Required</h1>
+                <p class="text-lg">This site is built with dynamic features and relies on JavaScript to function. Please enable JavaScript in your browser settings to continue.</p>
+            </div>
+        </div>
+    </noscript>
 
-    <div id="navbar-placeholder"></div>
+    <!-- This div wraps all of the original page content and will be shown if JS is enabled. -->
+    <div class="js-content-wrapper">
+        <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
+            <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
+            <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+        </div>
 
-    <main class="container mx-auto px-4 py-16 pt-32">
-        <div style="margin: 20px; text-align: center;"><h2 style="display: inline;" class="text-5xl font-extrabold text-neon mb-4 animate-fadeInUp">Blue Planet </h2><h2 style="display: inline;" class="text-5xl font-extrabold mb-4 animate-fadeInUp">Rules</h2></div>
-        <p class="text-lg text-center mb-12 max-w-2xl mx-auto text-gray-400 ">
-            To ensure a safe and friendly community, please follow these rules.
-        </p>
+        <div id="navbar-placeholder"></div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div class="space-y-8">
-                <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
-                    <h2 id="chatting-rules" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-comment-dots mr-2"></i> CHATTING RULES</h2>
-                    
-                    <div class="mb-6">
-                        <h3 class="text-xl font-bold text-white mb-4">General Conduct</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
-                                <div>
-                                    <p class="font-semibold text-white">No Swearing/Bad Language:</p>
-                                    <p class="text-sm text-gray-400">Never swear, use slurs, be toxic, or say anything racist. Respect everyone in the server.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
-                                <div>
-                                    <p class="font-semibold text-white">Be Mature & Respectful:</p>
-                                    <p class="text-sm text-gray-400">No drama, no toxic replies, no picking fights. This is a chill place.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
-                                <div>
-                                    <p class="font-semibold text-white">Respect Other Cultures:</p>
-                                    <p class="text-sm text-gray-400">Don’t mock, joke about, or disrespect anyone’s country, accent, religion, or background.</p>
-                                </div>
-                            </li>
-                        </ul>
+        <main class="container mx-auto px-4 py-16 pt-32">
+            <div style="margin: 20px; text-align: center;"><h2 style="display: inline;" class="text-5xl font-extrabold text-neon mb-4 animate-fadeInUp">Blue Planet </h2><h2 style="display: inline;" class="text-5xl font-extrabold mb-4 animate-fadeInUp">Rules</h2></div>
+            <p class="text-lg text-center mb-12 max-w-2xl mx-auto text-gray-400 ">
+                To ensure a safe and friendly community, please follow these rules.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="space-y-8">
+                    <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
+                        <h2 id="chatting-rules" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-comment-dots mr-2"></i> CHATTING RULES</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-white mb-4">General Conduct</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">No Swearing/Bad Language:</p>
+                                        <p class="text-sm text-gray-400">Never swear, use slurs, be toxic, or say anything racist. Respect everyone in the server.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">Be Mature & Respectful:</p>
+                                        <p class="text-sm text-gray-400">No drama, no toxic replies, no picking fights. This is a chill place.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">Respect Other Cultures:</p>
+                                        <p class="text-sm text-gray-400">Don’t mock, joke about, or disrespect anyone’s country, accent, religion, or background.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4">Server Interaction</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">No Pinging Content Creators:</p>
+                                        <p class="text-sm text-gray-400">If you ping any content creator (like @ItsMarwan) without reason, you'll get muted for 3 days.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">No Self-Promotions:</p>
+                                        <p class="text-sm text-gray-400">Only send your maps in the <span class="text-blue-400">#your-builds</span> channel. If you're caught promoting, you'll get muted for 5 days.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">Helping Others:</p>
+                                        <p class="text-sm text-gray-400">Don’t say “idk” or “help me pls” without trying. If you can’t help, stay quiet. Breaking this rule results in a 1-week mute.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">4.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">No Mini-Modding:</p>
+                                        <p class="text-sm text-gray-400">Do not act like a mod unless you are one. Let the staff do their job.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-4">Server Interaction</h3>
+
+                    <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
+                        <h2 id="keeping-server-safe" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-shield-check mr-2"></i> KEEPING THE SERVER SAFE</h2>
                         <ul class="space-y-4">
                             <li class="flex items-start">
                                 <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
                                 <div>
-                                    <p class="font-semibold text-white">No Pinging Content Creators:</p>
-                                    <p class="text-sm text-gray-400">If you ping any content creator (like @ItsMarwan) without reason, you'll get muted for 3 days.</p>
+                                    <p class="font-semibold text-white">Dealing with Bugs:</p>
+                                    <p class="text-sm text-gray-400">Found a bug or server issue? DM @ItsMarwan with details so it can be fixed.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
                                 <div>
-                                    <p class="font-semibold text-white">No Self-Promotions:</p>
-                                    <p class="text-sm text-gray-400">Only send your maps in the <span class="text-blue-400">#your-builds</span> channel. If you're caught promoting, you'll get muted for 5 days.</p>
+                                    <p class="font-semibold text-white">Reporting Users:</p>
+                                    <p class="text-sm text-gray-400">Tag @report_user and explain the issue clearly. Misusing this gets you a 2-day mute.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
                                 <div>
-                                    <p class="font-semibold text-white">Helping Others:</p>
-                                    <p class="text-sm text-gray-400">Don’t say “idk” or “help me pls” without trying. If you can’t help, stay quiet. Breaking this rule results in a 1-week mute.</p>
+                                    <p class="font-semibold text-white">Discord TOS:</p>
+                                    <p class="text-sm text-gray-400">Always follow Discord’s Terms of Service. Breaking them can get you banned from this server & Discord itself.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-neon text-xl font-bold mr-3 mt-1">4.</span>
                                 <div>
-                                    <p class="font-semibold text-white">No Mini-Modding:</p>
-                                    <p class="text-sm text-gray-400">Do not act like a mod unless you are one. Let the staff do their job.</p>
+                                    <p class="font-semibold text-white">Suspicious Activity:</p>
+                                    <p class="text-sm text-gray-400">Don’t share scam links, phishing, or fake giveaways. Instant ban if caught.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">5.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Hacked Accounts:</p>
+                                    <p class="text-sm text-gray-400">If your account was hacked or acts suspiciously, you will be temporarily banned until verified.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">6.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Privacy:</p>
+                                    <p class="text-sm text-gray-400">Don’t share private DMs, personal info, or other people’s content without permission.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
-                    <h2 id="keeping-server-safe" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-shield-check mr-2"></i> KEEPING THE SERVER SAFE</h2>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
-                            <div>
-                                <p class="font-semibold text-white">Dealing with Bugs:</p>
-                                <p class="text-sm text-gray-400">Found a bug or server issue? DM @ItsMarwan with details so it can be fixed.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
-                            <div>
-                                <p class="font-semibold text-white">Reporting Users:</p>
-                                <p class="text-sm text-gray-400">Tag @report_user and explain the issue clearly. Misusing this gets you a 2-day mute.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
-                            <div>
-                                <p class="font-semibold text-white">Discord TOS:</p>
-                                <p class="text-sm text-gray-400">Always follow Discord’s Terms of Service. Breaking them can get you banned from this server & Discord itself.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">4.</span>
-                            <div>
-                                <p class="font-semibold text-white">Suspicious Activity:</p>
-                                <p class="text-sm text-gray-400">Don’t share scam links, phishing, or fake giveaways. Instant ban if caught.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">5.</span>
-                            <div>
-                                <p class="font-semibold text-white">Hacked Accounts:</p>
-                                <p class="text-sm text-gray-400">If your account was hacked or acts suspiciously, you will be temporarily banned until verified.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">6.</span>
-                            <div>
-                                <p class="font-semibold text-white">Privacy:</p>
-                                <p class="text-sm text-gray-400">Don’t share private DMs, personal info, or other people’s content without permission.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
-                    <h2 id="event-rules" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-trophy mr-2"></i> EVENT RULES</h2>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
-                            <div>
-                                <p class="font-semibold text-white">No Cheating:</p>
-                                <p class="text-sm text-gray-400">If you’re caught cheating or breaking event rules, you’ll be disqualified and possibly banned.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
-                            <div>
-                                <p class="font-semibold text-white">Respect Event Hosts:</p>
-                                <p class="text-sm text-gray-400">If you're participating in a tournament, contest, or giveaway, follow the host’s instructions.</p>
+                    
+                    <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
+                        <h2 id="event-rules" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-trophy mr-2"></i> EVENT RULES</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
+                                <div>
+                                    <p class="font-semibold text-white">No Cheating:</p>
+                                    <p class="text-sm text-gray-400">If you’re caught cheating or breaking event rules, you’ll be disqualified and possibly banned.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Respect Event Hosts:</p>
+                                    <p class="text-sm text-gray-400">If you're participating in a tournament, contest, or giveaway, follow the host’s instructions.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
+                                    <div>
+                                    <p class="font-semibold text-white">Don’t Ask for Wins:</p>
+                                    <p class="text-sm text-gray-400">Asking for free wins, roles, or giveaway rerolls will get you disqualified.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">4.</span>
+                                <div>
+                                    <p class="font-semibold text-white">One Account Only:</p>
+                                    <p class="text-sm text-gray-400">Do not join events using alts. Only your main account is allowed.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
+                        <h2 id="agreement" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-gavel mr-2"></i> LICENSE & USAGE TERMS</h2>
+                        <p class="font-semibold text-white mb-4">By purchasing or using my (“Products”), you agree to the following legally binding conditions:</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
+                                <div>
+                                    <p class="font-semibold text-white">STRICTLY NO RESALE OR DISTRIBUTION</p>
+                                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-400 mt-2">
+                                        <li>You are NOT permitted to resell, share, re-upload, leak, or distribute this product in any form, modified or unmodified.</li>
+                                        <li>Group buys, redistribution, or sharing with others is a direct violation of this agreement.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
+                                <div>
+                                    <p class="font-semibold text-white">VIOLATIONS = PERMANENT BAN + LEGAL ACTION</p>
+                                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-400 mt-2">
+                                        <li>Any user caught leaking or redistributing the product will be **immediately and permanently banned** from the Discord server.</li>
+                                        <li>The original buyer responsible for the leak will be subject to **legal consequences** under copyright infringement laws.</li>
+                                        <li>No warnings. No second chances.</li>
+                                    </ul>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
                                 <div>
-                                <p class="font-semibold text-white">Don’t Ask for Wins:</p>
-                                <p class="text-sm text-gray-400">Asking for free wins, roles, or giveaway rerolls will get you disqualified.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">4.</span>
-                            <div>
-                                <p class="font-semibold text-white">One Account Only:</p>
-                                <p class="text-sm text-gray-400">Do not join events using alts. Only your main account is allowed.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
-                    <h2 id="agreement" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-gavel mr-2"></i> LICENSE & USAGE TERMS</h2>
-                    <p class="font-semibold text-white mb-4">By purchasing or using my (“Products”), you agree to the following legally binding conditions:</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
-                            <div>
-                                <p class="font-semibold text-white">STRICTLY NO RESALE OR DISTRIBUTION</p>
-                                <ul class="list-disc list-inside space-y-2 text-sm text-gray-400 mt-2">
-                                    <li>You are NOT permitted to resell, share, re-upload, leak, or distribute this product in any form, modified or unmodified.</li>
-                                    <li>Group buys, redistribution, or sharing with others is a direct violation of this agreement.</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
-                            <div>
-                                <p class="font-semibold text-white">VIOLATIONS = PERMANENT BAN + LEGAL ACTION</p>
-                                <ul class="list-disc list-inside space-y-2 text-sm text-gray-400 mt-2">
-                                    <li>Any user caught leaking or redistributing the product will be **immediately and permanently banned** from the Discord server.</li>
-                                    <li>The original buyer responsible for the leak will be subject to **legal consequences** under copyright infringement laws.</li>
-                                    <li>No warnings. No second chances.</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
-                            <div>
-                                <p class="font-semibold text-white">CONTACT & OFFICIAL SOURCE</p>
-                                <ul class="list-disc list-inside space-y-2 text-sm text-gray-400 mt-2">
-                                    <li>Discord: itsmarwan.</li>
-                                    <li>Official Shop: https://buymeacoffee.com/itsmarwan</li>
-                                    <li>Official Shop2: https://patreon.com/itsmarwan</li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                    <p class="text-sm text-gray-400 mt-4">Copyright © 2025 itsmarwan. All rights reserved.<br>Unauthorized use, duplication, or distribution is strictly prohibited.</p>
-                </div>
-            </div>
-            
-            <div class="space-y-8">
-                <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
-                    <h2 id="more-chatting-rules" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-comment-dots mr-2"></i> MORE CHATTING RULES</h2>
-                    
-                    <div class="mb-6">
-                        <h3 class="text-xl font-bold text-white mb-4">Moderation and Pings</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
-                                <div>
-                                    <p class="font-semibold text-white">Listen to Moderators & @ItsMarwan:</p>
-                                    <p class="text-sm text-gray-400">Mods are here to help. Respect their decisions or you might get muted.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
-                                <div>
-                                    <p class="font-semibold text-white">No Spamming @Mods or Help:</p>
-                                    <p class="text-sm text-gray-400">Spamming help requests or pinging mods without reason will result in a mute and no support.</p>
+                                    <p class="font-semibold text-white">CONTACT & OFFICIAL SOURCE</p>
+                                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-400 mt-2">
+                                        <li>Discord: itsmarwan.</li>
+                                        <li>Official Shop: https://buymeacoffee.com/itsmarwan</li>
+                                        <li>Official Shop2: https://patreon.com/itsmarwan</li>
+                                    </ul>
                                 </div>
                             </li>
                         </ul>
+                        <p class="text-sm text-gray-400 mt-4">Copyright © 2025 itsmarwan. All rights reserved.<br>Unauthorized use, duplication, or distribution is strictly prohibited.</p>
                     </div>
-                    
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-4">Prohibited Topics & Behaviors</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
-                                <div>
-                                    <p class="font-semibold text-white">No Politics or Religion:</p>
-                                    <p class="text-sm text-gray-400">These topics aren’t allowed. If you start such discussions, you’ll be banned for 3 weeks.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
-                                <div>
-                                    <p class="font-semibold text-white">No Begging:</p>
-                                    <p class="text-sm text-gray-400">Don’t beg for roles, ranks, free stuff, or special permissions.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
-                    <h2 id="channel-usage" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-hashtag mr-2"></i> CHANNEL USAGE</h2>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
-                            <div>
-                                <p class="font-semibold text-white">Support Channels:</p>
-                                <p class="text-sm text-gray-400">Only ask for help in <span class="text-blue-400">#community</span> or <span class="text-blue-400">#ask-marwan</span>. Not in <span class="text-blue-400">#general</span> or off-topic channels.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
-                            <div>
-                                <p class="font-semibold text-white">Channel Usage:</p>
-                                <p class="text-sm text-gray-400">Use each channel for its intended purpose. Read the description before typing.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
-                            <div>
-                                <p class="font-semibold text-white">Usage of <span class="text-blue-400">#ask-marwan</span>:</p>
-                                <p class="text-sm text-gray-400">This is only for direct questions to @ItsMarwan. Don’t use <span class="text-blue-400">#general</span> to ask him anything.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">4.</span>
-                            <div>
-                                <p class="font-semibold text-white">Follow Forums Rules:</p>
-                                <p class="text-sm text-gray-400">Some forums have rules or templates. Read them before posting.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">5.</span>
-                            <div>
-                                <p class="font-semibold text-white">Media Channels:</p>
-                                <p class="text-sm text-gray-400">You can send images, but no NSFW or inappropriate content. Video ideas must follow Epic Games' Terms of Service.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">6.</span>
-                            <div>
-                                <p class="font-semibold text-white">English Only:</p>
-                                <p class="text-sm text-gray-400">This server uses English. You can chat in other languages in designated channels if available.</p>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
                 
-                <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
-                    <h2 id="channel-restrictions" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-ban mr-2"></i> CHANNEL RESTRICTIONS</h2>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
-                            <div>
-                                <p class="font-semibold text-white">Links:</p>
-                                <p class="text-sm text-gray-400">Only allowed in <span class="text-blue-400">#your-builds</span> and <span class="text-blue-400">#promotions</span>. Posting links elsewhere = warning + link deleted.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
-                            <div>
-                                <p class="font-semibold text-white">Spam Messages:</p>
-                                <p class="text-sm text-gray-400">No spamming texts, emojis, images, or repeated messages.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
-                            <div>
-                                <p class="font-semibold text-white">Server Invites:</p>
-                                <p class="text-sm text-gray-400">Don’t send invites to other servers unless it’s in <span class="text-blue-400">#promotions</span>.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">4.</span>
-                            <div>
-                                <p class="font-semibold text-white">NSFW/Offensive Content:</p>
-                                <p class="text-sm text-gray-400">This is a family-friendly server. No NSFW content anywhere. Doing so results in an instant ban.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">5.</span>
-                            <div>
-                                <p class="font-semibold text-white">Impersonation:</p>
-                                <p class="text-sm text-gray-400">Don’t pretend to be staff, creators, or other members. This gets you banned.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">6.</span>
-                            <div>
-                                <p class="font-semibold text-white">AI & Bot Use:</p>
-                                <p class="text-sm text-gray-400">Only use bots in the bot channels. Don’t spam bot commands in general chat.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">7.</span>
-                            <div>
-                                <p class="font-semibold text-white">Promotions & Job Board Rules:</p>
-                                <p class="text-sm text-gray-400">You cannot sell or promote anything against the Epic Games Terms of Service in the <span class="text-blue-400">#promotions</span> or <span class="text-blue-400">#job-board</span> channels.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-neon text-xl font-bold mr-3 mt-1">8.</span>
-                            <div>
-                                <p class="font-semibold text-white">Asset Trading Rules & Disclaimer:</p>
-                                <p class="text-sm text-gray-400">
-                                    <span class="font-bold text-red-400">Warning:</span> Trades and assets shared here are not affiliated with the server. Verify everything before downloading or trading.<br><br>
-                                    <span class="font-bold text-white">Trading Disclaimer:</span> By accessing this channel and participating in trades, you acknowledge and agree that:
-                                    <ul class="list-disc list-inside mt-2 ml-4">
-                                        <li>Selling assets is strictly prohibited. Only trading is allowed.</li>
-                                        <li>This server and its staff are not responsible for any trades or assets shared here.</li>
-                                        <li>We do not own, sell, or distribute any of the assets posted in this forum.</li>
-                                        <li>If you're the rightful owner of any asset and want it removed, please contact the moderators.</li>
-                                    </ul>
-                                    <span class="font-semibold text-white mt-2 inline-block">You trade, download, or share content at your own risk.</span>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
-                    <h2 class="text-3xl font-bold text-neon mb-6"><i class="fab fa-discord mr-2"></i> INHABIT BLUE PLANET</h2>
-                    <p class="text-xl font-semibold text-white mb-2">Marwan's Blue Planet</p>
-                    <p class="text-sm text-gray-400 mb-4">ItsMarwan Official Server! If You Have Issues In UEFN I'll Be More Than Happy To Help You Solve It!</p>
-                    <div class="flex flex-col space-y-2 mb-6 text-sm w-full">
-                        <div class="flex items-center">
-                            <i class="fas fa-users text-gray-500 mr-2"></i>
-                            <span class="text-white">1,673 members</span>
+                <div class="space-y-8">
+                    <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
+                        <h2 id="more-chatting-rules" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-comment-dots mr-2"></i> MORE CHATTING RULES</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-white mb-4">Moderation and Pings</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">Listen to Moderators & @ItsMarwan:</p>
+                                        <p class="text-sm text-gray-400">Mods are here to help. Respect their decisions or you might get muted.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">No Spamming @Mods or Help:</p>
+                                        <p class="text-sm text-gray-400">Spamming help requests or pinging mods without reason will result in a mute and no support.</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-circle text-green-500 text-xs mr-2"></i>
-                            <span class="text-white">467 online</span>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4">Prohibited Topics & Behaviors</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">No Politics or Religion:</p>
+                                        <p class="text-sm text-gray-400">These topics aren’t allowed. If you start such discussions, you’ll be banned for 3 weeks.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
+                                    <div>
+                                        <p class="font-semibold text-white">No Begging:</p>
+                                        <p class="text-sm text-gray-400">Don’t beg for roles, ranks, free stuff, or special permissions.</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <a href="https://discord.com/invite/itsmarwan-s-blue-planet-1150156572857733170" target="_blank" class="inline-block w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 text-center button-pop explore-btn">
-                        Join Now
-                    </a>
+
+                    <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
+                        <h2 id="channel-usage" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-hashtag mr-2"></i> CHANNEL USAGE</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Support Channels:</p>
+                                    <p class="text-sm text-gray-400">Only ask for help in <span class="text-blue-400">#community</span> or <span class="text-blue-400">#ask-marwan</span>. Not in <span class="text-blue-400">#general</span> or off-topic channels.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Channel Usage:</p>
+                                    <p class="text-sm text-gray-400">Use each channel for its intended purpose. Read the description before typing.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Usage of <span class="text-blue-400">#ask-marwan</span>:</p>
+                                    <p class="text-sm text-gray-400">This is only for direct questions to @ItsMarwan. Don’t use <span class="text-blue-400">#general</span> to ask him anything.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">4.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Follow Forums Rules:</p>
+                                    <p class="text-sm text-gray-400">Some forums have rules or templates. Read them before posting.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">5.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Media Channels:</p>
+                                    <p class="text-sm text-gray-400">You can send images, but no NSFW or inappropriate content. Video ideas must follow Epic Games' Terms of Service.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">6.</span>
+                                <div>
+                                    <p class="font-semibold text-white">English Only:</p>
+                                    <p class="text-sm text-gray-400">This server uses English. You can chat in other languages in designated channels if available.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
+                        <h2 id="channel-restrictions" class="text-3xl font-bold text-neon mb-6"><i class="fas fa-ban mr-2"></i> CHANNEL RESTRICTIONS</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">1.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Links:</p>
+                                    <p class="text-sm text-gray-400">Only allowed in <span class="text-blue-400">#your-builds</span> and <span class="text-blue-400">#promotions</span>. Posting links elsewhere = warning + link deleted.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">2.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Spam Messages:</p>
+                                    <p class="text-sm text-gray-400">No spamming texts, emojis, images, or repeated messages.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">3.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Server Invites:</p>
+                                    <p class="text-sm text-gray-400">Don’t send invites to other servers unless it’s in <span class="text-blue-400">#promotions</span>.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">4.</span>
+                                <div>
+                                    <p class="font-semibold text-white">NSFW/Offensive Content:</p>
+                                    <p class="text-sm text-gray-400">This is a family-friendly server. No NSFW content anywhere. Doing so results in an instant ban.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">5.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Impersonation:</p>
+                                    <p class="text-sm text-gray-400">Don’t pretend to be staff, creators, or other members. This gets you banned.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">6.</span>
+                                <div>
+                                    <p class="font-semibold text-white">AI & Bot Use:</p>
+                                    <p class="text-sm text-gray-400">Only use bots in the bot channels. Don’t spam bot commands in general chat.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">7.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Promotions & Job Board Rules:</p>
+                                    <p class="text-sm text-gray-400">You cannot sell or promote anything against the Epic Games Terms of Service in the <span class="text-blue-400">#promotions</span> or <span class="text-blue-400">#job-board</span> channels.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-neon text-xl font-bold mr-3 mt-1">8.</span>
+                                <div>
+                                    <p class="font-semibold text-white">Asset Trading Rules & Disclaimer:</p>
+                                    <p class="text-sm text-gray-400">
+                                        <span class="font-bold text-red-400">Warning:</span> Trades and assets shared here are not affiliated with the server. Verify everything before downloading or trading.<br><br>
+                                        <span class="font-bold text-white">Trading Disclaimer:</span> By accessing this channel and participating in trades, you acknowledge and agree that:
+                                        <ul class="list-disc list-inside mt-2 ml-4">
+                                            <li>Selling assets is strictly prohibited. Only trading is allowed.</li>
+                                            <li>This server and its staff are not responsible for any trades or assets shared here.</li>
+                                            <li>We do not own, sell, or distribute any of the assets posted in this forum.</li>
+                                            <li>If you're the rightful owner of any asset and want it removed, please contact the moderators.</li>
+                                        </ul>
+                                        <span class="font-semibold text-white mt-2 inline-block">You trade, download, or share content at your own risk.</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card p-8 rounded-xl shadow-lg border border-gray-700 card-hover ">
+                        <h2 class="text-3xl font-bold text-neon mb-6"><i class="fab fa-discord mr-2"></i> INHABIT BLUE PLANET</h2>
+                        <p class="text-xl font-semibold text-white mb-2">Marwan's Blue Planet</p>
+                        <p class="text-sm text-gray-400 mb-4">ItsMarwan Official Server! If You Have Issues In UEFN I'll Be More Than Happy To Help You Solve It!</p>
+                        <div class="flex flex-col space-y-2 mb-6 text-sm w-full">
+                            <div class="flex items-center">
+                                <i class="fas fa-users text-gray-500 mr-2"></i>
+                                <span class="text-white">1,673 members</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-circle text-green-500 text-xs mr-2"></i>
+                                <span class="text-white">467 online</span>
+                            </div>
+                        </div>
+                        <a href="https://discord.com/invite/itsmarwan-s-blue-planet-1150156572857733170" target="_blank" class="inline-block w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 text-center button-pop explore-btn">
+                            Join Now
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <div id="footer-placeholder"></div>
-    <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+        <div id="footer-placeholder"></div>
+        <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     <script src="/javascript/index.js"></script>
     <script>
         // Adjusts the body padding to account for the fixed navbar height.
@@ -449,7 +468,5 @@
             }
         });
     </script>
-    <script src="/javascript/loaders.js"></script>
-    <script src="/javascript/loading.js"></script>
 </body>
 </html>

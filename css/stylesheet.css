@@ -523,3 +523,12 @@ body {
     pointer-events: none;
     z-index: 100000; /* This z-index must be higher than the popup's z-index (99999) */
 }
+
+.js-content-wrapper {
+    display: none;
+}
+
+/* This makes the content wrapper visible when the body has the 'js-enabled' class. */
+body.js-enabled .js-content-wrapper {
+    display: block;
+}
