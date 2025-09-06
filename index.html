@@ -172,7 +172,10 @@
 
         <!-- Customer Reviews Carousel -->
         <section id="reviews" class="container mx-auto px-4 py-16">
-            <h2 class="text-4xl font-bold text-center mb-12">What Creators Say</h2>
+            <h2 class="text-4xl font-bold text-center mb-4">What Creators Say</h2>
+            <p class="text-gray-400 mb-12 text-center">
+                Have doubts? Feel free to verify in our Discord server at <span class="text-blue-500 font-semibold"><a href="https://discord.com/channels/1150156572857733170/1363460580555489441" target="_blank"><i class="fa-solid fa-star"></i>┃reviews</a></span>.
+            </p>
             <div class="relative max-w-4xl mx-auto">
                 <div class="carousel-container rounded-xl shadow-lg border border-gray-700">
                     <div id="carousel-track" class="carousel-track flex">
@@ -193,8 +196,9 @@
                         <button id="prevBtn" class="bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
                         </button>
-                        <div id="carousel-dots" class="flex items-center space-x-2">
-                            <!-- Dots will be dynamically generated here -->
+                        <div id="carousel-dots-container" class="relative overflow-hidden flex items-center max-w-[50px] mx-auto">
+                            <div id="carousel-dots" class="flex items-center space-x-2 transition-transform duration-500 ease-in-out">
+                                </div>
                         </div>
                         <button id="nextBtn" class="bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>

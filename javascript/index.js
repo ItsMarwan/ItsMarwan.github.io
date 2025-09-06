@@ -1,4 +1,3 @@
-// --- Function to fetch data from API and initialize the app ---
 async function fetchRatingsAndInitialize() {
     const userIds = [
         '983752185919709274',
@@ -134,9 +133,12 @@ function initializeRatingsCarousel(ratingsData) {
         carouselTrack.appendChild(slide);
 
         const dot = document.createElement('button');
-        // This line is changed to no longer set the initial active class.
-        dot.className = `w-3 h-3 rounded-full bg-gray-600 transition-colors duration-300`;
-        dot.addEventListener('click', () => goToSlide(index));
+        dot.className = `w-2 h-2 rounded-full bg-gray-400 transition-all duration-300`;
+        dot.addEventListener('click', () => {
+            clearInterval(window.carouselInterval);
+            goToSlide(index);
+            startCarouselAutoplay();
+        });
         carouselDots.appendChild(dot);
     });
 
@@ -145,30 +147,53 @@ function initializeRatingsCarousel(ratingsData) {
     
     setupCarouselNavigation();
     startCarouselAutoplay();
-    // This new line ensures the correct dot is selected immediately after creation.
     updateCarousel(); 
+}
+
+function goToSlide(index) {
+    window.currentSlide = index;
+    updateCarousel();
 }
 
 function updateCarousel() {
     const carouselTrack = document.getElementById('carousel-track');
+    const carouselDotsContainer = document.getElementById('carousel-dots-container');
     const carouselDots = document.getElementById('carousel-dots');
     
-    if (!carouselTrack || !carouselDots) return;
+    if (!carouselTrack || !carouselDotsContainer || !carouselDots) return;
 
-    // Move the carousel track
     const slideWidth = carouselTrack.children[0].clientWidth;
     carouselTrack.style.transform = `translateX(-${window.currentSlide * slideWidth}px)`;
 
-    // Update the dots
     const dots = carouselDots.querySelectorAll('button');
+    const dotWidth = 8; 
+    const largeDotWidth = 12; 
+    const dotSpacing = 8; 
+
     dots.forEach((dot, index) => {
-        dot.classList.remove('bg-blue-500');
-        dot.classList.add('bg-gray-600');
+        dot.classList.remove('bg-blue-500', 'bg-gray-600', 'bg-gray-400', 'bg-white', 'w-2', 'h-2', 'w-3', 'h-3');
+        dot.classList.add('transition-all');
+        
         if (index === window.currentSlide) {
-            dot.classList.add('bg-blue-500');
-            dot.classList.remove('bg-gray-600');
+            dot.classList.add('bg-white', 'w-3', 'h-3'); 
+        } else {
+            dot.classList.add('bg-gray-400', 'w-2', 'h-2');
         }
     });
+    
+    // Improved centering logic
+    let translateX;
+    const currentDotOffset = (window.currentSlide * (dotWidth + dotSpacing));
+    const containerCenter = carouselDotsContainer.clientWidth / 2;
+    const dotCenter = largeDotWidth / 2;
+    translateX = -(currentDotOffset - containerCenter + dotCenter);
+
+    const maxTranslateX = -((window.totalSlides * (dotWidth + dotSpacing)) - carouselDotsContainer.clientWidth);
+    const minTranslateX = 0;
+    
+    translateX = Math.min(minTranslateX, Math.max(maxTranslateX, translateX));
+    
+    carouselDots.style.transform = `translateX(${translateX}px)`;
 }
 
 function setupCarouselNavigation() {
@@ -220,7 +245,6 @@ function startCarouselAutoplay() {
         startProgressBar();
     }, slideDuration);
 
-    // Start first progress bar immediately
     startProgressBar();
 }
 

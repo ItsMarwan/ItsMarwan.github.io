@@ -23,7 +23,6 @@ body {
 }
 
 #carousel-dots {
-    overflow: hidden; 
     white-space: nowrap; 
 }
 
