@@ -1,4 +1,4 @@
-//   RANDOM LOADING MESSAGES
+// --- RANDOM LOADING MESSAGES ---
 const loadingMessages = [
     "Loading awesomeness…",
     "Building your experience…",
@@ -39,85 +39,46 @@ const loadingMessages = [
     "Charging creativity circuits...",
     "Crafting realities beyond pixels...",
     "Spawning infinite possibilities...",
-    "Aligning imagination with algorithms...",
-    "Breathing soul into scripts...",
-    "Assembling your digital playground...",
-    "Rolling dice behind the scenes...",
-    "Casting spells on polygons...",
-    "Summoning epic assets...",
-    "Respawning fresh ideas...",
-    "Loading your next level of wonder...",
-    "Unlocking sandbox mode...",
-    "Pixel potions brewing...",
-    "Compiling dreams into design...",
-    "Debugging the impossible...",
-    "Rendering reality in real time...",
-    "Merging imagination with logic...",
-    "Optimizing your creative core...",
-    "Deploying digital daydreams...",
-    "Every pixel tells a story...",
-    "Imagination loading, reality pending...",
-    "Creation is just code with a soul...",
-    "From idea to infinity...",
-    "Dreams take time to render...",
-    "Loading the future, one frame at a time...",
-    "Every great journey starts with a progress bar..."
+    "Connecting the dots...",
+    "Igniting inspiration...",
+    "Assembling the impossible...",
+    "Designing new frontiers...",
+    "Bringing dreams to life...",
+    "Creating the future of UEFN..."
 ];
 
 const loadingTextElement = document.getElementById('loading-text');
+let messageIndex = 0;
 
-//   RANDOM MESSAGE PICKER
-
-function getRandomMessage() {
-    const randomIndex = Math.floor(Math.random() * loadingMessages.length);
-    return loadingMessages[randomIndex];
-}
-
-//   UPDATE LOADING TEXT WITH FADE
-
-function updateLoadingTextWithFade() {
+function updateLoadingText() {
     if (loadingTextElement) {
-        // Fade the current text OUT & move it DOWN
-        loadingTextElement.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        loadingTextElement.style.opacity = '0';
-        loadingTextElement.style.transform = 'translateY(20px)';
-
-        // After fade-out, switch message and fade IN moving UP
-        setTimeout(() => {
-            loadingTextElement.textContent = getRandomMessage();
-
-            // Reset position ABOVE, invisible
-            loadingTextElement.style.opacity = '0';
-            loadingTextElement.style.transform = 'translateY(-20px)';
-
-            // Fade IN and slide DOWN to original position
-            setTimeout(() => {
-                loadingTextElement.style.opacity = '1';
-                loadingTextElement.style.transform = 'translateY(0)';
-            }, 50);
-        }, 500); // Matches CSS fade-out duration
+        loadingTextElement.innerText = loadingMessages[messageIndex];
+        messageIndex = (messageIndex + 1) % loadingMessages.length;
     }
 }
 
-//   INITIALIZE LOADING TEXT
-if (loadingTextElement) {
-    // Set first random message
-    loadingTextElement.textContent = getRandomMessage();
+function updateLoadingTextWithFade() {
+    if (!loadingTextElement) return;
 
-    // Animate first line with your existing "fade-in-up" class
-    loadingTextElement.classList.add('fade-in-up');
+    loadingTextElement.classList.add('fade-out');
+    setTimeout(() => {
+        updateLoadingText();
+        loadingTextElement.classList.remove('fade-out');
+    }, 500); // Wait for fade-out to complete before changing text
+    
+    setTimeout(() => {
+        loadingTextElement.classList.add('fade-in-up');
+    }, 500);
 
-    // Remove the class after animation to avoid conflicts later
     setTimeout(() => {
         loadingTextElement.classList.remove('fade-in-up');
-    }, 600); // Should match your CSS fade-in-up duration
+    }, 1100); // Should match your CSS fade-in-up duration
 }
 
 // Change message every 3 seconds
 const textInterval = setInterval(updateLoadingTextWithFade, 3000);
 
-//   LOADING SCREEN FADE & INIT
-
+// --- LOADING SCREEN FADE & INIT ---
 window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
 
@@ -128,6 +89,10 @@ window.addEventListener('load', () => {
         // Fully hide after fade-out
         setTimeout(() => {
             loadingScreen.style.display = 'none';
+            // Trigger the discount.js logic ONLY after the loading screen is hidden
+            if (window.initDiscountModal) {
+                window.initDiscountModal();
+            }
         }, 350);
 
         // Animate progress bars
@@ -148,8 +113,14 @@ window.addEventListener('load', () => {
         });
 
         // Initialize custom scroll effects if available
-        if (typeof initializeScrollEffects === 'function') {
-            initializeScrollEffects();
+        if (typeof initScrollEffects === 'function') {
+            initScrollEffects();
         }
+
+        // Clean up the text interval once loading is done
+        clearInterval(textInterval);
     }
 });
+
+// Update the initial message
+updateLoadingText();
