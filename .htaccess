@@ -1,26 +1,7 @@
-# Enable Rewrite Engine
 RewriteEngine On
 RewriteBase /
 
-# Force trailing slash removal for directories (optional, cleaner URLs)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1 [R=301,L]
+Redirect /home /index.html
 
-# 1. Redirect /home to index.html
-RewriteRule ^home$ index.html [L]
-
-# 2. Redirect /discord to Discord invite
-RewriteRule ^discord$ https://discord.com/invite/itsmarwan-s-blue-planet-1150156572857733170 [R=302,L]
-
-# 3. If the user requests a .html file, remove the extension from the URL
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?]
-RewriteRule ^ %1 [R=301,L]
-
-# 4. Internally map extensionless URLs to .html files if they exist
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L]
-
-# 5. Custom 404 page
 ErrorDocument 404 /404.html
+
