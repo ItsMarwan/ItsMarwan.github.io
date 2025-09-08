@@ -3,6 +3,10 @@ Allow: /
 
 Sitemap: https://itsmarwan.github.io/sitemap.xml
 
-# Prevent indexing of GitHub-specific files
+Disallow: /thankyou.html
+
+Disallow: .github/
+
 Disallow: /legal/
+
 Disallow: /README.md
