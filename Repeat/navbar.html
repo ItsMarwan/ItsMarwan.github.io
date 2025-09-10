@@ -18,22 +18,40 @@
             <a href="/products" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
                 <i class="fa-solid fa-cart-shopping"></i> Products
             </a>
-            <div class="relative group">
-                <button class="nav-link flex items-center">
-                    <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>&#8194More
-                </button>
-                <div id="planet-dropdown" class="absolute left-0 mt-2 w-48 bg-[#111527] rounded-md  py-1 z-50 opacity-0 group-hover:opacity-85 group-hover:visible transition-all duration-300 invisible origin-top transform scale-y-0 group-hover:scale-y-100">
-                    <a href="/rules" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1c2447]">Planet Rules</a>
-                    <a href="/faq" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1c2447]">FAQ</a>
-                    <a href="/products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1c2447]">Products</a>
-                    <a href="/contact" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1c2447]">Contact Me</a>
-                    <a href="/discord" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1c2447]">Discord Server</a>
-                    <a href="/contributions" class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1c2447]">Contributed Maps</a>
+                <!-- Desktop Dropdown -->
+                <div class="dropdown">
+                    <button class="nav-link text-gray-300 hover:text-white transition duration-300 flex items-center">
+                        <i class="fa-solid fa-bars"></i>&#8194More
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/rules" class="dropdown-item">
+                            <i class="fa-solid fa-book-sparkles mr-2"></i>Planet Rules
+                        </a>
+                        <a href="/faq" class="dropdown-item">
+                            <i class="fa-solid fa-comment-question mr-2"></i>FAQ
+                        </a>
+                        <a href="/contact" class="dropdown-item">
+                            <i class="fa-solid fa-address-book mr-2"></i>Contact Me
+                        </a>
+                        <a href="/contributions" class="dropdown-item">
+                            <i class="fa-solid fa-code mr-2"></i>Contributions
+                        </a>
+                        <a href="/discord" class="dropdown-item">
+                            <i class="fa-brands fa-discord mr-2"></i>Discord Server
+                        </a>
+                        <a href="/patreon" class="dropdown-item">
+                            <i class="fa-brands fa-patreon mr-2"></i> Patreon
+                        </a>
+                        <a href="/buymeacoffee" class="dropdown-item">
+                            <i class="fa-solid fa-cup-togo mr-2"></i> Buymeacoffee
+                        </a>
+                    </div>
                 </div>
+            <div class="flex justify-center pt-2">
+                <button onclick="window.location.reload();" class="refresh-btn text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2" title="Refresh Page">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
             </div>
-            <button onclick="window.location.reload();" class="refresh-btn text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2 transform" title="Refresh Page">
-                <i class="fas fa-sync-alt"></i>
-            </button>
         </div>
         <!-- Mobile Menu Button -->
         <button id="menu-btn" class="text-gray-300 hover:text-white md:hidden focus:outline-none w-6 h-6 relative">
@@ -72,13 +90,14 @@
         <a href="/contributions" class="nav-link  text-center py-2">
             <i class="fa-solid fa-code"></i> Contributed Maps
         </a>
-        <button onclick="window.location.reload();" class="refresh-btn text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2 transform" title="Refresh Page">
+        <div class="flex justify-center pt-2">
+            <button onclick="window.location.reload();" class="refresh-btn text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2" title="Refresh Page">
                 <i class="fas fa-sync-alt"></i>
-        </button>
+            </button>
+        </div>
             <br>
     </div>
     <script>
         window.location.replace("/");
     </script>
-    <script src="/javascript/restrictions.js"></script>
 </nav>
