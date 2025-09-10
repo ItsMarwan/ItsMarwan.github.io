@@ -9,10 +9,6 @@
     <meta name="keywords" content="UEFN, Fortnite, Verse, Game Development, Tutorials, Custom Assets, Game Mechanics, ItsMarwan">
     <meta name="thumbnail" content="/imgs/brand.png">
     <meta name="theme-color" content="#2D7EEA">
-
-    <!-- google stuff -->
-    <meta name="google-site-verification" content="_4kVx92p4jrjZosLtEDvzvZSKomznXHdZi0aWHy4--k" />
-
     <link rel="icon" type="image/png" href="/imgs/brand.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -48,6 +44,7 @@
         <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
             <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
             <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+            <div class="target_bg"></div>
         </div>
 
         <div id="navbar-placeholder"></div>
@@ -63,9 +60,9 @@
                 </p>
                 <!-- Average Rating Display -->
                 <a href="#reviews" class="inline-block hover:scale-105 transition-transform duration-300  animated-element" style="animation-delay: 0.5s; opacity: 0;">
-                    <div class="bg-gray-800 rounded-full px-4 py-2 inline-flex items-center space-x-2 text-white shadow-lg cursor-pointer">
-                        <p id="average-rating" class="text-xl font-bold"></p>
-                        <div id="average-stars" class="text-yellow-400 text-sm"></div>
+                    <div class="bg-gray-800 rounded-full px-4 py-2 inline-flex items-center space-x-2 text-white shadow-lg cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        <p id="average-rating" class="text-xl font-bold transition duration-300"></p>
+                        <div id="average-stars" class="text-yellow-400 text-sm transition duration-300"></div>
                     </div>
                 </a>
                 <div class="mt-8 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4  animated-element" style="animation-delay: 0.6s; opacity: 0; ">
@@ -73,7 +70,7 @@
                         Explore My Tutorials
                     </a>
                     <a href="/contact" class="inline-block px-8 py-4 bg-gray-800 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-                        Contact Me
+                        Hire Me!
                     </a>
                 </div>
             </section>
@@ -270,10 +267,15 @@
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
+    <div class="target_bg"></div>
+    <div class="track" id="track"></div>
+    <script src="/javascript/mouse_blur.js"></script>
+    <script src="/javascript/blob.js"></script>
     <script src="/javascript/index.js"></script>
     <script src="/javascript/loaders.js"></script>
     <script src="/javascript/loading.js"></script>
     <script src="/javascript/js-detector.js"></script>
     <script src="/javascript/restrictions.js"></script>
+    <script src="/javascript/custom-cursor.js"></script>
 </body>
 </html>

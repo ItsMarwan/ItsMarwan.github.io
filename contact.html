@@ -29,6 +29,7 @@
     <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
         <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
         <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+        <div class="target_bg"></div>
     </div>
     
     <!-- Navbar Placeholder -->
@@ -119,13 +120,11 @@
     <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
+    <div class="target_bg"></div>
 
     <!-- Scripts -->
     <script src="/javascript/loaders.js"></script>
-    <script src="/javascript/index.js"></script>
     <script src="/javascript/loading.js"></script>
-    <script src="/javascript/js-detector.js"></script>
-    <script src="/javascript/restrictions.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -243,5 +242,7 @@
             });
         });
     </script>
+    <div class="track" id="track"></div>
+    <script src="/javascript/mouse_blur.js"></script>
 </body>
 </html>

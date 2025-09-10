@@ -8,9 +8,6 @@
     <meta name="keywords" content="UEFN, Fortnite, Verse, Game Development, Tutorials, Custom Assets, Game Mechanics, ItsMarwan, FAQ, support">
     <link rel="icon" type="image/png" href="/imgs/brand.png">
     <script src="https://cdn.tailwindcss.com"></script>
-        <!-- google stuff -->
-    <meta name="google-site-verification" content="_4kVx92p4jrjZosLtEDvzvZSKomznXHdZi0aWHy4--k" />
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="/css/stylesheet.css">
@@ -26,6 +23,7 @@
     <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
         <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
         <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+        <div class="target_bg"></div>
     </div>
 
     <div id="navbar-placeholder"></div>
@@ -142,7 +140,7 @@
                     </div>
                 </div>
                 
-                <!-- <h2 class="text-3xl font-bold text-white mt-10 mb-4"><i class="fa-solid fa-credit-card text-neon"></i> Payments</h2>
+                <h2 class="text-3xl font-bold text-white mt-10 mb-4"><i class="fa-solid fa-credit-card text-neon"></i> Payments</h2>
                 <div class="faq-item card p-6 rounded-lg shadow-lg border border-gray-700 cursor-pointer">
                     <div class="flex justify-between items-center">
                         <h3 class="text-lg font-semibold text-white">Is support free or is it paid?</h3>
@@ -178,7 +176,7 @@
                     <div class="faq-answer text-gray-400">
                         <p>You can buy stuff from the <a href="/products" class="text-blue-400 hover:underline transition-colors duration-200">Marwan's Products Page</a>. Members get offers + exclusive perks as listed there.</p>
                     </div>
-                </div> -->
+                </div>
             </div>
         </section>
     </main>
@@ -187,6 +185,7 @@
     <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
+    <div class="target_bg"></div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const navbar = document.querySelector('nav');
@@ -207,10 +206,9 @@
             }
         }
     </script>
+    <div class="track" id="track"></div>
+    <script src="/javascript/mouse_blur.js"></script>
     <script src="/javascript/index.js"></script>
     <script src="/javascript/loaders.js"></script>
     <script src="/javascript/loading.js"></script>
-    <script src="/javascript/js-detector.js"></script>
-    <script src="/javascript/restrictions.js"></script>
-
 </html>
