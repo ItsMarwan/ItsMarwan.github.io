@@ -267,6 +267,16 @@
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
+    <script>
+        if (
+            window.location.pathname.endsWith("/index") ||
+            window.location.pathname.endsWith("/index.html")
+        ) {
+            // Redirect to the clean root URL
+            window.location.replace("/");
+        }
+    </script>
+
     <div class="target_bg"></div>
     <div class="track" id="track"></div>
     <script src="/javascript/mouse_blur.js"></script>
