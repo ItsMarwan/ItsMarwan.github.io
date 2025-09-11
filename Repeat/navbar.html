@@ -1,0 +1,103 @@
+<!-- FOR LIVE SERVER NOT LOADING CORRECTLY -->
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<nav class="fixed top-0 left-0 w-full z-50 glass-bg border-b-0 shadow-none">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-neon tracking-wider transition-colors duration-500 transition-transform duration-500 hover:text-white hover:scale-105 transform">
+            <span class="hidden md:inline">MARWAN.IS-A.DEV</span><span class="inline md:hidden">MARWAN</span><i class="fa-solid fa-brackets-curly"></i>
+        </a>
+        <div class="space-x-2 md:space-x-4 hidden md:flex items-center flex-nowrap">
+            <a href="/" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
+                <i class="fas fa-home mr-1"></i> Home
+            </a>
+            <a href="/#reviews" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
+                <i class="fas fa-star mr-1"></i> Reviews
+            </a>
+            <a href="/products" class="nav-link text-sm md:text-base text-gray-300 hover:text-white transition duration-300">
+                <i class="fa-solid fa-cart-shopping"></i> Products
+            </a>
+                <!-- Desktop Dropdown -->
+                <div class="dropdown">
+                    <button class="nav-link text-gray-300 hover:text-white transition duration-300 flex items-center">
+                        <i class="fa-solid fa-bars"></i>&#8194More
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/rules" class="dropdown-item">
+                            <i class="fa-solid fa-book-sparkles mr-2"></i>Planet Rules
+                        </a>
+                        <a href="/faq" class="dropdown-item">
+                            <i class="fa-solid fa-comment-question mr-2"></i>FAQ
+                        </a>
+                        <a href="/contact" class="dropdown-item">
+                            <i class="fa-solid fa-address-book mr-2"></i>Contact Me
+                        </a>
+                        <a href="/contributions" class="dropdown-item">
+                            <i class="fa-solid fa-code mr-2"></i>Contributions
+                        </a>
+                        <a href="/discord" class="dropdown-item">
+                            <i class="fa-brands fa-discord mr-2"></i>Discord Server
+                        </a>
+                        <a href="/patreon" class="dropdown-item">
+                            <i class="fa-brands fa-patreon mr-2"></i> Patreon
+                        </a>
+                        <a href="/buymeacoffee" class="dropdown-item">
+                            <i class="fa-solid fa-cup-togo mr-2"></i> Buymeacoffee
+                        </a>
+                    </div>
+                </div>
+            <div class="flex justify-center pt-2">
+                <button onclick="window.location.reload();" class="refresh-btn text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2" title="Refresh Page">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="text-gray-300 hover:text-white md:hidden focus:outline-none w-6 h-6 relative">
+            <svg id="menu-icon" class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path id="line-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+                <path id="line-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+                <path id="line-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+</nav>
+<!-- Mobile Menu -->
+<nav id="mobile-menu" class="md:hidden fixed w-full top-16 z-40 glass-bg transition-all duration-300 ease-in-out border-b-0 shadow-none">
+    <div class="flex flex-col space-y-4 items-center">
+        <a href="/" class="nav-link  text-center py-2">
+            <i class="fas fa-home mr-1"></i> Home
+        </a>
+        <a href="index#reviews" class="nav-link  text-center py-2">
+            <i class="fas fa-star mr-1"></i> Reviews
+        </a>
+        <a href="/products" class="nav-link  text-center py-2">
+            <i class="fas fa-folder-open mr-1"></i> Products
+        </a>
+        <a href="/rules" class="nav-link  text-center py-2">
+            <i class="fa-solid fa-book-sparkles"></i> Planet Rules
+        </a>
+        <a href="/contact" class="nav-link  text-center py-2">
+            <i class="fa-solid fa-address-book"></i> Contact Me
+        </a>
+        <a href="/discord" class="nav-link  text-center py-2">
+            <i class="fa-brands fa-discord"></i> Discord Server
+        </a>
+        <a href="/faq" class="nav-link  text-center py-2">
+            <i class="fa-solid fa-comment-question"></i> FAQ
+        </a>
+        <a href="/contributions" class="nav-link  text-center py-2">
+            <i class="fa-solid fa-code"></i> Contributed Maps
+        </a>
+        <div class="flex justify-center pt-2">
+            <button onclick="window.location.reload();" class="refresh-btn text-gray-300 hover:text-white transition duration-300 bg-gray-800 rounded-full px-3 py-2" title="Refresh Page">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+            <br>
+    </div>
+    <script>
+        window.location.replace("/");
+    </script>
+</nav>

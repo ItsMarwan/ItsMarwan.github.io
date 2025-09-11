@@ -1,0 +1,49 @@
+===========================
+        PRIVACY POLICY
+===========================
+
+This Privacy Policy explains how we collect, use, and protect the information you provide when you use the contact form on this website (“Website”). 
+By submitting your information, you agree to the terms described below.
+
+------------------------------------------------------------
+1. INFORMATION WE COLLECT
+------------------------------------------------------------
+When you use the contact form, we may collect the following information:
+
+- Name – as provided by you.
+- Email Address – to respond to your inquiry.
+- Message Content – the details you include in your message.
+- IP Address – automatically collected for security and spam prevention.
+
+------------------------------------------------------------
+2. HOW WE USE YOUR INFORMATION
+------------------------------------------------------------
+The information we collect may be used for the following purposes:
+
+- To respond to your questions, feedback, or requests.
+- To improve the Website and the services we provide.
+- To protect the Website from spam, abuse, or malicious activity.
+
+------------------------------------------------------------
+3. CONSENT
+------------------------------------------------------------
+By submitting the contact form, you consent to the collection and use of 
+your information as described in this Privacy Policy.
+
+Additionally, you will be asked to confirm your consent by clicking 
+“Accept” before sending your message.
+
+------------------------------------------------------------
+4. DATA SHARING
+------------------------------------------------------------
+We do **not** sell, rent, or share your personal information with 
+third parties unless required by law or to comply with a legal obligation.
+
+------------------------------------------------------------
+5. ACKNOWLEDGMENT
+------------------------------------------------------------
+By using the contact form, you confirm that you understand and agree 
+to this Privacy Policy and the way your data is handled.
+
+------------------------------------------------------------
+Last Updated: 05/09/2025

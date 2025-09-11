@@ -1,0 +1,70 @@
+/* Custom styles for the 404 page */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.error-code {
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+    animation: glitch 1.5s infinite;
+}
+
+.error-message {
+    opacity: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.error-description {
+    opacity: 0;
+    font-size: 1rem;
+    max-width: 500px;
+    margin-top: 1rem;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.7s;
+}
+
+.home-button {
+    opacity: 0;
+    margin-top: 2rem;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.9s;
+}
+
+@keyframes glitch {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(0, 229, 255, 0.5), 
+                        2px 2px 2px #ff00c8, 
+                        -2px -2px 2px #00ffc8;
+        transform: translate(0);
+    }
+    25% {
+        text-shadow: 0 0 20px rgba(0, 229, 255, 0.5), 
+                        -2px 2px 2px #ff00c8, 
+                        2px -2px 2px #00ffc8;
+        transform: translate(-5px, 5px);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 229, 255, 0.5), 
+                        -2px -2px 2px #ff00c8, 
+                        2px 2px 2px #00ffc8;
+        transform: translate(5px, -5px);
+    }
+    75% {
+        text-shadow: 0 0 20px rgba(0, 229, 255, 0.5), 
+                        2px -2px 2px #ff00c8, 
+                        -2px 2px 2px #00ffc8;
+        transform: translate(-5px, -5px);
+    }
+}

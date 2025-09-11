@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItsMarwan's Products</title>
+    <meta name="title" content="ItsMarwan's Products">
+    <meta name="description" content="Discover ItsMarwan's premium UEFN products, including Verse scripts, custom materials, Niagara effects, and animations to enhance your Fortnite Creative projects.">
+    <meta name="keywords" content="UEFN, Fortnite, Verse, Game Development, Tutorials, Custom Assets, Game Mechanics, ItsMarwan">
+    <meta name="thumbnail" content="/imgs/brand.png">
+    <meta name="theme-color" content="#2D7EEA">
+    <link rel="icon" type="image/png" href="/imgs/brand.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <meta name="keywords" content="marwan, itsmarwan, fortnite creative, uefn, server, official">
+    <meta name="website" content="index, follow"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css">
+</head>
+<body class="text-gray-200 min-h-screen">
+    <div id="popup-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
+        <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
+        <div class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                <i class="fa-solid fa-xmark fa-xl"></i>
+            </button>
+            <div class="flex flex-col items-center">
+                <i class="fa-solid fa-gift text-6xl text-blue-500 mb-4"></i>
+                <h3 class="text-3xl font-extrabold text-white mb-2">Exclusive Offer!</h3>
+                <p class="text-gray-400 mb-4">
+                    Get <span class="text-blue-500 font-semibold">20% off</span> your next purchase with this special discount code! expires by 12/9
+                </p>
+                <div class="bg-gray-800 rounded-lg p-4 w-full relative">
+                    <p id="discount-code" class="text-xl font-mono tracking-widest text-white cursor-pointer select-all">REFRESH</p>
+                    <div id="copied-tooltip" class="tooltip-container absolute hidden opacity-0 transition-opacity duration-300">
+                        <div class="tooltip-arrow absolute"></div>
+                        <span class="tooltip-text bg-blue-500 text-white text-xs rounded py-1 px-3 whitespace-nowrap">Copied!</span>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-xs mt-2">
+                    Copy and paste the code at checkout.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
+        <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
+        <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+        <div class="target_bg"></div>
+    </div>
+
+    <div id="navbar-placeholder"></div>
+    
+    <main class="py-24 container mx-auto px-4 md:px-8">
+        <section id="projects" class="text-center">
+            <div style="margin: 20px;"><h2 style="display: inline;" class="text-5xl font-extrabold text-neon mb-4 animate-fadeInUp">My </h2><h2 style="display: inline;" class="text-5xl font-extrabold mb-4 animate-fadeInUp">Products</h2></div>
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto animate-fadeInUp"> 
+                Explore my high-quality systems, visual effects, and assets designed for reliability, and seamless integration into your projects.
+            </p>
+
+            <div class="mb-8 max-w-2xl mx-auto flex items-center gap-4">
+                <!-- Search Input -->
+                <div class="relative flex-1">
+                    <input id="search-input" type="text" placeholder="Search for products..."
+                        class="w-full px-6 py-3 rounded-full bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all pl-12" />
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                </div>
+
+                <!-- Filter Button -->
+                <button id="filter-toggle-btn" class="px-6 py-3 rounded-full bg-gray-800 text-gray-200 font-semibold transition-colors duration-300 flex items-center justify-center gap-2 hover:bg-gray-700">
+                    <i id="filter-icon" class="fa-solid fa-sliders"></i>
+                    <span>Show Filters</span>
+                </button>
+            </div>
+
+
+            <!-- Filter Modal (like coupon modal) -->
+            <div id="filter-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
+                <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
+                <div id="filter-modal-content" class="relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 opacity-0 transition-all duration-300 ease-in-out">
+                    <button id="close-filter-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                        <i class="fa-solid fa-xmark fa-xl"></i>
+                    </button>
+                    <h3 class="text-xl font-bold text-white mb-4">Filter Products</h3>
+
+                    <!-- Price Filter -->
+                    <div class="filter-category flex flex-col items-center gap-2 mb-4">
+                        <label class="text-sm font-semibold text-gray-400">Price</label>
+                        <div class="flex items-center gap-2">
+                            <button class="filter-price-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200 active-filter" data-price="all">All</button>
+                            <button class="filter-price-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-price="free">Free</button>
+                            <button class="filter-price-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-price="paid">Paid</button>
+                        </div>
+                        <div class="price-slider-container w-full mt-4 max-w-xs px-2">
+                            <input type="range" id="price-slider" min="0" max="20" value="20" step="1" class="w-full h-2 rounded-full appearance-none cursor-pointer [&::-webkit-slider-runnable-track]:bg-gray-700 [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-500 [&::-webkit-slider-thumb]:shadow-lg" />
+                            <div class="flex justify-between text-xs mt-2">
+                                <span>0.00£ ($0)</span>
+                                <span id="slider-value">962.28£ ($20)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Type Filter -->
+                    <div class="filter-category flex flex-col items-center gap-2 mb-4">
+                        <label class="text-sm font-semibold text-gray-400">Type</label>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200 active-filter" data-type="all">All</button>
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-type="Verse">Verse</button>
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-type="Materials">Materials</button>
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-type="Niagara">Niagara</button>
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-type="Animations">Animations</button>
+                        </div>
+                    </div>
+
+                    <!-- Sort Filter -->
+                    <div class="filter-category flex flex-col items-center gap-2">
+                        <label class="text-sm font-semibold text-gray-400">Sort By</label>
+                        <div class="flex items-center gap-2">
+                            <button class="sort-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200 active-sort" data-sort="newest">Newest</button>
+                            <button class="sort-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-sort="oldest">Oldest</button>
+                            <button class="sort-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-sort="alphabetical">Alphabetical</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+            
+            <div id="load-more-container" class="mt-8 text-center" style="display: none;">
+                <button id="load-more-btn" class="px-8 py-3 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base bg-blue-500 hover:bg-blue-600 text-white shadow-lg">Load More</button>
+            </div>
+        </section>
+        <div id="shop-container">
+            <div id="shop-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[100] flex items-center justify-center p-4">
+                <div class="modal-bg fixed inset-0 bg-black opacity-75"></div>
+                <div id="shop-modal-content" class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up" style="border: 1px solid #334155;">
+                    <div class="flex justify-between items-center pb-4 border-b border-gray-600">
+                        <h3 class="text-2xl font-bold text-white">Choose a Shop</h3>
+                        <button id="close-shop-modal-btn" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa-solid fa-xmark text-3xl"></i>
+                        </button>
+                    </div>
+                    <p class="text-gray-300 my-6 text-center">Where would you like to purchase this item?</p>
+                    <div class="flex flex-col gap-4">
+                        <a id="buymeacoffee-link" href="#" target="_blank" rel="noopener noreferrer" class="shop-btn bmc">
+                            <img src="/imgs/bmc.png" alt="Buy Me a Coffee" class="shop-icon">
+                            <span>Buymeacoffee</span>
+                        </a>
+
+                        <a id="patreon-link" href="#" target="_blank" rel="noopener noreferrer" class="shop-btn patreon">
+                            <i class="fa-brands fa-patreon mr-3"></i>
+                            <span>Patreon</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="target_bg"></div>
+    <div class="track" id="track"></div>
+    <script src="/javascript/mouse_blur.js"></script>
+    <script src="/javascript/filters.js"></script>
+    <script src="/javascript/index.js"></script>
+    <script src="/javascript/restrictions.js"></script>
+    <script src="/javascript/loaders.js"></script>
+    <script src="/javascript/loading.js"></script>
+    <script src="/javascript/discount.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>

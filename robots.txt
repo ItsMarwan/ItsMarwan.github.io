@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itsmarwan.github.io/sitemap.xml
+
+Disallow: /thankyou.html
+
+Disallow: .github/
+
+Disallow: /legal/
+
+Disallow: /README.md

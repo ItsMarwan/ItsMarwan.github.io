@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItsMarwan's Fortnite Maps</title>
+    <meta name="title" content="ItsMarwan's Fortnite Maps">
+    <meta name="description" content="Explore a showcase of custom Fortnite maps created by ItsMarwan, featuring unique game mechanics, stunning visuals, and immersive experiences.">
+    <meta name="keywords" content="UEFN, Fortnite, maps, creative, custom maps, game development, ItsMarwan">
+    <meta name="thumbnail" content="/imgs/brand.png">
+    <meta name="theme-color" content="#2D7EEA">
+    <link rel="icon" type="image/png" href="/imgs/brand.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <meta name="keywords" content="marwan, itsmarwan, fortnite creative, uefn, server, official">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css">
+</head>
+<body class="bg-gray-900 text-white font-inter overflow-x-hidden" style="background-color: #04081b;">
+
+    <!-- Legal Document Popup -->
+    <div id="legal-popup-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
+        <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
+        <div class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-4xl max-h-[90vh] text-left transform scale-95 transition-transform duration-300 ease-in-out border border-gray-700">
+            <div class="flex justify-between items-center pb-4 border-b border-gray-600">
+                <h3 id="legal-popup-title" class="text-2xl font-bold text-white"></h3>
+                <button id="close-legal-modal-btn" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                    <i class="fa-solid fa-xmark fa-xl"></i>
+                </button>
+            </div>
+            <div id="legal-popup-content" class="legal-content mt-4 overflow-y-auto max-h-[70vh] text-gray-300 leading-relaxed">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
+        <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
+        <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+        <div class="target_bg"></div>
+    </div>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="w-full min-h-screen py-10 px-4">
+        <section class="max-w-7xl mx-auto py-12 px-4 md:px-6 lg:px-8 animated-element text-center">
+            <div style="margin: 20px;"><h2 style="display: inline;" class="text-5xl font-extrabold mb-4 animate-fadeInUp">Some Maps I </h2><h2 style="display: inline;" class="text-5xl font-extrabold text-neon mb-4 animate-fadeInUp">Contributed To</h2></div>
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto animate-fadeInUp"> 
+                A collection of Fortnite maps I contributed to, highlighting my work in design, development, and creativity.
+            </p>
+            <div id="maps-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+            <div class="mt-8 text-center flex justify-center">
+                <button id="load-more-btn" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    Load More Maps
+                </button>
+            </div>
+
+            <div class="mt-12 w-full text-center">
+                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl mx-auto max-w-2xl border border-gray-700">
+                    <h2 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 mb-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Some Maps Unlisted <i class="fa-solid fa-triangle-exclamation"></i>
+                    </h2>
+                    <p class="text-gray-400">
+                        Some maps have been unlisted or removed by their respective owners. They may not be viewable or playable anymore. So i cannot provide links or map codes unfortunately :(
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="target_bg"></div>
+    <div class="track" id="track"></div>
+    <script src="/javascript/mouse_blur.js"></script>
+    <script src="/javascript/contribution.js"></script>
+    <script src="/javascript/loaders.js"></script>
+    <script src="/javascript/loading.js"></script>
+    <script src="/javascript/index.js"></script>
+    <script src="/javascript/js-detector.js"></script>
+    <script src="/javascript/restrictions.js"></script>
+    <script src="/javascript/legal_popup.js"></script>
+</body>
+</html>

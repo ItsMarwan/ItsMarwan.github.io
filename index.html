@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="ItsMarwan's Homepage">
+    <title>ItsMarwan Homepage</title>
+    <meta name="description" content="Welcome to ItsMarwan, your go-to source for UEFN development tutorials, custom assets, and game mechanics. Join our community and elevate your Fortnite creations!">
+    <meta name="keywords" content="UEFN, Fortnite, Verse, Game Development, Tutorials, Custom Assets, Game Mechanics, ItsMarwan">
+    <meta name="thumbnail" content="/imgs/brand.png">
+    <meta name="theme-color" content="#2D7EEA">
+    <link rel="icon" type="image/png" href="/imgs/brand.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <meta name="keywords" content="marwan, itsmarwan, fortnite creative, uefn, server, official">
+    <!--Some SEO so google can find your website on search better-->
+    <meta name="website" content="index, follow"><!-- Ignorable -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css">
+</head>
+<body class="text-gray-200 min-h-screen">
+
+    <!-- Legal Document Popup -->
+    <div id="legal-popup-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
+        <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
+        <div class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-4xl max-h-[90vh] text-left transform scale-95 transition-transform duration-300 ease-in-out border border-gray-700">
+            <div class="flex justify-between items-center pb-4 border-b border-gray-600">
+                <h3 id="legal-popup-title" class="text-2xl font-bold text-white"></h3>
+                <button id="close-legal-modal-btn" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                    <i class="fa-solid fa-xmark fa-xl"></i>
+                </button>
+            </div>
+            <div id="legal-popup-content" class="legal-content mt-4 overflow-y-auto max-h-[70vh] text-gray-300 leading-relaxed">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- This block is only visible if JavaScript is disabled. -->
+    <noscript>
+        <div class="fixed inset-0 z-[99999] bg-gray-900 flex flex-col items-center justify-center p-8 text-center text-white">
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 max-w-lg mx-auto transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                <i class="fa-solid fa-code-slash text-6xl text-neon mb-4 fa-beat"></i>
+                <h1 class="text-3xl font-bold mb-4">JavaScript Required</h1>
+                <p class="text-lg">This site is built with dynamic features and relies on JavaScript to function. Please enable JavaScript in your browser settings to continue.</p>
+            </div>
+        </div>
+    </noscript>
+
+    <!-- This div wraps all of the original page content and will be shown if JS is enabled. -->
+    <div class="js-content-wrapper">
+        <div id="loading-screen" class="loading-screen flex flex-col items-center justify-center">
+            <i class="fa-solid fa-brackets-curly text-4xl fa-beat"></i>
+            <p id="loading-text" class="loading-text-transition text-white text-xl mt-4"></p>
+            <div class="target_bg"></div>
+        </div>
+
+        <div id="navbar-placeholder"></div>
+
+        <main>
+            <!-- Home Section -->
+            <section id="home" class="container mx-auto px-4 py-16 text-center">
+                <h1 style="margin-top: 100px; opacity: 0;" class="text-5xl md:text-7xl font-extrabold text-white leading-tight  mb-4 animated-element" style="animation-delay: 0.2s;">
+                    I'm <span class="name-pop">Marwan,</span> a Solo UEFN Developer.
+                </h1>
+                <p class="text-lg md:text-2xl mb-4 max-w-2xl mx-auto animated-element" style="animation-delay: 0.4s; opacity: 0;">
+                    A dedicated creator specializing in Logic, Mechanics, custom assets, and engaging tutorials.
+                </p>
+                <!-- Average Rating Display -->
+                <a href="#reviews" class="inline-block hover:scale-105 transition-transform duration-300  animated-element" style="animation-delay: 0.5s; opacity: 0;">
+                    <div class="bg-gray-800 rounded-full px-4 py-2 inline-flex items-center space-x-2 text-white shadow-lg cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        <p id="average-rating" class="text-xl font-bold transition duration-300"></p>
+                        <div id="average-stars" class="text-yellow-400 text-sm transition duration-300"></div>
+                    </div>
+                </a>
+                <div class="mt-8 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4  animated-element" style="animation-delay: 0.6s; opacity: 0; ">
+                    <a href="#Tutorials" class="explore-btn inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        Explore My Tutorials
+                    </a>
+                    <a href="/contact" class="inline-block px-8 py-4 bg-gray-800 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        Reach Out!
+                    </a>
+                </div>
+            </section>
+
+            <!-- My Toolkit Section -->
+            <section id="skills" class="container mx-auto px-4 py-16">
+                <h2 class="text-4xl font-bold text-center mb-12">My Toolkit</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Skill Card 1 -->
+                    <div class="card card-hover p-6 rounded-xl shadow-lg border border-gray-700">
+                        <h3 class="text-2xl font-semibold mb-4 text-neon">Mechanics & Logic</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            Mastered game logic to build complex game mechanics and dynamic player experiences.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm font-medium">Verse Language</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="40%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Game Logic</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Mechanics & Systems</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="97%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skill Card 2 -->
+                    <div class="card card-hover p-6 rounded-xl shadow-lg border border-gray-700">
+                        <h3 class="text-2xl font-semibold mb-4 text-neon">Assets & Design</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            Creating custom UEFN assets, designing maps, and building immersive virtual worlds.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm font-medium">UEFN Assets</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Level Design</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Environmental Art</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skill Card 3 -->
+                    <div class="card card-hover p-6 rounded-xl shadow-lg border border-gray-700">
+                        <h3 class="text-2xl font-semibold mb-4 text-neon">Content & Community</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            Sharing my knowledge through tutorials and creating unique content for the Fortnite ecosystem.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm font-medium">Tutorial Creation</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Paid Assets</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="98%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Community Engagement</p>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="progress-bar-fill skill-bar-inner h-2.5 rounded-full" data-width="65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- YouTube Tutorials Section -->
+            <section id="Tutorials" class="container mx-auto px-4 py-16">
+                <h2 class="text-4xl font-bold text-center mb-12">Highlighted Tutorials</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class=" video-container card rounded-xl shadow-lg border border-gray-700 overflow-hidden aspect-video transform hover:scale-105">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/RaDYn5HQhlo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class=" video-container card rounded-xl shadow-lg border border-gray-700 overflow-hidden aspect-video transform hover:scale-105">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/xfycdq1G4ws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class=" video-container card rounded-xl shadow-lg border border-gray-700 overflow-hidden aspect-video transform hover:scale-105">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/-iaZFWqihEw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="https://www.youtube.com/channel/@itsmarwan." target="_blank" class="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        Visit My YouTube Channel
+                    </a>
+                </div>
+            </section>
+
+            <!-- Customer Reviews Carousel -->
+            <section id="reviews" class="container mx-auto px-4 py-16">
+                <h2 class="text-4xl font-bold text-center mb-4">What Creators Say</h2>
+                <p class="text-gray-400 mb-12 text-center">
+                    Have doubts? Feel free to verify in our Discord server at <span class="text-blue-500 font-semibold"><a href="https://discord.com/channels/1150156572857733170/1363460580555489441" target="_blank"><i class="fa-solid fa-star"></i>┃reviews</a></span>.
+                </p>
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="carousel-container rounded-xl shadow-lg border border-gray-700">
+                        <div id="carousel-track" class="carousel-track flex">
+                            <!-- Placeholder loading skeleton -->
+                            <div class="p-8 flex items-center justify-center w-full">
+                                <div class="w-16 h-16 bg-gray-700 rounded-full animate-pulse mr-4"></div>
+                                <div class="flex flex-col items-start">
+                                    <div class="h-4 w-32 bg-gray-700 rounded animate-pulse mb-2"></div>
+                                    <div class="h-3 w-48 bg-gray-700 rounded animate-pulse"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Controls and indicators below the carousel for better layout -->
+                    <div class="flex flex-col items-center mt-6">
+                        <div class="flex space-x-4 mb-4">
+                            <button id="prevBtn" class="bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                            </button>
+                            <div id="carousel-dots-container" class="relative overflow-hidden flex items-center max-w-[50px] mx-auto">
+                                <div id="carousel-dots" class="flex items-center space-x-2 transition-transform duration-500 ease-in-out">
+                                    </div>
+                            </div>
+                            <button id="nextBtn" class="bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+                            </button>
+                        </div>
+                        <div class="w-full max-w-xs h-1 bg-gray-700 rounded-full hidden"> <!-- PROGRESS BAR HIDDEN FOR NOW -->
+                            <div id="carousel-progress-bar" class="h-full rounded-full progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Discord Section -->
+            <section id="discord" class="container mx-auto px-4 py-16 text-center">
+                <h2 class="text-4xl font-bold mb-8">Inhabit <a class="text-neon">Blue Planet</a> Now!</h2>
+                <div class="card rounded-xl shadow-lg border border-gray-700 p-8 flex flex-col md:flex-row items-center gap-8 discord-flex">
+                    <!-- Discord Status on the left -->
+                    <div class="flex-initial flex flex-col items-center md:items-start text-center md:text-left">
+                        <!-- Discord Server Icon -->
+                        <img src="/imgs/server-icon.jpg" alt="Discord Server Icon" class="w-24 h-24 rounded-full content-center shadow-lg border-2 border-blue-500 mb-4 hover:scale-110 transition-transform duration-300">
+
+                        <h3 class="text-2xl font-semibold mb-2 text-white">Marwan's Blue Planet</h3>
+                        <p class="text-sm text-gray-400 mb-4">ItsMarwan Official Discord Server! If You Have Any Issues In UEFN I'll Be More Than Happy To Help You Solve It! + Commisions Open! Open a Ticket!</p>
+
+                        <div class="flex flex-col space-y-2 mb-6 text-sm w-full md:w-auto">
+                            <div class="flex items-center justify-center md:justify-start">
+                                <i class="fas fa-users text-gray-500 mr-2"></i>
+                                <span class="text-white">1,673 members</span>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start">
+                                <i class="fas fa-circle text-green-500 text-xs mr-2"></i>
+                                <span class="text-white">467 online</span>
+                            </div>
+                        </div>
+
+                        <a href="https://discord.com/invite/itsmarwan-s-blue-planet-1150156572857733170" target="_blank" class="inline-block px-8 py-4 w-full md:w-auto bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                            Join Now
+                        </a>
+                    </div>
+                    <div class="flex-grow flex justify-center items-center">
+                        <img id="discord-image" src="/imgs/discordOverview.png" alt="Discord Server Screenshot" class="rounded-xl w-full h-auto object-cover shadow-lg border-2 border-neon parallax-bg discord-image-order">
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="back-to-top-btn bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+    <script>
+        if (
+            window.location.pathname.endsWith("/index") ||
+            window.location.pathname.endsWith("/index.html")
+        ) {
+            // Redirect to the clean root URL
+            window.location.replace("/");
+        }
+    </script>
+
+    <div class="target_bg"></div>
+    <div class="track" id="track"></div>
+    <script src="/javascript/mouse_blur.js"></script>
+    <script src="/javascript/index.js"></script>
+    <script src="/javascript/loaders.js"></script>
+    <script src="/javascript/loading.js"></script>
+    <script src="/javascript/js-detector.js"></script>
+    <script src="/javascript/restrictions.js"></script>
+    <script src="/javascript/legal_popup.js"></script>
+</body>
+</html>

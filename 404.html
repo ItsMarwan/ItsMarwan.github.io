@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="404 Page Not Found">
+    <title>404 Page Not Found</title>
+    <meta name="description" content="The page you're looking for doesn't exist. It might have been moved or deleted.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="/css/404.css">
+</head>
+<body class="text-gray-200 min-h-screen">
+        <!-- This block is only visible if JavaScript is disabled. -->
+    <noscript>
+        <div class="fixed inset-0 z-[99999] bg-gray-900 flex flex-col items-center justify-center p-8 text-center text-white">
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 max-w-lg mx-auto transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                <i class="fa-solid fa-code-slash text-6xl text-neon mb-4 fa-beat"></i>
+                <h1 class="text-3xl font-bold mb-4">JavaScript Required</h1>
+                <p class="text-lg">This site is built with dynamic features and relies on JavaScript to function. Please enable JavaScript in your browser settings to continue.</p>
+            </div>
+        </div>
+    </noscript>
+
+    <!-- This div wraps all of the original page content and will be shown if JS is enabled. -->
+    <div class="js-content-wrapper">
+        <div class="error-container">
+            <h1 id="Code" class="error-code text-neon">404</h1>
+            <h2 id="Code_Message" class="error-message text-white">Page Not Found</h2>
+            <p id="Code_Description" class="error-description text-gray-400">
+                It looks like the page you were trying to reach has been lost in the digital cosmos.
+                Let's get you back to a familiar place.
+            </p>
+            <div class="home-button">
+                <a href="/" class="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    Go to Homepage
+                </a>
+            </div>
+        </div>
+    <script>
+        const code = document.getElementById("Code");
+        const codeDescription = document.getElementById("Code_Description");
+        const codeMessage = document.getElementById("Code_Message");
+        
+        // Common message and title
+        const redirectDescription = "It looks like the page you found is guiding you to a new destination.\nLet's take you where you need to be.";
+        const redirectTitle = "Redirecting...";
+        const redirectMessage = "Page Found!";
+        
+        // Map of paths and their corresponding redirect URLs
+        const redirects = {
+            "/home": "/",
+            "/index": "/",
+            "/products/buymeacoffee": "https://buymeacoffee.com/itsmarwan/extras",
+            "/products/patreon": "https://patreon.com/itsmarwan/shop",
+            "/buymeacoffee": "https://buymeacoffee.com/itsmarwan",
+            "/patreon": "https://patreon.com/itsmarwan",
+            "/discord": "https://discord.gg/Fwd9MgB8Ww",
+            "/discord-profile": "https://discord.com/users/999407143646142514",
+            "/youtube": "https://youtube.com/@itsmarwan"
+        };
+        
+        // Check if current path is in the redirects list
+        const currentPath = window.location.pathname;
+        if (redirects[currentPath]) {
+            code.innerText = "200";
+            codeDescription.innerText = redirectDescription;
+            codeMessage.innerText = redirectMessage;
+            document.title = redirectTitle;
+            console.log(`Redirecting to: ${redirects[currentPath]}`);
+            window.location.replace(redirects[currentPath]);
+        }
+    </script>
+    <script src="/javascript/index.js"></script>
+    <script src="/javascript/js-detector.js"></script>
+    <script src="/javascript/restrictions.js"></script>
+</body>
+
+</html>
