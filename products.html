@@ -25,6 +25,23 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css">
 </head>
 <body class="text-gray-200 min-h-screen">
+
+    <!-- Legal Document Popup -->
+    <div id="legal-popup-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
+        <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
+        <div class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-4xl max-h-[90vh] text-left transform scale-95 transition-transform duration-300 ease-in-out border border-gray-700">
+            <div class="flex justify-between items-center pb-4 border-b border-gray-600">
+                <h3 id="legal-popup-title" class="text-2xl font-bold text-white"></h3>
+                <button id="close-legal-modal-btn" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                    <i class="fa-solid fa-xmark fa-xl"></i>
+                </button>
+            </div>
+            <div id="legal-popup-content" class="legal-content mt-4 overflow-y-auto max-h-[70vh] text-gray-300 leading-relaxed">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
     <div id="popup-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
         <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
         <div class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up">
