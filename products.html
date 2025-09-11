@@ -25,23 +25,6 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css">
 </head>
 <body class="text-gray-200 min-h-screen">
-
-    <!-- Legal Document Popup -->
-    <div id="legal-popup-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
-        <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
-        <div class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-4xl max-h-[90vh] text-left transform scale-95 transition-transform duration-300 ease-in-out border border-gray-700">
-            <div class="flex justify-between items-center pb-4 border-b border-gray-600">
-                <h3 id="legal-popup-title" class="text-2xl font-bold text-white"></h3>
-                <button id="close-legal-modal-btn" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
-                    <i class="fa-solid fa-xmark fa-xl"></i>
-                </button>
-            </div>
-            <div id="legal-popup-content" class="legal-content mt-4 overflow-y-auto max-h-[70vh] text-gray-300 leading-relaxed">
-                <!-- Content will be loaded here -->
-            </div>
-        </div>
-    </div>
-
     <div id="popup-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
         <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
         <div class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up">
@@ -83,24 +66,74 @@
                 Explore my high-quality systems, visual effects, and assets designed for reliability, and seamless integration into your projects.
             </p>
 
-            <div class="mb-8 max-w-lg mx-auto">
-                <div class="relative flex items-center">
-                    <input id="search-input" type="text" placeholder="Search for products..." class="w-full px-6 py-3 rounded-full bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all pl-12" />
-                    <i class="fas fa-search absolute left-4 text-gray-400"></i>
+            <div class="mb-8 max-w-2xl mx-auto flex items-center gap-4">
+                <!-- Search Input -->
+                <div class="relative flex-1">
+                    <input id="search-input" type="text" placeholder="Search for products..."
+                        class="w-full px-6 py-3 rounded-full bg-gray-800 text-gray-200 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all pl-12" />
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
                 </div>
+
+                <!-- Filter Button -->
+                <button id="filter-toggle-btn" class="px-6 py-3 rounded-full bg-gray-800 text-gray-200 font-semibold transition-colors duration-300 flex items-center justify-center gap-2 hover:bg-gray-700">
+                    <i id="filter-icon" class="fa-solid fa-sliders"></i>
+                    <span>Show Filters</span>
+                </button>
             </div>
 
-            <div class="flex justify-center items-center flex-wrap gap-4 mb-8">
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base active-filter" data-filter="all">All</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Verse">Verse</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Materials">Materials</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Niagara">Niagara</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Animations">Animations</button>
-                <button class="filter-btn px-6 py-2 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base" data-filter="Free">Free</button>
+
+            <!-- Filter Modal (like coupon modal) -->
+            <div id="filter-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[99999] flex items-center justify-center p-4">
+                <div class="modal-bg fixed inset-0 bg-black opacity-70"></div>
+                <div id="filter-modal-content" class="relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 opacity-0 transition-all duration-300 ease-in-out">
+                    <button id="close-filter-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                        <i class="fa-solid fa-xmark fa-xl"></i>
+                    </button>
+                    <h3 class="text-xl font-bold text-white mb-4">Filter Products</h3>
+
+                    <!-- Price Filter -->
+                    <div class="filter-category flex flex-col items-center gap-2 mb-4">
+                        <label class="text-sm font-semibold text-gray-400">Price</label>
+                        <div class="flex items-center gap-2">
+                            <button class="filter-price-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200 active-filter" data-price="all">All</button>
+                            <button class="filter-price-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-price="free">Free</button>
+                            <button class="filter-price-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-price="paid">Paid</button>
+                        </div>
+                        <div class="price-slider-container w-full mt-4 max-w-xs px-2">
+                            <input type="range" id="price-slider" min="0" max="20" value="20" step="1" class="w-full h-2 rounded-full appearance-none cursor-pointer [&::-webkit-slider-runnable-track]:bg-gray-700 [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-500 [&::-webkit-slider-thumb]:shadow-lg" />
+                            <div class="flex justify-between text-xs mt-2">
+                                <span>0.00£ ($0)</span>
+                                <span id="slider-value">962.28£ ($20)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Type Filter -->
+                    <div class="filter-category flex flex-col items-center gap-2 mb-4">
+                        <label class="text-sm font-semibold text-gray-400">Type</label>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200 active-filter" data-type="all">All</button>
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-type="Verse">Verse</button>
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-type="Materials">Materials</button>
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-type="Niagara">Niagara</button>
+                            <button class="filter-type-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-type="Animations">Animations</button>
+                        </div>
+                    </div>
+
+                    <!-- Sort Filter -->
+                    <div class="filter-category flex flex-col items-center gap-2">
+                        <label class="text-sm font-semibold text-gray-400">Sort By</label>
+                        <div class="flex items-center gap-2">
+                            <button class="sort-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200 active-sort" data-sort="newest">Newest</button>
+                            <button class="sort-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-sort="oldest">Oldest</button>
+                            <button class="sort-btn px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-sm bg-gray-700 hover:bg-gray-600 text-gray-200" data-sort="alphabetical">Alphabetical</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                </div>
+            </div>
             
             <div id="load-more-container" class="mt-8 text-center" style="display: none;">
                 <button id="load-more-btn" class="px-8 py-3 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base bg-blue-500 hover:bg-blue-600 text-white shadow-lg">Load More</button>
@@ -141,11 +174,11 @@
     <div class="target_bg"></div>
     <div class="track" id="track"></div>
     <script src="/javascript/mouse_blur.js"></script>
+    <script src="/javascript/filters.js"></script>
     <script src="/javascript/index.js"></script>
     <script src="/javascript/restrictions.js"></script>
     <script src="/javascript/loaders.js"></script>
     <script src="/javascript/loading.js"></script>
-    <script src="/javascript/legal_popup.js"></script>
     <script src="/javascript/discount.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
