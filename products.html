@@ -119,8 +119,8 @@
                         <div class="price-slider-container w-full mt-4 max-w-xs px-2">
                             <input type="range" id="price-slider" min="0" max="20" value="20" step="1" class="w-full h-2 rounded-full appearance-none cursor-pointer [&::-webkit-slider-runnable-track]:bg-gray-700 [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-500 [&::-webkit-slider-thumb]:shadow-lg" />
                             <div class="flex justify-between text-xs mt-2">
-                                <span>0.00£ ($0)</span>
-                                <span id="slider-value">962.28£ ($20)</span>
+                                <span>€0</span>
+                                <span id="slider-value">€20</span>
                             </div>
                         </div>
                     </div>
@@ -156,28 +156,25 @@
                 <button id="load-more-btn" class="px-8 py-3 rounded-full font-semibold transition-colors duration-300 text-sm md:text-base bg-blue-500 hover:bg-blue-600 text-white shadow-lg">Load More</button>
             </div>
         </section>
-        <div id="shop-container">
-            <div id="shop-modal" class="popup-modal hidden opacity-0 transition-opacity duration-300 ease-in-out fixed inset-0 z-[100] flex items-center justify-center p-4">
-                <div class="modal-bg fixed inset-0 bg-black opacity-75"></div>
-                <div id="shop-modal-content" class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up" style="border: 1px solid #334155;">
-                    <div class="flex justify-between items-center pb-4 border-b border-gray-600">
-                        <h3 class="text-2xl font-bold text-white">Choose a Shop</h3>
-                        <button id="close-shop-modal-btn" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fa-solid fa-xmark text-3xl"></i>
-                        </button>
-                    </div>
-                    <p class="text-gray-300 my-6 text-center">Where would you like to purchase this item?</p>
-                    <div class="flex flex-col gap-4">
-                        <a id="buymeacoffee-link" href="#" target="_blank" rel="noopener noreferrer" class="shop-btn bmc">
-                            <img src="/imgs/bmc.png" alt="Buy Me a Coffee" class="shop-icon">
-                            <span>Buymeacoffee</span>
-                        </a>
-
-                        <a id="patreon-link" href="#" target="_blank" rel="noopener noreferrer" class="shop-btn patreon">
-                            <i class="fa-brands fa-patreon mr-3"></i>
-                            <span>Patreon</span>
-                        </a>
-                    </div>
+        <div id="shop-modal" class="popup-modal fixed inset-0 z-[100] flex items-center justify-center p-4 transition-opacity duration-300 ease-in-out opacity-0 pointer-events-none">
+            <div class="modal-bg absolute inset-0 bg-black bg-opacity-75"></div>
+            <div id="shop-modal-content" class="modal-content relative bg-gray-900 rounded-2xl p-6 md:p-8 w-full max-w-md text-center transform scale-95 transition-transform duration-300 ease-in-out animated-element fade-in-up" style="border: 1px solid #334155;">
+                <div class="flex items-center justify-between pb-4 border-b border-gray-700">
+                    <h2 class="text-xl font-bold text-white">Choose a Shop</h2>
+                    <button id="close-shop-modal-btn" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+                <p class="py-4 text-center text-gray-300">Where would you like to purchase this item?</p>
+                <div class="space-y-4">
+                    <a id="buymeacoffee-link" href="#" target="_blank" class="w-full flex items-center justify-center space-x-2 py-4 px-6 text-lg font-semibold text-gray-900 bg-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" style="background-color: white; color: black;">
+                        <i class="fa-solid fa-cup-togo"></i>
+                        <span class="text-xl font-bold">Buymeacoffee</span>
+                    </a>
+                    <a id="patreon-link" href="#" target="_blank" class="w-full flex items-center justify-center space-x-2 py-4 px-6 text-lg font-semibold text-white bg-black rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" style="background-color: black; color: white;">
+                        <i class="fa-brands fa-patreon text-xl"></i>
+                        <span class="text-xl font-bold">Patreon</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -191,7 +188,7 @@
     <div class="target_bg"></div>
     <div class="track" id="track"></div>
     <script src="/javascript/mouse_blur.js"></script>
-    <script src="/javascript/products.js"></script>
+    <script type="module" src="/javascript/products.js"></script>
     <script src="/javascript/navigation.js"></script>
     <script src="/javascript/main.js"></script>
     <script src="/javascript/filters.js"></script>
