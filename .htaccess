@@ -4,4 +4,3 @@ RewriteBase /
 Redirect /home /index.html
 
 ErrorDocument 404 /404.html
-
