@@ -1,5 +1,7 @@
 /javascript/normal-non-obfuscated/
 /css/normal-non-obfuscated/
 .vscode/
-/OBFUSCATOR/
-/Test/
+/md/
+/database/
+/legal/
+/testing
