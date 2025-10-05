@@ -3,12 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting....</title>
-</head> 
+    <title>Redirecting... | ItsMarwan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #04081b;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .background-glow {
+            position: fixed;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(closest-side, rgba(59, 130, 246, 0.15), transparent);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        .icon-container {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .redirect-icon {
+            font-size: 5rem;
+            color: #00e5ff;
+            animation: rotate 2s linear infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.5));
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #00e5ff, #00b4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .message {
+            font-size: 1.125rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .destination {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid #3b82f6;
+            border-radius: 12px;
+            padding: 0.75rem 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: #00e5ff;
+            word-break: break-all;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00b4ff, #0072ff);
+            border-radius: 9999px;
+            animation: progress 3s ease-out forwards;
+            box-shadow: 0 0 20px rgba(0, 180, 255, 0.5);
+        }
+
+        @keyframes progress {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .countdown {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #00e5ff;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        .cancel-btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 9999px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1.6s ease-out;
+            cursor: pointer;
+        }
+
+        .cancel-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #00e5ff;
+            color: #00e5ff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 229, 255, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .particles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #00e5ff;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 8s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
 <body>
-    Redirecting To Main Page, Click <a href="https://marwan.is-a.dev">Here</a> If You Didnt Get Redirected
+    <div class="background-glow"></div>
+    
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <div class="icon-container">
+            <div class="redirect-icon">⟳</div>
+        </div>
+        
+        <h1>Redirecting...</h1>
+        
+        <p class="message">You will be redirected to your destination shortly</p>
+        
+        <div class="destination" id="destination">
+            Loading destination...
+        </div>
+
+        <div class="countdown" id="countdown">3</div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        
+        <button class="cancel-btn" onclick="cancelRedirect()">Cancel</button>
+    </div>
+
+    <script>
+        // Get URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const redirectUrl = urlParams.get('url') || urlParams.get('to') || 'https://marwan.is-a.dev';
+        
+        // Display destination
+        document.getElementById('destination').textContent = redirectUrl;
+
+        // Countdown
+        let count = 1;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdownInterval = setInterval(() => {
+            count--;
+            countdownElement.textContent = count;
+            
+            if (count <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = redirectUrl;
+            }
+        }, 1000);
+
+        // Cancel redirect
+        function cancelRedirect() {
+            clearInterval(countdownInterval);
+            window.history.back();
+        }
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+    </script>
 </body>
-<script>
-    window.location.href = "https://marwan.is-a.dev";
-</script>
 </html>
