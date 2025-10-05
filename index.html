@@ -246,28 +246,21 @@
     <script>
         // Get URL parameter
         const urlParams = new URLSearchParams(window.location.search);
-        const redirectUrl = urlParams.get('url') || urlParams.get('to') || 'https://marwan.is-a.dev';
+        let redirectUrl = urlParams.get('url') || urlParams.get('to') || 'https://marwan.is-a.dev';
+        
+        // Ensure the URL has a protocol (http:// or https://)
+        if (redirectUrl && !redirectUrl.match(/^https?:\/\//i)) {
+            redirectUrl = 'https://' + redirectUrl;
+        }
         
         // Display destination
         document.getElementById('destination').textContent = redirectUrl;
 
-        // Countdown
-        let count = 1;
-        const countdownElement = document.getElementById('countdown');
-        
-        const countdownInterval = setInterval(() => {
-            count--;
-            countdownElement.textContent = count;
-            
-            if (count <= 0) {
-                clearInterval(countdownInterval);
-                window.location.href = redirectUrl;
-            }
-        }, 1000);
+        // Immediate redirect to external link
+        window.location.replace(redirectUrl);
 
-        // Cancel redirect
+        // Cancel redirect (won't work with instant redirect, but kept for UI)
         function cancelRedirect() {
-            clearInterval(countdownInterval);
             window.history.back();
         }
 
